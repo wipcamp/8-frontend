@@ -1,0 +1,99 @@
+html,body{
+	padding: 0;
+	margin: 0;
+
+}
+
+#main {
+	position: relative;
+	height: 100%;
+	width: 100%; 
+}
+
+#main, #layout {
+    min-width: 980px;
+    min-height: 700px;
+}
+
+.overlay {
+  visibility: hidden;
+  background-color: rgba(255,255,255,0.3);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  opacity: 0;
+  z-index: 1;
+  transition:visibility 0s linear 1s,opacity 1s linear;
+}
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+  transition-delay:0s;
+}
+
+#map {
+	background-image: url("../images/bg.png");
+	min-width: 100%;
+  min-height: 100%;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+}
+
+.element {
+	color: #fff;
+}
+
+.element>div {
+	position: absolute;
+}
+
+#map .what{
+	position: absolute;
+  left: 5%;
+  top: 25%;
+  z-index: 20;}
+#map .where{
+	left: 50%;
+  bottom: 15%;
+}
+#map .when{
+	right: 12%;
+  bottom: 10%;
+}
+#map .faq{
+	left: 40%;
+  top: 10%;
+}
+#map .reg{
+	top: 30%;
+  left: 30%;
+}
+#map .contact{
+	bottom: 0px;
+  right: 0px;
+}
+
+
+.popup.left {
+	background-color: white;
+	min-width: 50%;
+  min-height: 100%;
+  position: fixed; 
+  top: 0; 
+  left: -100%; 
+  z-index: 200;
+}
+
+.popup.right {
+  background-color: white;
+  min-width: 50%;
+  min-height: 100%;
+  position: fixed; 
+  top: 0; 
+  right: -100%; 
+  z-index: 200;
+}
+.popup.right img{
+  float: right;
+}
