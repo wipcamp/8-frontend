@@ -4,6 +4,18 @@ html,body{
 
 }
 
+@font-face {
+    font-family: 'Superspace';
+    src: url('../fonts/Superspace_Bold.ttf');
+    font-weight: normal;
+}
+
+
+h1,p{
+  font-family: Superspace;
+  letter-spacing: .3px;
+}
+
 #main {
 	position: relative;
 	height: 100%;
@@ -70,15 +82,35 @@ html,body{
   left: 30%;
 }
 #map .contact{
-	bottom: 0px;
-  right: 0px;
+	top:20%;
+  right: 20%;
 }
 
+#map .element img{
+  display: inline-block;
+  height: 60px;
+}
+#map .element .description{
+  display: inline-block;  
+  padding-left: 10px;
+}
+
+#map .element .description h1{
+  font-size: 32px;
+  margin: 0;
+}
+
+#map .element .description p {
+  margin: 0;
+  padding-top: 5px;
+  border-top:1px solid #;
+  font-size: 20px;
+}
 
 .popup.left {
 	background-color: white;
-	min-width: 50%;
-  min-height: 100%;
+	width: 50%;
+  height: 100%;
   position: fixed; 
   top: 0; 
   left: -100%; 
@@ -87,8 +119,8 @@ html,body{
 
 .popup.right {
   background-color: white;
-  min-width: 50%;
-  min-height: 100%;
+  width: 50%;
+  height: 100%;
   position: fixed; 
   top: 0; 
   right: -100%; 
