@@ -1,20 +1,19 @@
 html,body{
 	padding: 0;
-	margin: 0;
+	margin: 0;  
+  font-family: Thaisans_lite;
+  letter-spacing: .3px;
 
 }
 
 @font-face {
-    font-family: 'Superspace';
-    src: url('../fonts/Superspace_Bold.ttf');
+    font-family: 'Thaisans_lite';
+    src: url('../fonts/thaisanslite_r1.ttf');
     font-weight: normal;
 }
 
 
-h1,p{
-  font-family: Superspace;
-  letter-spacing: .3px;
-}
+
 
 #main {
 	position: relative;
@@ -107,6 +106,12 @@ h1,p{
   font-size: 20px;
 }
 
+.popup .content {
+    position: absolute;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.3);
+  }
+
 .popup.left {
 	background-color: white;
 	width: 50%;
@@ -128,4 +133,28 @@ h1,p{
 }
 .popup.right img{
   float: right;
+}
+
+.popup .image-wippo {
+  position: absolute;
+  height: 80%;
+  padding:30px;
+  left: -30%
+}
+
+.content h1 {
+  font-size: 70px;
+  margin: 0 0 0 0;
+}
+.content {
+  margin: 0 0 0 130px;
+  height: 100%
+}
+.content .inner p {
+  font-size: 20px;
+  margin: 8px;
+}
+.content .inner .highlight {
+  margin-left: 0;
+  font-size: 30px;
 }
