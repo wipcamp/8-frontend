@@ -42,7 +42,6 @@ h6{
 
 p{
   font-size: 20px;
-  letter-spacing: .3px;
 }
 
  /* 1 # Main Section */
@@ -64,7 +63,7 @@ p{
   width: 100%;
   position: fixed;
   opacity: 0;
-  z-index: 1;
+  z-index: 100;
   transition:visibility 0s linear 1s,opacity 1s linear;
 }
 .overlay.active {
@@ -403,6 +402,22 @@ p{
   font-size: 30px;
 }
 
+/* When */
+
+.pop-when ul{
+  list-style: none;
+  padding: 0;
+}
+.pop-when h2 {
+  margin: 0;
+}
+
+.pop-when p {
+  margin: 0;
+}
+
+/* Contact */
+
 .content .inner .information {
   display: inline-block;
   vertical-align: top;
@@ -427,7 +442,7 @@ p{
 .content .inner .social ul{
   list-style: none;
   font-size: 55px;
-  margin: 0;
+  margin: 20px 0;
   padding: 0;
 }
 
@@ -446,16 +461,17 @@ i.fa {
     line-height: 65px;
 }
 
+/* Other Popup*/
+
 .exit {
   position: absolute;
-  left: 105%;
-  top: 15px;
+  left: -80px;
+  top: 20;
   z-index: 10;
+  width: 60px;
+  height: 60px;
 }
 
-.exit img {
-  height: 80px;
-}
 /* Key Frame Section */
 
 @keyframes line-one {
