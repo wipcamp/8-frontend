@@ -305,7 +305,7 @@ p{
 .popup .content {
     position: absolute;
     padding: 20px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.6);
   }
 
 .popup.left {
@@ -371,13 +371,13 @@ p{
 
 .content h1 {
   font-size: 70px;
-  margin: 0 0 0 0;
+  margin: 0 ;
   border-bottom: 3px solid #000;
 }
 
 .content h2 {
   font-size: 30px;
-  margin: 0 0 0 0;
+  margin: 0 5px;
 }
 
 .left .content {
@@ -386,7 +386,7 @@ p{
 }
 .right .content {
   text-align: right;
-  margin: 0 130px 0 0 ;
+  margin: 0 130px 0 0;
   height: 100%;
   right: 0;
 }
@@ -397,10 +397,9 @@ p{
 
 .content .inner p {
   font-size: 20px;
-  margin: 8px;
 }
 .content .inner .highlight {
-  margin-left: 0;
+  margin: 0px 10px;
   font-size: 30px;
 }
 
@@ -415,26 +414,36 @@ p{
 
 .content .inner .information p{
   font-size: 34px;
+  margin: 0;
 }
 
 .content .inner .social {
-  display: inline-block;
+  position: absolute;
+  width: 600px;
+  right: 20px;
+  margin-top: 20px;
 }
 
 .content .inner .social ul{
   list-style: none;
   font-size: 55px;
   margin: 0;
+  padding: 0;
 }
 
 .content .inner .social ul li{
   padding: 10px;
+  display: inline-block;
   border: 1px solid #000;
-  margin: 10px;
+  margin: 5px;
   width: 65px;
   height: 65px;
   text-align: center;
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.9);
+}
+
+i.fa {
+    line-height: 65px;
 }
 
 .exit {
