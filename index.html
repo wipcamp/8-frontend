@@ -155,6 +155,7 @@
       
       <img class="triangle" src="images/triangle_r.png" style="position: relative;right: -100%;height: 100%;" alt="">    		
   	</div>
+
     <!-- Where Popup Section -->
     <div class="popup pop-where maps">
       <!-- <img src="images/WippoGame-GreenArrow.png" alt=""> -->
@@ -162,14 +163,14 @@
         <img class="exit" src="images/cross-x.png" alt="">
         <div class="inner">
           <h2>สถานที่จัดค่าย</h2>
-          <p class="highlight">ค่ายของเรานี้จะจัดขึ้นที่</p>
+          <p>ค่ายของเรานี้จะจัดขึ้นที่</p>
           <p>"คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี วิทยาเขตบางมด"</p>        
           <p>สามารถติดต่อได้ตามรายละเอียดด้านล่างนี้เลยได้ครับ</p>
           <p>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
           <p>126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140</p>
         </div>
       </div>
-      <iframe style="height:100%; width:100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ9ZZzpVGi4jARHgtAn_MxDV4&key=AIzaSyDh1CQ_zYyharqQojQ5QGCUdmah0qqLzCM" allowfullscreen></iframe>
+        <div id="google_map" style="height:100%; width:100%;z-index:-100" ></div>
     </div>
        
     <!-- When Popup Section -->
@@ -201,7 +202,7 @@
       <img src="images/triangle_r.png" style="position: relative;right: -100%;height: 100%;" alt="">        
     </div>
 
-    <!-- When Popup Section --> <!-- current: when is who     Who start  -->
+    <!-- Who Popup Section --> <!-- current: when is who     Who start  -->
     <div class="popup pop-who left">
       <img class="image-wippo" src="images/CaptainAmerica.jpg" alt="">
       <img src="images/triangle_r.png" style="position: relative;right: -100%;height: 100%;" alt="">        
@@ -236,10 +237,10 @@
         <div class="inner">
           <div class="information">
             <h2>โทรศัพท์</h2>
-            <p>081-234-5678 (พี่วิปโป้)</p>
-            <p>081-234-5678 (พี่วิปโป้)</p>
+            <p><i class="fa fa-mobile"></i> 081-234-5678 (พี่วิปโป้)</p>
+            <p><i class="fa fa-mobile"></i> 081-234-5678 (พี่วิปโป้)</p>
             <h2>อีเมล</h2>
-            <p>wippo@wipcamp.com</p>
+            <p><i class="fa fa-envelope"></i> wippo@wipcamp.com</p>
           </div>
           <div class="social">
             <ul>
@@ -258,7 +259,6 @@
   </div>
 
  	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="js/velocity.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
 	<script>
 	$(document).ready(function(){
@@ -278,17 +278,17 @@
           // $(name).animate({ left: "0%" }, 100 , 'easeInOutQuint');
 
           // $(name).velocity({ left: "0%" }, "easeOutSlowMo");
-          TweenMax.to($(name),1,{ left: "0%",  ease:SlowMo.easeOut});
+          TweenMax.to($(name),1,{ left: "0%",delay: 0.2,  ease:SlowMo.easeOut});
           $(name).addClass('active');
         }
         else{
           // $(name).velocity({ right: "0%" }, "easeOutBounce");
-          TweenMax.to($(name),1,{ right: "0%",  ease:SlowMo.easeIn});
+          TweenMax.to($(name),1,{ right: "0%",delay: 0.2,  ease:SlowMo.easeIn});
           $(name).addClass('active');
         }
         // $('.overlay').addClass('active');
-        TweenMax.to(".overlay", 1, {className:"+=active"})
-        TweenMax.to("#map", 1, {transform:"scale(1.2)"})
+        TweenMax.to(".overlay", 1, {className:"+=active"});
+        TweenMax.to("#map", 2, {transform:"scale(1.4)"});
 
         chkPop++;
       }
@@ -316,6 +316,42 @@
 
 	});
 	</script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  
+  <script type="text/javascript">
+      // When the window has finished loading create our google map below
+      google.maps.event.addDomListener(window, 'load', init);
+  
+      function init() {
+        // Basic options for a simple Google Map
+        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+          // How zoomed in you want the map to start at (always required)
+          zoom: 18,
+
+          // The latitude and longitude to center the map (always required)
+          center: new google.maps.LatLng(13.6512855,100.4940314), // New York
+
+          // How you would like to style the map. 
+          // This is where you would paste any style found on Snazzy Maps.
+          styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":60}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"lightness":30}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ef8c25"},{"lightness":40}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#b6c54c"},{"lightness":40},{"saturation":-40}]},{}]
+        };
+
+        // Get the HTML DOM element that will contain your map 
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('google_map');
+
+        // Create the Google Map using our element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // Let's also add a marker while we're at it
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(13.6512855,100.4940314),
+            map: map,
+            title: 'Snazzy!'
+        });
+      }
+  </script>
 
 </body>
 
