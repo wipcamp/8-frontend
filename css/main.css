@@ -1,0 +1,474 @@
+/*​ Wipcamp 8 */
+/* ========= */
+/* 1 # Main Section */
+
+
+/* Config font and default */
+
+@font-face {
+    font-family: 'Thaisans_lite';
+    src: url('../fonts/thaisanslite_r1.ttf');
+    font-weight: normal;
+}
+
+html,body{
+	padding: 0;
+	margin: 0;  
+  font-family: Thaisans_lite;
+  letter-spacing: .3px;
+}
+
+
+/* Typography */
+
+h1{
+  font-size: 70px;
+}
+h2{
+  font-size: 56px;
+}
+h3{
+  font-size: 40px;
+}
+h4{
+  font-size: 34px;
+}
+h5{
+  font-size: 30px;
+}
+h6{
+  font-size: 26px;
+}
+
+p{
+  font-size: 20px;
+  letter-spacing: .3px;
+}
+
+ /* 1 # Main Section */
+
+#main {
+	position: relative;
+	height: 100%;
+	width: 100%; 
+}
+#main{
+  min-width: 980px;
+  min-height: 700px;
+}
+
+.overlay {
+  visibility: hidden;
+  background-color: rgba(255,255,255,0.3);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  opacity: 0;
+  z-index: 1;
+  transition:visibility 0s linear 1s,opacity 1s linear;
+}
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+  transition-delay:0s;
+}
+
+#map {
+	background-image: url("../images/bg.png");
+	min-width: 100%;
+  min-height: 100%;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+}
+
+#map .what{
+  position: absolute;
+  left: 5%;
+  top: 25%;
+  z-index: 20;}
+#map .where{
+  left: 50%;
+  bottom: 15%;
+}
+#map .when{
+  left: 72%;
+  bottom: 10%;
+}
+#map .faq{
+  left: 40%;
+  top: 10%;
+}
+#map .reg{
+  top: 30%;
+  left: 30%;
+}
+#map .contact{
+  top:20%;
+  left: 70%;
+}
+#map .who{
+  bottom : 20%;
+  left: 20%;
+}
+
+#map .element {
+  color: #fff;
+}
+#map .element .section {
+  position: absolute;
+}
+#map .element img{
+  display: inline-block;
+  height: 60px;
+}
+#map .element .description{
+  display: inline-block;  
+  padding-left: 10px;
+}
+#map .element .description h1{
+  font-size: 32px;
+  margin: 0;
+}
+#map .element .description p {
+  margin: 0;
+  padding-top: 5px;
+  border-top:1px solid #;
+  font-size: 20px;
+}
+
+/* Emblem of Section */
+
+.lowerImage{
+  left: 7px;
+  position: absolute;
+  z-index: 2;
+  transform: scale(0);
+  transition: 0.2s;
+  
+}
+.upperImage{
+  position: absolute;
+  z-index: 3;
+  transition: 0.2s;
+}
+
+.container{
+  height: 60px;
+  width: 60px;
+  position: relative;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+.section:hover .upperImage{
+  transform: scale(0);
+  transition: all 0.2s;
+}
+
+.section:hover .lowerImage{
+  transform: scale(2);
+  transition: all 0.2s; 
+  
+}
+.section:hover .container{
+  width: 80px;
+  transition: all 0.5s;
+ }
+  
+/* Regis Wippo 3 */
+
+.threeImage.giroro{
+  height: 60px;
+  position: absolute;
+  top: -8px;
+  left: 43px;
+  transform: rotate(25deg);
+}
+
+#giroro{
+   transform: scale(0);
+}
+.section:hover #giroro{
+   transform: scale(1.6);
+   transition: all 0.2s; 
+   transition-delay: 0.2s;
+}
+.threeImage.dororo{
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: -43px;
+  transform: rotate(-25deg);
+  z-index: 1;
+ 
+}
+
+#dororo{
+   transform: scale(0);
+}
+.section:hover #dororo{
+   transform: scale(1.6);
+   transition: all 0.2s; 
+  
+}
+.section:hover #keroro{
+   transition: 0.2s;
+   transition-delay: 0.4s;
+}
+
+.section:hover #containerReg{
+  width: 120px;
+  transition: 0.8s;
+}
+
+/* line */
+.line {
+  height: 1.5px;
+  background-color: #000;
+  width: 150px;
+  position: absolute;
+}
+.line.one {
+  left: 50px;
+  top: 100px;
+  width: 150px;
+}
+.line.two {
+  left: 110px;
+  top: 250px;
+  width: 300px;
+}
+.line.three {
+  left: 80px;
+  top: 410px;
+  width: 200px;
+}
+.line.four {
+  left: 55px;
+  top: 510px;
+  width: 150px;
+}
+.line.one.lineTest {
+  animation: line-one 1s;
+}
+.line.two.lineTest {
+  animation: line-two 1s;
+}
+.line.three.lineTest {
+  animation: line-three 1s;
+}
+.line.four.lineTest {
+  animation: line-four 1s;
+}
+
+/* point after line action */ 
+.topic-point {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  
+}
+.topic-point.act {
+  animation: topic-point-action .5s;
+  animation-delay: 1s;
+}
+.topic-point.permanent {
+  transforms: scale(1);
+}
+.topic-point.hidden {
+  transform: scale(0);
+}
+
+/* not support for responsive yet ex.left, top*/
+.topic-point.point1 {
+  left: 200px;
+  top: 93px;
+}
+.topic-point.point2 {
+  left: 410px;
+  top: 243px;
+}
+.topic-point.point3 {
+  left: 280px;
+  top: 403px;
+}
+.topic-point.point4 {
+  left: 205px;
+  top: 503px;
+}
+
+/* 2 # Popup Section */
+
+.popup .content {
+    position: absolute;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.3);
+  }
+
+.popup.left {
+	background-color: white;
+	width: 50%;
+  min-height: 770px;
+  height: 100%;
+  position: fixed; 
+  top: 0; 
+  left: -100%; 
+  z-index: 200;
+}
+
+.popup.right {
+  background-color: white;
+  width: 50%;
+  min-height: 770px;
+  height: 100%;
+  position: fixed; 
+  top: 0; 
+  right: -100%; 
+  z-index: 200;
+}
+.popup.right img{
+  float: right;
+}
+
+.popup.maps {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: fixed; 
+  top: 0; 
+  right: -100%; 
+  z-index: 200;
+}
+
+.popup.maps .content {
+  right: 50px;
+}
+
+.popup.maps .content h2 {
+  font-size: 60px;
+  margin: 30px 0 10px;
+}
+
+.popup.maps .content .highlight {
+  font-size: 26px;
+}
+
+.popup.left .image-wippo {
+  position: absolute;
+  height: 800px;
+  padding:30px;
+  left: -30%
+}
+.popup.right .image-wippo {
+  position: absolute;
+  height: 800px;
+  padding:30px;
+  right: -30%
+}
+
+.content h1 {
+  font-size: 70px;
+  margin: 0 0 0 0;
+  border-bottom: 3px solid #000;
+}
+
+.content h2 {
+  font-size: 30px;
+  margin: 0 0 0 0;
+}
+
+.left .content {
+  margin: 0 0 0 130px;
+  height: 100%
+}
+.right .content {
+  text-align: right;
+  margin: 0 130px 0 0 ;
+  height: 100%;
+  right: 0;
+}
+
+.content .inner {
+  margin-top: 20px;
+}
+
+.content .inner p {
+  font-size: 20px;
+  margin: 8px;
+}
+.content .inner .highlight {
+  margin-left: 0;
+  font-size: 30px;
+}
+
+.content .inner .information {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.content .inner .information h2{
+  font-size: 50px
+}
+
+.content .inner .information p{
+  font-size: 34px;
+}
+
+.content .inner .social {
+  display: inline-block;
+}
+
+.content .inner .social ul{
+  list-style: none;
+  font-size: 55px;
+  margin: 0;
+}
+
+.content .inner .social ul li{
+  padding: 10px;
+  border: 1px solid #000;
+  margin: 10px;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  background: rgba(255,255,255,.7);
+}
+
+.exit {
+  position: absolute;
+  left: 105%;
+  top: 15px;
+  z-index: 10;
+}
+
+.exit img {
+  height: 80px;
+}
+/* Key Frame Section */
+
+@keyframes line-one {
+  0% {width: 0px;}
+  100% {width: 150px;}
+}
+@keyframes line-two {
+  0% {width: 0px;}
+  100% {width: 300px;}
+}
+@keyframes line-three {
+  0% {width: 0px;}
+  100% {width: 200px;}
+}
+@keyframes line-four {
+  0% {width: 0px;}
+  100% {width: 150px;}
+}
+
+@keyframes topic-point-action {
+  0% {transform: scale(0);}
+  55% {background-color: #000; transform: scale(1);}
+  85% {background-color: #fff;}
+  100% {background-color: #000;}
+}
