@@ -72,11 +72,11 @@ p{
 
 #map .what{
   position: absolute;
-  left: 5%;
-  top: 25%;
-  z-index: 20;}
+  left: 43%;
+  bottom: 20%;
+}
 #map .where{
-  left: 50%;
+  left: 10%;
   bottom: 15%;
 }
 #map .when{
@@ -88,26 +88,38 @@ p{
   top: 10%;
 }
 #map .reg{
-  top: 35%;
-  left: 30%;
+  top: 40%;
+  left: 40%;
   position: absolute;
 }
 #map .contact{
   top:20%;
-  left: 70%;
+  right: 20%;
 }
 #map .who{
-  bottom : 20%;
-  left: 20%;
+  top : 20%;
+  left: 15%;
 }
 
 #map .element {
   color: #fff;
 }
+
+#map .element:hover .section{
+  opacity: .6;
+}
+
 #map .element .section {
   position: absolute;
   cursor: pointer;
+  transition: opacity .2s;
 }
+
+#map .element .section:hover {
+  opacity: 1 !important;
+}
+
+
 #map .element img{
   display: inline-block;
   height: 100px;
@@ -120,6 +132,7 @@ p{
 #map .element .description h1{
   font-size: 2.6em;
   margin: 0;
+  text-shadow: 0px 0px 15px rgba(255,255,255,0.7);
 }
 #map .element .description p {
   margin: 0;
@@ -460,4 +473,9 @@ i.fa {
   55% {background-color: #000; transform: scale(1);}
   85% {background-color: #fff;}
   100% {background-color: #000;}
+}
+@-webkit-keyframes loy {
+  0 {padding-top:0;}
+  50% {padding-top:5px}
+  100% {padding-top:0}
 }
