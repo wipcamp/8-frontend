@@ -110,20 +110,20 @@ p{
 }
 #map .element img{
   display: inline-block;
-  height: 60px;
+  height: 100px;
 }
 #map .element .description{
   display: inline-block;  
-  padding-left: 10px;
+  vertical-align: top;
+  padding-top: .4em;
 }
 #map .element .description h1{
-  font-size: 2em;
+  font-size: 2.6em;
   margin: 0;
 }
 #map .element .description p {
   margin: 0;
-  padding-top: 5px;
-  border-top:1px solid #;
+  line-height: .6em;
 }
 
 /* Register */
@@ -187,8 +187,9 @@ p{
   vertical-align: top;
 }
 #map .reg .description h1{
-  font-size: 3.125em;
+  font-size: 4em;
   line-height: 1em;
+  letter-spacing: .02em
 }
 #map .reg .description p{
   font-size: 2em;
@@ -213,8 +214,8 @@ p{
 }
 
 .container{
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
   position: relative;
   display: inline-block;
   transition: all 0.5s;
@@ -231,7 +232,7 @@ p{
   
 }
 .section:hover .container{
-  width: 80px;
+  width:170px;
   transition: all 0.5s;
  }
   
