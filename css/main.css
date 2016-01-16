@@ -232,7 +232,7 @@ p{
   
 }
 .section:hover .container{
-  width:170px;
+  width:120px;
   transition: all 0.5s;
  }
   
@@ -308,6 +308,14 @@ p{
   padding:30px;
   right: -30%
 }
+
+.popup.pop-faq .image-wippo { /* fix superman faq*/
+  position: absolute;
+  height: 800px;
+  padding:30px;
+  right: -50%
+}
+
 
 .content h1 {
   margin: 0 ;
