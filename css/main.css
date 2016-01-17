@@ -17,6 +17,7 @@ html,body{
   font-size: 16px;
   font-family: Thaisans_lite;
   letter-spacing: .0246783em;
+  overflow: hidden;
 }
 
 
@@ -66,18 +67,41 @@ p{
   top: -100%;
 }
 .layout .logo {
-  background-image: url(../images/layout/logo.png);
-  width: 577px;
-  height: 295px;
   display: block;
   position: relative;
   left: -50%;
+}
+
+.layout .camp_name {
+  background-image: url(../images/layout/camp_name.png);
+  width: 539px;
+  height: 214px;
+}
+.layout .camp_way {
+  background-image: url(../images/layout/camp_way.png);  
+  width: 500px;
+  height: 138px;
+  margin: -4.0625em auto 0 auto;
+}
+.layout .sponser {
+  background-image: url(../images/layout/camp_spon1.png);
+  width: 539px;
+  height: 214px;
+  margin: -87px -22px;
+}
+
+.layout .spotlight {
+  width: 282px;
+  height: 42em;
+  margin: -20.0625em auto 0 auto;
+  opacity: 0;
 }
 
 .layout .over-earth {
   position: absolute;
   left: 50%;
   bottom: -100%;
+  z-index: -100;
 }
 .layout .earth {
   background-image: url(../images/layout/earth.png);
@@ -86,6 +110,7 @@ p{
   display: block;
   position: relative;
   left: -50%;
+
   animation: roll 50s infinite;
 }
 
@@ -115,6 +140,8 @@ p{
   left: -50%;
   position: relative;
   z-index: 200;
+  box-shadow: inset 0 0 1em 5.1px #fcfcfc, 0 -1px 3em 1.2em #fff;
+  border-radius: 50%;
 }
 
 #map .reg{
@@ -178,7 +205,7 @@ p{
 #map .element .description{
   display: inline-block;  
   vertical-align: top;
-  padding-top: .4em;
+  padding-top: .8em;
   opacity: 0;
   visibility: hidden;
 }

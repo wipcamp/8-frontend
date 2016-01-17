@@ -17,12 +17,24 @@
     <div id="map">
       <div class="layout">
         <div class="over-logo">
-          <div class="logo"></div>
+          <div class="logo camp_name"></div>
+          <div class="logo camp_way"></div> 
+          <div class="logo sponser"></div>
+          <img class="logo spotlight" src="images/layout/spotlight.png" alt="">
         </div>
         <div class="over-earth">
           <div class="earth"></div>
         </div>
-      </div>   
+      </div>
+      <div class="star-front">
+        <img src="" alt="" class="star-1">
+      </div>  
+      <div class="star-mid">
+        
+      </div> 
+      <div class="star-back">
+        
+      </div> 
       <div class="overlay"></div>
       <div class="element">
         <!-- What Section -->
@@ -127,7 +139,6 @@
     <!-- What Popup Section -->
   	<div class="popup pop-what left">
       <img class="image-wippo" src="images/wippo/wippo-captainamerica.png" alt="">
-      <img class="exit" src="images/exit.png" alt="">
       <div class="content">
         <h1>What is WIP Camp ?</h1>
         <div class="inner">
@@ -283,14 +294,16 @@
 	<script>
 	$(document).ready(function(){
 
+    console.log("%cตัวเอง.. ไม่เสือกดิ่","color:#f00;font-size:40px;font-weight:bold;font-family:\"Thaisans_lite\";");
+
     TweenMax.fromTo('#map .what',.8,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "13%", top: "22%", opacity: 1},delay:1});
     TweenMax.fromTo('#map .who',.5,{css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "7%", top: "50%", opacity: 1},delay:1});
-    TweenMax.fromTo('#map .faq',1.2,{css: {left: "44%", top: "39%", opacity: 0}},
+    TweenMax.fromTo('#map .when',1.2,{css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "13%", top: "75%", opacity: 1},delay:1});
-    TweenMax.fromTo('#map .when',1,{css: {left: "44%", top: "39%", opacity: 0}},
+    TweenMax.fromTo('#map .faq',1,{css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "70%", top: "24%", opacity: 1},delay:1});
     TweenMax.fromTo('#map .where',1.6,{css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "76%", top: "50%", opacity: 1},delay:1});
@@ -302,7 +315,9 @@
 
     TweenMax.to('.layout .over-earth', 2,{css: {bottom:"-40%"},delay:1.5});
     TweenMax.to('.layout .over-logo', 2,{css: {top: "0"},delay:1.5});
-
+    TweenMax.to('.layout .over-logo', 2,{css: {top: "0"},delay:1.5});
+    TweenMax.to('.layout .spotlight', 3,{css: {opacity:1},delay:3});
+    
     var chkPop = 0;
 
     $('.section').click(function(e){
