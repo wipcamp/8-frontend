@@ -156,6 +156,8 @@ p{
   display: inline-block;  
   vertical-align: top;
   padding-top: .4em;
+  opacity: 0;
+  visibility: hidden;
 }
 #map .element .description h1{
   font-size: 2.6em;
