@@ -91,39 +91,39 @@ p{
   position: absolute;
 }
 #map .what {
-  animation: logo1 .5s ;
-  animation-delay: 1s;
+  /*animation: logo1 .5s ;*/
+  /*animation-delay: 1s;*/
   left: 5%;
   top: 10%;
 }
 
 #map .contact {
-  animation: logo2 .45s ease-in-out;
-  animation-delay: 1s;
+  /*animation: logo2 .45s ease-in-out;*/
+  /*animation-delay: 1s;*/
   left: 15%;
   top: 30%;
 }
 #map .who {
-  animation: logo3 .48s ease-in-out;
-  animation-delay: 1s;
+  /*animation: logo3 .48s ease-in-out;*/
+  /*animation-delay: 1s;*/
   left: 8%;
   top: 55%;
 }
 #map .when {
-  animation: logo4 .7s ease-in-out;
-  animation-delay: 1s;
+  /*animation: logo4 .7s ease-in-out;*/
+  /*animation-delay: 1s;*/
   left: 80%;
   top: 13%;
 }
 #map .where {
-  animation: logo5 .65s ease-in-out;
-  animation-delay: 1s;
+  /*animation: logo5 .65s ease-in-out;*/
+  /*animation-delay: 1s;*/
   left: 74%;
   top: 36%;
 }
 #map .faq {
-  animation: logo6 .55s ease-in-out;
-  animation-delay: 1s;
+  /*animation: logo6 .55s ease-in-out;*/
+  /*animation-delay: 1s;*/
   left: 84%;
   top: 60%;
 }
