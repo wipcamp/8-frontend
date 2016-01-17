@@ -36,7 +36,7 @@ p{
 	position: relative;
 	height: 100%;
 	width: 100%; 
-  min-height: 780px;
+  min-height: 680px;
   min-width: 980px;
 }
 
@@ -70,40 +70,66 @@ p{
   min-height: 768px;
 }
 
-#map .what{
+/* Starter */
+.main-logo {
   position: absolute;
-  left: 43%;
-  bottom: 20%;
-}
-#map .where{
-  left: 10%;
-  bottom: 15%;
-}
-#map .when{
-  left: 72%;
-  bottom: 10%;
-}
-#map .faq{
   left: 40%;
-  top: 10%;
+  top: 30%;
+  z-index:200;
 }
+.main-logo .main {
+  height: 200px;
+  transform: scale(.5);
+  animation: scale 1s ;
+  opacity: 0;
+  z-index: 200;
+}
+
 #map .reg{
   top: 40%;
   left: 40%;
   position: absolute;
 }
-#map .contact{
-  top:20%;
-  left: 65%;
+#map .what {
+  animation: logo1 .5s ;
+  animation-delay: 1s;
+  left: 5%;
+  top: 10%;
 }
-#map .who{
-  top : 20%;
+
+#map .contact {
+  animation: logo2 .45s ease-in-out;
+  animation-delay: 1s;
   left: 15%;
+  top: 30%;
+}
+#map .who {
+  animation: logo3 .48s ease-in-out;
+  animation-delay: 1s;
+  left: 8%;
+  top: 55%;
+}
+#map .when {
+  animation: logo4 .7s ease-in-out;
+  animation-delay: 1s;
+  left: 80%;
+  top: 13%;
+}
+#map .where {
+  animation: logo5 .65s ease-in-out;
+  animation-delay: 1s;
+  left: 74%;
+  top: 36%;
+}
+#map .faq {
+  animation: logo6 .55s ease-in-out;
+  animation-delay: 1s;
+  left: 84%;
+  top: 60%;
 }
 
 #map .element {
   color: #fff;
-  opacity: 0;
 }
 
 #map .element:hover .section{
@@ -113,6 +139,7 @@ p{
 #map .element .section {
   position: absolute;
   cursor: pointer;
+  opacity: 0;
   transition: opacity .2s;
 }
 
@@ -474,6 +501,8 @@ i.fa {
   transform: rotate(180deg);
 }
 
+
+
 /* Key Frame Section */
 
 @keyframes line-one {
@@ -507,4 +536,34 @@ i.fa {
   100% {
     opacity:0;visibility:"hidden";height:0;
   }
+}
+
+@keyframes scale {
+  0% , 60% {transform: scale(1); opacity: 1;}
+  90% {transform: scale(1.5); opacity: 1;}
+  100% {transform: scale(.5); opacity: 0;}
+}
+@keyframes logo1 {
+  0% {left: 44%; top: 39%; opacity: 0;}
+  100% {left: 5%; top: 10%; opacity: 1;}
+}
+@keyframes logo2 {
+  0% {left: 44%; top: 39%; opacity: 0;}
+  100% {left: 15%; top: 30%; opacity: 1;}
+}
+@keyframes logo3 {
+  0% {left: 44%; top: 39%; opacity: 0;}
+  100% {left: 8%; top: 55%; opacity: 1;}
+}
+@keyframes logo4 {
+  0% {left: 44%; top: 39%; opacity: 0;}
+  100% {left: 80%; top: 13%; opacity: 1;}
+}
+@keyframes logo5 {
+  0% {left: 44%; top: 39%; opacity: 0;}
+  100% {left: 74%; top: 36%; opacity: 1;}
+}
+@keyframes logo6 {
+  0% {left: 44%; top: 39%; opacity: 0;}
+  100% {left: 84%; top: 60%; opacity: 1;}
 }
