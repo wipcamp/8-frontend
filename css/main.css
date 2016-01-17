@@ -56,8 +56,41 @@ p{
   transition-delay:0s;
 }
 
+/* Layout */
+
+.layout {}
+
+.layout .over-logo {
+  position: absolute;
+  left: 50%;
+  top: -100%;
+}
+.layout .logo {
+  background-image: url(../images/layout/logo.png);
+  width: 577px;
+  height: 295px;
+  display: block;
+  position: relative;
+  left: -50%;
+}
+
+.layout .over-earth {
+  position: absolute;
+  left: 50%;
+  bottom: -100%;
+}
+.layout .earth {
+  background-image: url(../images/layout/earth.png);
+  width: 500px;
+  height: 500px;
+  display: block;
+  position: relative;
+  left: -50%;
+  animation: roll 50s infinite;
+}
+
+/* Map */
 #map {
-  background: url("../images/bgweb.jpg") no-repeat center center fixed; 
   background-color: #0c141e;
   position: fixed; 
   top: 0; 
@@ -70,15 +103,17 @@ p{
 /* Starter */
 .main-logo {
   position: absolute;
-  left: 40%;
+  left: 50%;
   top: 30%;
   z-index:200;
 }
 .main-logo .main {
-  height: 200px;
+  height: 300px;
   transform: scale(.5);
   animation: scale 1.2s ;
   opacity: 0;
+  left: -50%;
+  position: relative;
   z-index: 200;
 }
 
@@ -532,4 +567,9 @@ i.fa {
   0% , 60% {transform: scale(1); opacity: 1;}
   80% {transform: scale(1.5); opacity: 1;}
   100% {transform: scale(.5); opacity: 0;}
+}
+
+@keyframes roll {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
 }

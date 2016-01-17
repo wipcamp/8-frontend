@@ -14,7 +14,15 @@
   </div>
   <div id="main">
     <!-- Map Section -->
-    <div id="map">   
+    <div id="map">
+      <div class="layout">
+        <div class="over-logo">
+          <div class="logo"></div>
+        </div>
+        <div class="over-earth">
+          <div class="earth"></div>
+        </div>
+      </div>   
       <div class="overlay"></div>
       <div class="element">
         <!-- What Section -->
@@ -287,11 +295,13 @@
     TweenMax.fromTo('#map .where',1.6,{css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "76%", top: "50%", opacity: 1},delay:1});
     TweenMax.fromTo('#map .contact',1.8,{css: {left: "44%", top: "39%", opacity: 0}},
-      {css:{left: "76%", top: "75%", opacity: 1},delay:1});
+      {css:{left: "69%", top: "75%", opacity: 1},delay:1});
 
     TweenMax.fromTo('#map .description',1,{css: {opacity: 0, visibility: "hidden"}},
       {css:{opacity: 1, visibility: "visible"},delay:2.5});
 
+    TweenMax.to('.layout .over-earth', 2,{css: {bottom:"-40%"},delay:1.5});
+    TweenMax.to('.layout .over-logo', 2,{css: {top: "0"},delay:1.5});
 
     var chkPop = 0;
 
