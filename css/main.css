@@ -94,7 +94,7 @@ p{
 }
 #map .contact{
   top:20%;
-  right: 20%;
+  left: 65%;
 }
 #map .who{
   top : 20%;
@@ -103,6 +103,7 @@ p{
 
 #map .element {
   color: #fff;
+  opacity: 0;
 }
 
 #map .element:hover .section{
@@ -150,6 +151,9 @@ p{
   height: 100px;
 }
 
+#map .faq .lowerImage{
+  padding-left: 30px;
+}
 /* Regis Wippo 3 */
 
 .threeImage.giroro{
@@ -311,7 +315,8 @@ p{
 
 .popup.left .image-wippo {
   position: absolute;
-  height: 800px;
+  min-height: 800px;
+  height: 100%;
   padding:30px;
   left: -30%
 }
@@ -336,7 +341,7 @@ p{
 }
 
 .content h2 {
-  font-size: 1.875em;
+  font-size: 1.675em;
   margin: 0 5px;
 }
 
@@ -359,8 +364,7 @@ p{
   font-size: 1.25em;
 }
 .content .inner .highlight {
-  margin: 0px 10px;
-  font-size: 2.125em;
+  font-size: 1.625em;
 }
 
 /* When */
@@ -375,6 +379,27 @@ p{
 
 .pop-when p {
   margin: 0;
+}
+
+/* FAQ */
+
+.pop-faq .accordion {
+  list-style: none;
+}
+
+.pop-faq .accordion span {
+  font-size: 1.25em;
+  display: block;
+  visibility:hidden;
+  opacity:0;
+  height:0;
+  transition: all 1s;
+}
+
+.pop-faq .accordion span.show {
+  opacity:1;
+  visibility:visible;
+  height:auto;
 }
 
 /* Contact */
@@ -474,8 +499,12 @@ i.fa {
   85% {background-color: #fff;}
   100% {background-color: #000;}
 }
-@-webkit-keyframes loy {
-  0 {padding-top:0;}
-  50% {padding-top:5px}
-  100% {padding-top:0}
+
+@keyframes show-acc {
+  0% {
+    opacity:0;visibility:"hidden";height:0;
+  }
+  100% {
+    opacity:0;visibility:"hidden";height:0;
+  }
 }
