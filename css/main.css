@@ -16,7 +16,7 @@ html,body{
 	margin: 0;
   font-size: 16px;
   font-family: Thaisans_lite;
-  letter-spacing: .3px;
+  letter-spacing: .0246783em;
 }
 
 
@@ -94,50 +94,40 @@ p{
   top: 10%;
 }
 
-#map .contact {
-  /*animation: logo2 .45s ease-in-out;*/
-  /*animation-delay: 1s;*/
+/*#map  .who{
   left: 15%;
   top: 30%;
 }
-#map .who {
-  /*animation: logo3 .48s ease-in-out;*/
-  /*animation-delay: 1s;*/
+#map .faq {
   left: 8%;
   top: 55%;
 }
 #map .when {
-  /*animation: logo4 .7s ease-in-out;*/
-  /*animation-delay: 1s;*/
   left: 80%;
   top: 13%;
 }
 #map .where {
-  /*animation: logo5 .65s ease-in-out;*/
-  /*animation-delay: 1s;*/
   left: 74%;
   top: 36%;
 }
-#map .faq {
-  /*animation: logo6 .55s ease-in-out;*/
-  /*animation-delay: 1s;*/
+#map .contact {
   left: 84%;
   top: 60%;
-}
+}*/
 
 #map .element {
   color: #fff;
 }
 
 #map .element:hover .section{
-  opacity: .6;
+  opacity: .6 !important;
 }
 
 #map .element .section {
   position: absolute;
   cursor: pointer;
   opacity: 0;
-  transition: opacity .2s;
+  transition: opacity .6s;
   transform: scale(1.2);
 }
 
@@ -148,7 +138,7 @@ p{
 
 #map .element img{
   display: inline-block;
-  height: 100px;
+  height: 7em;
 }
 #map .element .description{
   display: inline-block;  
@@ -170,24 +160,24 @@ p{
 /* Register */
 
 #map .reg .container{
-  height: 100px;
-  width: 100px;
+  height: 7em;
+  width: 7em;
 }
 
 #map .reg .upperImage{
-  height: 100px;
+  height: 7em;
 }
 
 #map .faq .lowerImage{
-  padding-left: 30px;
+  padding-left: 1.875em;
 }
 /* Regis Wippo 3 */
 
 .threeImage.giroro{
-  height: 100px;
+  height: 7em;
   position: absolute;
-  top: -8px;
-  left: 43px;
+  top: -.05em;
+  left: 2.6875em;
   transform: rotate(25deg);
 }
 
@@ -200,10 +190,10 @@ p{
    transition-delay: 0.2s;
 }
 .threeImage.dororo{
-  height: 100px;
+  height: 7em;
   position: absolute;
-  top: 20px;
-  left: -43px;
+  top: 1.25em;
+  left: -2.6875em;
   transform: rotate(-25deg);
   z-index: 1;
  
@@ -258,8 +248,8 @@ p{
 }
 
 .container{
-  height: 100px;
-  width: 100px;
+  height: 7em;
+  width: 7em;
   position: relative;
   display: inline-block;
   transition: all 0.5s;
@@ -285,7 +275,7 @@ p{
 
 .popup .content {
     position: absolute;
-    padding: 20px;
+    padding: 1.25em;
     background-color: rgba(255,255,255,0.6);
   }
 
@@ -333,7 +323,7 @@ p{
 
 .popup.maps .content h2 {
   font-size: 3.75em;
-  margin: 30px 0 10px;
+  margin: 1.875em 0 0.625em;
 }
 
 .popup.maps .content .highlight {
@@ -344,20 +334,20 @@ p{
   position: absolute;
   min-height: 800px;
   height: 100%;
-  padding:30px;
+  padding:1.875em;
   left: -30%
 }
 .popup.right .image-wippo {
   position: absolute;
   height: 800px;
-  padding:30px;
+  padding: 1.875em;
   right: -30%
 }
 
 .popup.pop-faq .image-wippo { /* fix superman faq*/
   position: absolute;
   height: 800px;
-  padding:30px;
+  padding: 1.875em;
   right: -50%
 }
 
@@ -373,18 +363,18 @@ p{
 }
 
 .left .content {
-  margin: 0 0 0 130px;
-  height: 100%
+  margin: 0 0 0 8.125em;
+  height: 100%;
 }
 .right .content {
   text-align: right;
-  margin: 0 130px 0 0;
+  margin: 0 8.125em 0 0;
   height: 100%;
   right: 0;
 }
 
 .content .inner {
-  margin-top: 20px;
+  margin-top: 1.625em;
 }
 
 .content .inner p {
@@ -448,24 +438,24 @@ p{
 .pop-contact .inner .social {
   position: absolute;
   width: 600px;
-  right: 20px;
-  margin-top: 20px;
+  right: 1.625em;
+  margin-top: 1.625em;
 }
 
 .pop-contact .inner .social ul{
   list-style: none;
   font-size: 3.43em;
-  margin: 20px 0;
+  margin: 1.625em 0;
   padding: 0;
 }
 
 .pop-contact .inner .social ul li{
-  padding: 10px;
+  padding: 0.625em;
   display: inline-block;
-  border: 1px solid #000;
-  margin: 5px;
-  width: 65px;
-  height: 65px;
+  border: 0.0625em solid #000;
+  margin: 0.3125em;
+  width: 4.0625em;
+  height: 4.0625em;
   text-align: center;
   background: rgba(255,255,255,.9);
   transition: transform .2s, opacity .2s;
@@ -473,7 +463,7 @@ p{
 
 
 i.fa {
-    line-height: 65px;
+    line-height: 4.0625em;
 }
 
 .pop-contact ul:hover li {
@@ -488,11 +478,11 @@ i.fa {
 
 .exit {
   position: absolute;
-  left: -80px;
-  top: 9px;
+  left: -5em;
+  top: 0.3125em;
   z-index: 10;
-  width: 70px;
-  height: 70px;
+  width: -5em;
+  height: -5em;
   transition: transform .4s;
   cursor: pointer;
 }

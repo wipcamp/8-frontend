@@ -275,23 +275,24 @@
 	<script>
 	$(document).ready(function(){
 
-    TweenMax.fromTo('#map .what',.8,{css: {left: "44%", top: "39%", opacity: 0}},
-      {css:{left: "5%", top: "10%", opacity: 1},delay:1});
-    TweenMax.fromTo('#map .contact',.5,{css: {left: "44%", top: "39%", opacity: 0}},
-      {css:{left: "15%", top: "30%", opacity: 1},delay:1});
-    TweenMax.fromTo('#map .who',1.2,{css: {left: "44%", top: "39%", opacity: 0}},
-      {css:{left: "8%", top: "55%", opacity: 1},delay:1});
+    TweenMax.fromTo('#map .what',.8,
+      {css: {left: "44%", top: "39%", opacity: 0}},
+      {css:{left: "13%", top: "22%", opacity: 1},delay:1});
+    TweenMax.fromTo('#map .who',.5,{css: {left: "44%", top: "39%", opacity: 0}},
+      {css:{left: "7%", top: "50%", opacity: 1},delay:1});
+    TweenMax.fromTo('#map .faq',1.2,{css: {left: "44%", top: "39%", opacity: 0}},
+      {css:{left: "13%", top: "75%", opacity: 1},delay:1});
     TweenMax.fromTo('#map .when',1,{css: {left: "44%", top: "39%", opacity: 0}},
-      {css:{left: "80%", top: "13%", opacity: 1},delay:1});
+      {css:{left: "70%", top: "24%", opacity: 1},delay:1});
     TweenMax.fromTo('#map .where',1.6,{css: {left: "44%", top: "39%", opacity: 0}},
-      {css:{left: "74%", top: "36%", opacity: 1},delay:1});
-    TweenMax.fromTo('#map .faq',1.8,{css: {left: "44%", top: "39%", opacity: 0}},
-      {css:{left: "84%", top: "60%", opacity: 1},delay:1});
+      {css:{left: "76%", top: "50%", opacity: 1},delay:1});
+    TweenMax.fromTo('#map .contact',1.8,{css: {left: "44%", top: "39%", opacity: 0}},
+      {css:{left: "76%", top: "75%", opacity: 1},delay:1});
 
     TweenMax.fromTo('#map .description',1,{css: {opacity: 0, visibility: "hidden"}},
       {css:{opacity: 1, visibility: "visible"},delay:2.5});
 
-    
+
     var chkPop = 0;
 
     $('.section').click(function(e){
