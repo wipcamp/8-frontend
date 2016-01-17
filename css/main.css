@@ -37,7 +37,7 @@ p{
 	position: relative;
 	height: 100%;
 	width: 100%; 
-  min-height: 680px;
+  min-height: 580px;
   min-width: 980px;
 }
 
@@ -110,7 +110,6 @@ p{
   display: block;
   position: relative;
   left: -50%;
-
   animation: roll 50s infinite;
 }
 
@@ -598,5 +597,5 @@ i.fa {
 
 @keyframes roll {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(359deg); }
+  100% { transform: rotate(360deg); }
 }
