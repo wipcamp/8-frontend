@@ -291,9 +291,9 @@
 
  	<script src="js/jquery.min.js"></script>
   <script src="js/tweenmax.js"></script>
-	<script>
+	<script> 
 	$(document).ready(function(){
-
+    // console.log("window height : "+$( window ).height());
     console.log("%cตัวเอง.. ไม่เสือกดิ่","color:#f00;font-size:40px;font-weight:bold;font-family:\"Thaisans_lite\";");
 
     TweenMax.fromTo('#map .what',.8,
@@ -315,8 +315,7 @@
 
     TweenMax.to('.layout .over-earth', 2,{css: {bottom:"-40%"},delay:1.5});
     TweenMax.to('.layout .over-logo', 2,{css: {top: "0"},delay:1.5});
-    TweenMax.to('.layout .over-logo', 2,{css: {top: "0"},delay:1.5});
-    TweenMax.to('.layout .spotlight', 3,{css: {opacity:1},delay:3});
+    TweenMax.to('.layout .spotlight', 3,{css: {opacity:1},delay:3.5});
     
     var chkPop = 0;
 
