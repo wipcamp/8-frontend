@@ -24,7 +24,7 @@ html,body{
 /* Typography */
 
 h1{
-  font-size: 4.435em;
+  font-size: 3.835em;
 }
 
 p{
@@ -43,11 +43,12 @@ p{
 
 .overlay {
   visibility: hidden;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(0,0,0,0.6);
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   opacity: 0;
+  top:0;
   z-index: 100;
   transition:visibility 0s linear 1s,opacity 1s linear;
 }
@@ -118,10 +119,10 @@ p{
 }
 .star-front .star-1 {top: 8%; left: 74%; animation: star_flash 3s infinite;}
 .star-front .star-2 {top: 35%; left: 64%; animation: star_flash 5s infinite;}
-.star-front .star-3 {top: 22%; left: 29%; animation: star_flash 4s infinite;}
+.star-front .star-3 {top: 18%; left: 15%; animation: star_flash 4s infinite;}
 .star-mid .star-1 {top: 48%; left: 36%; animation: star_flash 5s infinite;}
 .star-mid .star-2 {top: 80%; left: 30%; animation: star_flash 2s infinite;}
-.star-mid .star-3 {top: 80%; left: 88%; animation: star_flash 3s infinite;}
+.star-mid .star-3 {top: 80%; left: 80%; animation: star_flash 3s infinite;}
 .star-back .star-1 {top: 68%; left: 8%; animation: star_flash 4s infinite;}
 .star-back .star-2 {top: 60%; left: 58%; animation: star_flash 2s infinite;}
 
@@ -147,7 +148,7 @@ p{
 .main-logo .main {
   height: 300px;
   transform: scale(.5);
-  animation: scale_preload 1.6s ;
+  animation: scale_preload 3s ;
   opacity: 0;
   left: -50%;
   position: relative;
@@ -162,32 +163,10 @@ p{
   position: absolute;
 }
 .map .what {
-  /*animation: logo1 .5s ;*/
-  /*animation-delay: 1s;*/
   left: 5%;
   top: 10%;
 }
 
-/*.map  .who{
-  left: 15%;
-  top: 30%;
-}
-.map .faq {
-  left: 8%;
-  top: 55%;
-}
-.map .when {
-  left: 80%;
-  top: 13%;
-}
-.map .where {
-  left: 74%;
-  top: 36%;
-}
-.map .contact {
-  left: 84%;
-  top: 60%;
-}*/
 
 .map .element {
   color: #fff;
@@ -244,66 +223,6 @@ p{
 .map .faq .lowerImage{
   padding-left: 1.875em;
 }
-/* Regis Wippo 3 */
-
-.threeImage.giroro{
-  height: 7em;
-  position: absolute;
-  top: -.05em;
-  left: 2.6875em;
-  transform: rotate(25deg);
-}
-
-#giroro{
-   transform: scale(0);
-}
-.reg:hover #giroro{
-   transform: scale(2);
-   transition: all 0.2s; 
-   transition-delay: 0.2s;
-}
-.threeImage.dororo{
-  height: 7em;
-  position: absolute;
-  top: 1.25em;
-  left: -2.6875em;
-  transform: rotate(-25deg);
-  z-index: 1;
- 
-}
-
-#dororo{
-   transform: scale(0);
-}
-.reg:hover #dororo{
-   transform: scale(2);
-   transition: all 0.2s; 
-  
-}
-.reg:hover #keroro{
-    transform: scale(2);
-   transition: 0.2s;
-   transition-delay: 0.4s;
-}
-
-.reg:hover #containerReg{
-  width: 120px;
-  transition: 0.8s;
-}
-.map .reg .description {
-  vertical-align: top;
-}
-.map .reg .description h1{
-  font-size: 4em;
-  line-height: 1em;
-  letter-spacing: .02em
-}
-.map .reg .description p{
-  font-size: 2em;
-  line-height: 1em;
-}
-
-
 /* Emblem of Section */
 
 .lowerImage{
@@ -339,7 +258,7 @@ p{
   
 }
 .section:hover .container{
-  width:120px;
+  width: 7.3em;
   transition: all 0.5s;
  }
   
@@ -363,6 +282,8 @@ p{
   z-index: 200;
 }
 
+.popup.left .triangle { position: relative;right: -100%;height: 100%;}
+
 .popup.right {
   background-color: white;
   width: 50%;
@@ -373,6 +294,10 @@ p{
   right: -100%; 
   z-index: 200;
 }
+
+.popup.right .triangle{position: relative;right: 100%;height: 100%;
+}
+
 .popup.right img{
   float: right;
 }
@@ -401,6 +326,7 @@ p{
 
 .popup.maps .content .highlight {
   font-size: 1.65em;
+  font-weight: bold;
 }
 
 .popup.left .image-wippo {
@@ -451,10 +377,12 @@ p{
 }
 
 .content .inner p {
-  font-size: 1.25em;
+  margin: 0.2em 0;
+}
+.content .inner p span{
 }
 .content .inner .highlight {
-  font-size: 1.625em;
+  font-size: 1.475em;
 }
 
 /* When */
@@ -509,26 +437,23 @@ p{
 }
 
 .pop-contact .inner .social {
-  position: absolute;
-  width: 600px;
-  right: 1.625em;
+  position: relative;
   margin-top: 1.625em;
 }
 
 .pop-contact .inner .social ul{
   list-style: none;
-  font-size: 3.43em;
-  margin: 1.625em 0;
+  font-size: 2.8em;
+  margin: 1.225em 0;
   padding: 0;
 }
 
 .pop-contact .inner .social ul li{
-  padding: 0.625em;
   display: inline-block;
   border: 0.0625em solid #000;
-  margin: 0.3125em;
-  width: 4.0625em;
-  height: 4.0625em;
+  margin: 0.0125em;
+  width: 1.5em;
+  height: 1.5em;
   text-align: center;
   background: rgba(255,255,255,.9);
   transition: transform .2s, opacity .2s;
@@ -536,7 +461,7 @@ p{
 
 
 i.fa {
-    line-height: 4.0625em;
+    padding-top: .25em;
 }
 
 .pop-contact ul:hover li {
