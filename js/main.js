@@ -82,7 +82,7 @@
       }
     });
 
-    $('.map,.triangle,.exit').click(function(){
+    $('.main-logo,.map,.overlay,.triangle,.exit').click(function(){
      if($('#popup .popup').find('.active') && chkPop == 1){
         var item = $('#popup').find('.active');
         if($(item).hasClass('left')){

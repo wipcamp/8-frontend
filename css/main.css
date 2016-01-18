@@ -271,7 +271,7 @@ p{
 .popup .content {
     position: absolute;
     padding: 1.25em;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.8);
   }
 
 .popup.left {
@@ -365,6 +365,7 @@ p{
 .content h1 {
   margin: 0 ;
   border-bottom: 3px solid #000;
+  width: 100%;
 }
 
 .content h2 {
