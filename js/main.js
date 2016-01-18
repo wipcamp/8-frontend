@@ -8,31 +8,31 @@
     TweenMax.fromTo('.map .what',.8,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "13%", top: "22%", opacity: 1}
-      ,delay:2});
+      ,delay:3});
     TweenMax.fromTo('.map .who',.5,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "7%", top: "50%", opacity: 1}
-      ,delay:2});
+      ,delay:3});
     TweenMax.fromTo('.map .when',1.2,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "13%", top: "75%", opacity: 1}
-      ,delay:2});
+      ,delay:3});
     TweenMax.fromTo('.map .faq',1,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "70%", top: "24%", opacity: 1}
-      ,delay:2});
+      ,delay:3});
     TweenMax.fromTo('.map .where',1.6,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "76%", top: "50%", opacity: 1}
-      ,delay:2});
+      ,delay:3});
     TweenMax.fromTo('.map .contact',1.8,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "69%", top: "75%", opacity: 1}
-      ,delay:2});
+      ,delay:3});
     TweenMax.fromTo('.map .description',1,
       {css: {opacity: 0, visibility: "hidden"}},
       {css:{opacity: 1, visibility: "visible"}
-      ,delay:3});
+      ,delay:4});
 
     TweenMax.to('.layout .over-earth', 2, {css: {bottom:"-18em"} ,delay:3});
     TweenMax.to('.layout .over-logo', 2, {css: {top: "0"} ,delay:3});
