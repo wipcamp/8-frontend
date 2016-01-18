@@ -64,9 +64,13 @@
           TweenMax.to($(name),1,{ left: "0%",delay: 0.2,  ease:SlowMo.easeOut});
           $(name).addClass('active');
         }
-        else{
+        else if($(name).hasClass('right')){
           // $(name).velocity({ right: "0%" }, "easeOutBounce");
           TweenMax.to($(name),1,{ right: "0%",delay: 0.2,  ease:SlowMo.easeIn});
+          $(name).addClass('active');
+        }else{
+          TweenMax.to($(name),1,{ right: "0%",delay: 0.2,  ease:SlowMo.easeIn});
+          TweenMax.to(".pop-where .image-wippo", 1,{css:{left: 0,opacity: 1}});
           $(name).addClass('active');
         }
         // $('.overlay').addClass('active');
@@ -74,6 +78,7 @@
         TweenMax.to(".map", 2, {transform:"scale(1.4)"});
 
         chkPop++;
+        
       }
     });
 
@@ -85,10 +90,14 @@
           TweenMax.to(item,1,{ left: "-100%",  ease:SlowMo.easeIn});
           item.removeClass('active');
         }
-        else
+        else if ($(item).hasClass('right'))
         {
           // item.animate({right: "-100%"},200);
           TweenMax.to(item,1,{ right: "-100%",  ease:SlowMo.easeIn});
+          item.removeClass('active');
+        }else{
+          TweenMax.to(item,1,{ right: "-100%",  ease:SlowMo.easeIn});
+          TweenMax.to(".pop-where .image-wippo", 1,{css:{left: "-200%",opacity: 0}});
           item.removeClass('active');
         }
         TweenMax.to(".overlay", 1, {className:"-=active"});
