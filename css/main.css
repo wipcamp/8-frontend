@@ -186,7 +186,10 @@ p{
 .map .element .section:hover {
   opacity: 1 !important;
 }
-
+.map .element .section:hover .description{
+  transform: scale(1.1);
+  transition: transform .4s;
+}
 
 .map .element img{
   display: inline-block;
@@ -258,7 +261,7 @@ p{
   
 }
 .section:hover .container{
-  width: 7.3em;
+  width: 8em;
   transition: all 0.5s;
  }
   
@@ -401,7 +404,7 @@ p{
 
 /* FAQ */
 
-.pop-faq .accordion {
+/*.pop-faq .accordion {
   list-style: none;
 }
 
@@ -418,6 +421,29 @@ p{
   opacity:1;
   visibility:visible;
   height:auto;
+}*/
+
+.accordion {
+  position: relative;
+  height: 2em;
+  cursor: pointer;
+  padding: 0.3em 0.3em .3em;
+  background: rgba(238, 238, 238, 0.6);
+  width: 100%;
+  font-size: 1.325em;
+  letter-spacing: .01em;
+  font-weight: bold;
+  margin-top: .4em;
+  box-sizing: border-box;
+}
+.accContent {
+  width: 100%;
+  position: relative;
+  font-size: 1.125em;
+  margin-bottom: 1em;
+  background: rgba(255,255,255,.6);
+  padding: .3em;
+  box-sizing: border-box;
 }
 
 /* Contact */

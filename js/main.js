@@ -36,14 +36,14 @@
 
     TweenMax.to('.layout .over-earth', 2, {css: {bottom:"-18em"} ,delay:3});
     TweenMax.to('.layout .over-logo', 2, {css: {top: "0"} ,delay:3});
-    TweenMax.to('.layout .spotlight', 3, {css: {opacity:1} ,delay:4.5});
+    TweenMax.to('.layout .spotlight', 4, {css: {opacity:1} ,delay:4.5});
     
     TweenMax.fromTo('.star-front', 3,{css: {opacity: 0, visibility: "hidden"}},
-      {css:{opacity: 1, visibility: "visible"},delay:4});
-    TweenMax.fromTo('.star-mid', 2,{css: {opacity: 0, visibility: "hidden"}},
       {css:{opacity: 1, visibility: "visible"},delay:5});
-    TweenMax.fromTo('.star-back', 3,{css: {opacity: 0, visibility: "hidden"}},
+    TweenMax.fromTo('.star-mid', 2,{css: {opacity: 0, visibility: "hidden"}},
       {css:{opacity: 1, visibility: "visible"},delay:6});
+    TweenMax.fromTo('.star-back', 3,{css: {opacity: 0, visibility: "hidden"}},
+      {css:{opacity: 1, visibility: "visible"},delay:7});
 
     // Section
     var chkPop = 0;
@@ -77,7 +77,7 @@
       }
     });
 
-    $('body').click(function(){
+    $('.map,.triangle,.exit').click(function(){
      if($('#popup .popup').find('.active') && chkPop == 1){
         var item = $('#popup').find('.active');
         if($(item).hasClass('left')){
@@ -98,17 +98,15 @@
     });
 
     // FAQ
-    $('.accordion li').click(function() {
-      var acc = $(this).find("span");
-      if(acc.hasClass('show')){
-        acc.removeClass('show');
-        console.log("hide");
-      }else{
-        acc.addClass('show');
-        console.log("show");
-      }
-         
+    $('.accordion').click(function () {
+        $('.accContent').slideUp('600');
+
+        if ($(this).next().is(':hidden') == true) {
+            $(this).next().slideDown('600');
+        }
     });
+    $('.accContent').hide(); // Hide Content
+    $('.accContent.first').show();
 
 
 	});
