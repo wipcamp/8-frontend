@@ -14,7 +14,7 @@
 html,body{
 	padding: 0;
 	margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-family: Thaisans_lite;
   letter-spacing: .0246783em;
   overflow: hidden;
@@ -93,7 +93,7 @@ p{
 .layout .spotlight {
   width: 282px;
   height: 42em;
-  margin: -20.0625em auto 0 auto;
+  margin: -22.0625em auto 0 auto;
   opacity: 0;
 }
 
@@ -113,8 +113,21 @@ p{
   animation: roll 50s infinite;
 }
 
+.star > img {
+  position: relative;
+}
+.star-front .star-1 {top: 8%; left: 74%; animation: star_flash 3s infinite;}
+.star-front .star-2 {top: 35%; left: 64%; animation: star_flash 5s infinite;}
+.star-front .star-3 {top: 22%; left: 29%; animation: star_flash 4s infinite;}
+.star-mid .star-1 {top: 48%; left: 36%; animation: star_flash 5s infinite;}
+.star-mid .star-2 {top: 80%; left: 30%; animation: star_flash 2s infinite;}
+.star-mid .star-3 {top: 80%; left: 88%; animation: star_flash 3s infinite;}
+.star-back .star-1 {top: 68%; left: 8%; animation: star_flash 4s infinite;}
+.star-back .star-2 {top: 60%; left: 58%; animation: star_flash 2s infinite;}
+
+.layer { height: 100%;width: 100%}
 /* Map */
-#map {
+.map {
   background-color: #0c141e;
   position: fixed; 
   top: 0; 
@@ -134,7 +147,7 @@ p{
 .main-logo .main {
   height: 300px;
   transform: scale(.5);
-  animation: scale 1.2s ;
+  animation: scale_preload 1.6s ;
   opacity: 0;
   left: -50%;
   position: relative;
@@ -143,93 +156,92 @@ p{
   border-radius: 50%;
 }
 
-#map .reg{
+.map .reg{
   top: 40%;
   left: 40%;
   position: absolute;
 }
-#map .what {
+.map .what {
   /*animation: logo1 .5s ;*/
   /*animation-delay: 1s;*/
   left: 5%;
   top: 10%;
 }
 
-/*#map  .who{
+/*.map  .who{
   left: 15%;
   top: 30%;
 }
-#map .faq {
+.map .faq {
   left: 8%;
   top: 55%;
 }
-#map .when {
+.map .when {
   left: 80%;
   top: 13%;
 }
-#map .where {
+.map .where {
   left: 74%;
   top: 36%;
 }
-#map .contact {
+.map .contact {
   left: 84%;
   top: 60%;
 }*/
 
-#map .element {
+.map .element {
   color: #fff;
 }
 
-#map .element:hover .section{
+.map .element:hover .section{
   opacity: .6 !important;
 }
 
-#map .element .section {
+.map .element .section {
   position: absolute;
   cursor: pointer;
   opacity: 0;
   transition: opacity .6s;
-  transform: scale(1.2);
 }
 
-#map .element .section:hover {
+.map .element .section:hover {
   opacity: 1 !important;
 }
 
 
-#map .element img{
+.map .element img{
   display: inline-block;
   height: 7em;
 }
-#map .element .description{
+.map .element .description{
   display: inline-block;  
   vertical-align: top;
   padding-top: .8em;
   opacity: 0;
   visibility: hidden;
 }
-#map .element .description h1{
+.map .element .description h1{
   font-size: 2.6em;
   margin: 0;
   text-shadow: 0px 0px 15px rgba(255,255,255,0.7);
 }
-#map .element .description p {
+.map .element .description p {
   margin: 0;
   line-height: .6em;
 }
 
 /* Register */
 
-#map .reg .container{
+.map .reg .container{
   height: 7em;
   width: 7em;
 }
 
-#map .reg .upperImage{
+.map .reg .upperImage{
   height: 7em;
 }
 
-#map .faq .lowerImage{
+.map .faq .lowerImage{
   padding-left: 1.875em;
 }
 /* Regis Wippo 3 */
@@ -278,15 +290,15 @@ p{
   width: 120px;
   transition: 0.8s;
 }
-#map .reg .description {
+.map .reg .description {
   vertical-align: top;
 }
-#map .reg .description h1{
+.map .reg .description h1{
   font-size: 4em;
   line-height: 1em;
   letter-spacing: .02em
 }
-#map .reg .description p{
+.map .reg .description p{
   font-size: 2em;
   line-height: 1em;
 }
@@ -384,7 +396,7 @@ p{
 
 .popup.maps .content h2 {
   font-size: 3.75em;
-  margin: 1.875em 0 0.625em;
+  margin: 0.275em 0 0.225em;
 }
 
 .popup.maps .content .highlight {
@@ -539,11 +551,11 @@ i.fa {
 
 .exit {
   position: absolute;
-  left: -5em;
-  top: 0.3125em;
+  right: 1em;
+  top: 1em;
   z-index: 10;
-  width: -5em;
-  height: -5em;
+  width: 5em;
+  height: 5em;
   transition: transform .4s;
   cursor: pointer;
 }
@@ -589,13 +601,19 @@ i.fa {
   }
 }
 
-@keyframes scale {
-  0% , 60% {transform: scale(1); opacity: 1;}
-  80% {transform: scale(1.5); opacity: 1;}
+@keyframes scale_preload {
+  0% , 40% {transform: scale(1); opacity: 1;}
+  60% {transform: scale(1.5); opacity: 1;}
   100% {transform: scale(.5); opacity: 0;}
 }
 
 @keyframes roll {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes star_flash {
+  0% { opacity: 1; }
+  50% { opacity: .5; }
+  100% { opacity: 1; }
 }

@@ -14,8 +14,8 @@
   </div>
   <div id="main">
     <!-- Map Section -->
-    <div id="map">
-      <div class="layout">
+    <div id="scene" class="map">
+      <div class="layer layout" data-depth="0.1">
         <div class="over-logo">
           <div class="logo camp_name"></div>
           <div class="logo camp_way"></div> 
@@ -26,17 +26,22 @@
           <div class="earth"></div>
         </div>
       </div>
-      <div class="star-front">
-        <img src="" alt="" class="star-1">
+      <div class="layer star star-front" data-depth="0.20">
+        <img class="star-1" src="images/layout/s1.png" alt="">
+        <img class="star-2" src="images/layout/s2.png" alt="">
+        <img class="star-3" src="images/layout/s3.png" alt="">
       </div>  
-      <div class="star-mid">
-        
+      <div class="layer star star-mid" data-depth="0.30">
+        <img class="star-1" src="images/layout/s4.png" alt="">
+        <img class="star-2" src="images/layout/s5.png" alt="">
+        <img class="star-3" src="images/layout/s6.png" alt="">
       </div> 
-      <div class="star-back">
-        
+      <div class="layer star star-back" data-depth="0.40">
+        <img class="star-1" src="images/layout/s7.png" alt="">
+        <img class="star-2" src="images/layout/s8.png" alt="">
       </div> 
       <div class="overlay"></div>
-      <div class="element">
+      <div class="layer element"data-depth="0.1">
         <!-- What Section -->
         <div class="what section" data-sec="what">
           <div class="container">
@@ -291,32 +296,43 @@
 
  	<script src="js/jquery.min.js"></script>
   <script src="js/tweenmax.js"></script>
+  <script src="js/jquery.parallax.min.js"></script>
 	<script> 
 	$(document).ready(function(){
     // console.log("window height : "+$( window ).height());
     console.log("%cตัวเอง.. ไม่เสือกดิ่","color:#f00;font-size:40px;font-weight:bold;font-family:\"Thaisans_lite\";");
 
-    TweenMax.fromTo('#map .what',.8,
+    $('.map').parallax();
+
+    TweenMax.fromTo('.map .what',.8,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "13%", top: "22%", opacity: 1},delay:1});
-    TweenMax.fromTo('#map .who',.5,{css: {left: "44%", top: "39%", opacity: 0}},
+    TweenMax.fromTo('.map .who',.5,{css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "7%", top: "50%", opacity: 1},delay:1});
-    TweenMax.fromTo('#map .when',1.2,{css: {left: "44%", top: "39%", opacity: 0}},
+    TweenMax.fromTo('.map .when',1.2,{css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "13%", top: "75%", opacity: 1},delay:1});
-    TweenMax.fromTo('#map .faq',1,{css: {left: "44%", top: "39%", opacity: 0}},
+    TweenMax.fromTo('.map .faq',1,{css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "70%", top: "24%", opacity: 1},delay:1});
-    TweenMax.fromTo('#map .where',1.6,{css: {left: "44%", top: "39%", opacity: 0}},
+    TweenMax.fromTo('.map .where',1.6,{css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "76%", top: "50%", opacity: 1},delay:1});
-    TweenMax.fromTo('#map .contact',1.8,{css: {left: "44%", top: "39%", opacity: 0}},
+    TweenMax.fromTo('.map .contact',1.8,{css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "69%", top: "75%", opacity: 1},delay:1});
 
-    TweenMax.fromTo('#map .description',1,{css: {opacity: 0, visibility: "hidden"}},
+    TweenMax.fromTo('.map .description',1,{css: {opacity: 0, visibility: "hidden"}},
       {css:{opacity: 1, visibility: "visible"},delay:2.5});
 
-    TweenMax.to('.layout .over-earth', 2,{css: {bottom:"-40%"},delay:1.5});
+    TweenMax.to('.layout .over-earth', 2,{css: {bottom:"-18em"},delay:1.5});
     TweenMax.to('.layout .over-logo', 2,{css: {top: "0"},delay:1.5});
     TweenMax.to('.layout .spotlight', 3,{css: {opacity:1},delay:3.5});
     
+      
+    TweenMax.fromTo('.star-front', 3,{css: {opacity: 0, visibility: "hidden"}},
+      {css:{opacity: 1, visibility: "visible"},delay:3});
+    TweenMax.fromTo('.star-mid', 2,{css: {opacity: 0, visibility: "hidden"}},
+      {css:{opacity: 1, visibility: "visible"},delay:4});
+    TweenMax.fromTo('.star-back', 3,{css: {opacity: 0, visibility: "hidden"}},
+      {css:{opacity: 1, visibility: "visible"},delay:5});
+
     var chkPop = 0;
 
     $('.section').click(function(e){
@@ -342,7 +358,7 @@
         }
         // $('.overlay').addClass('active');
         TweenMax.to(".overlay", 1, {className:"+=active"});
-        TweenMax.to("#map", 2, {transform:"scale(1.4)"});
+        TweenMax.to(".map", 2, {transform:"scale(1.4)"});
 
         chkPop++;
       }
@@ -363,7 +379,7 @@
           item.removeClass('active');
         }
         TweenMax.to(".overlay", 1, {className:"-=active"});
-        TweenMax.to("#map", 1, {transform:"scale(1)"})
+        TweenMax.to(".map", 1, {transform:"scale(1)"})
         chkPop--;
      }
     });
