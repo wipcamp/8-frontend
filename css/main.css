@@ -121,10 +121,14 @@ p{
 .star-front .star-2 {top: 35%; left: 64%; animation: star_flash 5s infinite;}
 .star-front .star-3 {top: 18%; left: 15%; animation: star_flash 4s infinite;}
 .star-mid .star-1 {top: 48%; left: 36%; animation: star_flash 5s infinite;}
-.star-mid .star-2 {top: 80%; left: 30%; animation: star_flash 2s infinite;}
-.star-mid .star-3 {top: 80%; left: 80%; animation: star_flash 3s infinite;}
+.star-mid .star-2 {top: 80%; left: 25%; animation: star_flash 2s infinite;}
+.star-mid .star-3 {top: 80%; left: 70%; transform: rotate(20deg); animation: star_flash 3s infinite;}
 .star-back .star-1 {top: 68%; left: 8%; animation: star_flash 4s infinite;}
 .star-back .star-2 {top: 60%; left: 58%; animation: star_flash 2s infinite;}
+.star-end .star-1 {top: 10%; left: 7%; animation: star_flash 4s infinite;}
+.star-end .star-2 {top: 50%; left: 45%; transform: rotate(30deg); animation: star_flash 2s infinite;}
+.star-end .star-3 {top: 40%; left: 12%; animation: star_flash 4s infinite;}
+
 
 .layer { height: 100%;width: 100%}
 /* Map */
@@ -262,7 +266,7 @@ p{
 }
 .section:hover .container{
   width: 8em;
-  transition: all 0.5s;
+  transition: all 0.4s;
  }
   
 
@@ -314,6 +318,16 @@ p{
   right: -100%; 
   z-index: 200;
 }
+
+.pop-what .content .inner{
+  margin-top : 0;
+}
+.pop-what .content h2{
+  font-size: 2.2em;
+  font-weight: bold;
+  margin: 0 auto .2em;
+}
+
 
 .popup.maps .content {
   right: 0;
@@ -420,7 +434,41 @@ p{
   margin: 0;
 }
 
-/* FAQ */
+/* Who */
+
+.pop-who h2 {
+  font-size: 1.525em;
+  display: inline-block;
+  margin: 0;
+}
+.pop-who .des {
+  margin-top: 2.5em;
+}
+.pop-who .des .item {
+  display: inline-block;
+}
+.pop-who .des .icon {
+  display: inline-block;
+  margin: 0 .325em;
+  font-size: 1em;
+  vertical-align: top;
+  margin-top: .3em;
+}
+
+.pop-who.active .sec1 {
+ animation: who_des_action 1.5s;
+}
+.pop-who.active .sec2 {
+ animation: who_des_action 2s;
+}
+.pop-who.active .sec3 {
+ animation: who_des_action 2.5s;
+}
+.pop-who.active .sec4 {
+ animation: who_des_action 3s;
+}
+
+/* FAQs */
 
 .accordion {
   position: relative;
@@ -567,4 +615,9 @@ i.fa {
   0% { opacity: 1; }
   50% { opacity: .5; }
   100% { opacity: 1; }
+}
+
+@keyframes who_des_action {
+  0%, 50% {opacity: 0;}
+  100% {opacity: 1;}
 }

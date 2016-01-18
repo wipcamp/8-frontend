@@ -36,7 +36,7 @@
 
     TweenMax.to('.layout .over-earth', 2, {css: {bottom:"-18em"} ,delay:3});
     TweenMax.to('.layout .over-logo', 2, {css: {top: "0"} ,delay:3});
-    TweenMax.to('.layout .spotlight', 4, {css: {opacity:1} ,delay:4.5});
+    // TweenMax.to('.layout .spotlight', 4, {css: {opacity:1} ,delay:4.5});
     
     TweenMax.fromTo('.star-front', 3,{css: {opacity: 0, visibility: "hidden"}},
       {css:{opacity: 1, visibility: "visible"},delay:5});
@@ -44,6 +44,8 @@
       {css:{opacity: 1, visibility: "visible"},delay:6});
     TweenMax.fromTo('.star-back', 3,{css: {opacity: 0, visibility: "hidden"}},
       {css:{opacity: 1, visibility: "visible"},delay:7});
+    TweenMax.fromTo('.star-end', 3,{css: {opacity: 0, visibility: "hidden"}},
+      {css:{opacity: 1, visibility: "visible"},delay:8});
 
     // Section
     var chkPop = 0;
@@ -108,7 +110,11 @@
 
     // FAQ
     $('.accordion').click(function () {
-        $('.accContent').slideUp('600');
+        if (!($(this).next().is(':visible'))) {
+          $('.accContent').slideUp('600');
+        }else{
+          $('.accContent').not($(this).next()).slideUp('600');
+        }
 
         if ($(this).next().is(':hidden') == true) {
             $(this).next().slideDown('600');
