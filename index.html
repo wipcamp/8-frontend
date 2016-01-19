@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   <div class="main-logo"> 
     <img src="images/emblem/wippo.png" class="main"> 
   </div>
@@ -16,6 +17,7 @@
     <!-- Map Section -->
     <div id="scene" class="map">
       <div class="layer layout" data-depth="0.1">
+        <canvas id="spotlight"></canvas>
         <div class="over-logo">
           <div class="logo camp_name"></div>
           <div class="logo camp_way"></div> 
@@ -316,7 +318,8 @@
 
   </div>
 
- 	<script src="js/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+ 	<script src="js/spotlight.js"></script>
   <script src="js/tweenmax.js"></script>
   <script src="js/jquery.parallax.min.js"></script>
 	<script src="js/main.js"></script>
