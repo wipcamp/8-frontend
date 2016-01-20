@@ -1,14 +1,17 @@
 	$(document).ready(function(){
+
+    $(window).on("resize",function(e){
+      if($(window).width()<=500){
+        alert("ย่อหาพ่อหรอ");
+      }
+    });
     // console.log("window height : "+$( window ).height());
     console.log("%cตัวเอง.. ไม่เสือกดิ่","color:#f00;font-size:60px;font-weight:bold;font-family:\"Thaisans_lite\";");
     // Config
     $('.map').parallax();
 
     // Startup  
-    TweenMax.fromTo('.map .what',.8,
-      {css: {left: "44%", top: "39%", opacity: 0}},
-      {css:{left: "13%", top: "22%", opacity: 1}
-      ,delay:3});
+    TweenMax.from('.map .what',.8,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
     TweenMax.fromTo('.map .who',.5,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "7%", top: "50%", opacity: 1}

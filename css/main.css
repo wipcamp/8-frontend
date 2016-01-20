@@ -179,10 +179,10 @@ p{
   position: absolute;
 }
 .map .what {
-  left: 5%;
-  top: 10%;
+  left: 13%;
+  top: 22%;
+  opacity: 1;
 }
-
 
 .map .element {
   color: #fff;
@@ -195,7 +195,7 @@ p{
 .map .element .section {
   position: absolute;
   cursor: pointer;
-  opacity: 0;
+  opacity: 1;
   transition: opacity .6s;
 }
 
@@ -573,7 +573,21 @@ i.fa {
   transform: rotate(180deg);
 }
 
+@media only screen  and (min-width : 768px) {
 
+}
+
+@media screen and (min-width: 1078px) {
+
+}
+
+@media only screen  and (min-width : 1224px) {
+
+}
+
+@media only screen  and (min-width : 1824px) {
+
+}
 
 /* Key Frame Section */
 
@@ -623,9 +637,9 @@ i.fa {
 }
 
 @keyframes star_flash {
-  0% { opacity: 1; }
-  50% { opacity: .5; }
-  100% { opacity: 1; }
+  0% { opacity: .7; }
+  50% { opacity: .3; }
+  100% { opacity: .7; }
 }
 
 @keyframes who_des_action {
