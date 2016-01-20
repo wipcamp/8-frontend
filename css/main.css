@@ -141,8 +141,9 @@ p{
 .layer { height: 100%;width: 100%}
 /* Map */
 .map {
-  background-color: #0c141e;
-  position: fixed; 
+  /*background-color: #0c141e;*/
+  background-image: url("../images/bg2.jpg");
+  psition: fixed; 
   top: 0; 
   left: 0;
   width: 100%;
@@ -151,6 +152,15 @@ p{
 }
 
 /* Starter */
+.pre-load{
+  background-color: #0c141e;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -200;
+  opacity: 0;
+  animation: preload 4s;
+}
 .main-logo {
   position: absolute;
   left: 50%;
@@ -169,16 +179,18 @@ p{
   border-radius: 50%;
 }
 
+/* Map */
+
 .map .reg{
   top: 40%;
   left: 40%;
   position: absolute;
 }
 .map .what {
-  left: 5%;
-  top: 10%;
+  left: 13%;
+  top: 22%;
+  opacity: 1;
 }
-
 
 .map .element {
   color: #fff;
@@ -191,7 +203,7 @@ p{
 .map .element .section {
   position: absolute;
   cursor: pointer;
-  opacity: 0;
+  opacity: 1;
   transition: opacity .6s;
 }
 
@@ -383,7 +395,6 @@ p{
   right: -50%;
 }
 
-
 .content h1 {
   margin: 0 ;
   border-bottom: 3px solid #000;
@@ -570,7 +581,21 @@ i.fa {
   transform: rotate(180deg);
 }
 
+@media only screen  and (min-width : 768px) {
 
+}
+
+@media screen and (min-width: 1078px) {
+
+}
+
+@media only screen  and (min-width : 1224px) {
+
+}
+
+@media only screen  and (min-width : 1824px) {
+
+}
 
 /* Key Frame Section */
 
@@ -620,12 +645,17 @@ i.fa {
 }
 
 @keyframes star_flash {
-  0% { opacity: 1; }
-  50% { opacity: .5; }
-  100% { opacity: 1; }
+  0% { opacity: .7; }
+  50% { opacity: .3; }
+  100% { opacity: .7; }
 }
 
 @keyframes who_des_action {
   0%, 50% {opacity: 0;}
   100% {opacity: 1;}
+}
+
+@keyframes preload {
+  0% , 60%{ opacity: 1; z-index: 200;}
+  100% { opacity: 0 ; z-index: 200; display: none;}
 }
