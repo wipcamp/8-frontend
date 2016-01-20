@@ -1,6 +1,6 @@
 	$(document).ready(function(){
     // console.log("window height : "+$( window ).height());
-    console.log("%cตัวเอง.. ไม่เสือกดิ่","color:#f00;font-size:40px;font-weight:bold;font-family:\"Thaisans_lite\";");
+    console.log("%cตัวเอง.. ไม่เสือกดิ่","color:#f00;font-size:60px;font-weight:bold;font-family:\"Thaisans_lite\";");
     // Config
     $('.map').parallax();
 
