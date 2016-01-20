@@ -135,7 +135,7 @@ p{
 .map {
   /*background-color: #0c141e;*/
   background-image: url("../images/bg2.jpg");
-  position: fixed; 
+  psition: fixed; 
   top: 0; 
   left: 0;
   width: 100%;
@@ -144,6 +144,15 @@ p{
 }
 
 /* Starter */
+.pre-load{
+  background-color: #0c141e;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -200;
+  opacity: 0;
+  animation: preload 4s;
+}
 .main-logo {
   position: absolute;
   left: 50%;
@@ -622,4 +631,9 @@ i.fa {
 @keyframes who_des_action {
   0%, 50% {opacity: 0;}
   100% {opacity: 1;}
+}
+
+@keyframes preload {
+  0% , 60%{ opacity: 1; z-index: 200;}
+  100% { opacity: 0 ; z-index: 200; display: none;}
 }
