@@ -2,7 +2,7 @@
 
     $(window).on("resize",function(e){
       if($(window).width()<=500){
-        alert("ย่อหาพ่อหรอ");
+        alert("ย่อหาพ่อหรอมึงหรอครับ !");
       }
     });
     // console.log("window height : "+$( window ).height());
@@ -12,26 +12,32 @@
 
     // Startup  
     TweenMax.from('.map .what',.8,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
+
     TweenMax.fromTo('.map .who',.5,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "7%", top: "50%", opacity: 1}
       ,delay:3});
+
     TweenMax.fromTo('.map .when',1.2,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "13%", top: "75%", opacity: 1}
       ,delay:3});
+
     TweenMax.fromTo('.map .faq',1,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "70%", top: "24%", opacity: 1}
       ,delay:3});
+
     TweenMax.fromTo('.map .where',1.6,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "76%", top: "50%", opacity: 1}
       ,delay:3});
+
     TweenMax.fromTo('.map .contact',1.8,
       {css: {left: "44%", top: "39%", opacity: 0}},
       {css:{left: "69%", top: "75%", opacity: 1}
       ,delay:3});
+
     TweenMax.fromTo('.map .description',1,
       {css: {opacity: 0, visibility: "hidden"}},
       {css:{opacity: 1, visibility: "visible"}
@@ -49,6 +55,8 @@
       {css:{opacity: 1, visibility: "visible"},delay:7});
     TweenMax.fromTo('.star-end', 3,{css: {opacity: 0, visibility: "hidden"}},
       {css:{opacity: 1, visibility: "visible"},delay:8});
+    TweenMax.fromTo('.reg', 3,{css: {opacity: 0, visibility: "hidden"}},
+      {css:{opacity: 1, visibility: "visible"},delay:9});
 
     // Section
     var chkPop = 0;
@@ -82,6 +90,11 @@
         TweenMax.to(".overlay", 1, {className:"+=active"});
         TweenMax.to(".map", 2, {transform:"scale(1.4)"});
 
+        $('.loy-outer').removeClass('loyBig');
+        $('.loy-outer').removeClass('delay');
+        $('.inner-descript').removeClass('upText');
+        $('#line').removeClass('when'); 
+        
         chkPop++;
         
       }
@@ -126,5 +139,15 @@
     $('.accContent').hide(); // Hide Content
     $('.accContent.first').show();
 
+
+    // When
+
+      $('.when').click(function(){
+        // Chang Big circle //
+        $('.loy-outer.loy2').addClass('loyBig');
+        $('.loy-outer').addClass('delay');
+        $('#line').addClass('when');
+        $('.inner-descript').addClass('upText');
+      });
 
 	});

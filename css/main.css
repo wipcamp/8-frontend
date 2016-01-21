@@ -102,16 +102,15 @@ p{
   position: absolute;
   left: 50%;
   bottom: -100%;
-  z-index: -100;
+  z-index: 200;
 }
 .layout .earth {
-  background-image: url(../images/layout/earth.png);
   width: 500px;
   height: 500px;
   display: block;
   position: relative;
   left: -50%;
-  animation: roll 50s infinite;
+  animation: roll 80s infinite linear;
 }
 
 .star > img {
@@ -162,22 +161,35 @@ p{
 .main-logo .main {
   height: 300px;
   transform: scale(1);
-  animation: scale_preload 3s ;
+  animation: scale_preload 4s ;
   opacity: 0;
   left: -50%;
   position: relative;
   z-index: 200;
-  box-shadow: inset 0 0 .5em 5.1px #fcfcfc, 0 -1px 2em 0.8em #fff;
   border-radius: 50%;
+}
+
+.reg {
+  top: 70% !important;
+  left: 50% !important;
+  width: 250px;
+  margin: 0 auto;
+  
+}
+
+.reg img{
+  margin-left: -50%;
+  width: 250px;
+  transition: opacity .4s;
+  animation: reg_ani 2s infinite linear;
+}
+
+.reg img:hover {
+  opacity: 0.5;
 }
 
 /* Map */
 
-.map .reg{
-  top: 40%;
-  left: 40%;
-  position: absolute;
-}
 .map .what {
   left: 13%;
   top: 22%;
@@ -230,7 +242,7 @@ p{
 
 /* Register */
 
-.map .reg .container{
+/*.map .reg .container{
   height: 7em;
   width: 7em;
 }
@@ -238,7 +250,7 @@ p{
 .map .reg .upperImage{
   height: 7em;
 }
-
+*/
 .map .faq .lowerImage{
   padding-left: 1.875em;
 }
@@ -433,16 +445,141 @@ p{
 
 /* When */
 
+
+
 .pop-when ul{
   list-style: none;
   padding: 0;
 }
 .pop-when h2 {
   margin: 0;
+  
 }
 
+.pop-when ul li{
+  margin-top: 2.5em;
+}
 .pop-when p {
   margin: 0;
+  
+}
+
+.inner-topic{
+  height: 10%;
+  width: 15%;
+  margin-top: 2em;
+  
+}
+.loy-outer{
+  width: 3em;
+  height: 3em;
+  border-radius: 100%;
+  background-color: white; 
+  position: absolute;
+  border: 0.25em solid rgb(255,0,57);
+  transform: scale(0);
+  margin-top: 0.25em;
+
+}
+.loy-outer.loy1.delay{
+  transform: scale(1);
+  transition:  1s;
+  transition-delay: 0.5s;
+}
+.loy-outer.loy2.delay{
+  transform: scale(1);
+  transition:  1s;
+  transition-delay: 1s;
+}
+.loy-outer.loy3.delay{
+  transform: scale(1);
+  transition:  1s;
+  transition-delay: 2s;
+}
+.loy-outer.loy4.delay{
+  transform: scale(1);
+  transition:  1s;
+  transition-delay: 3s;
+}
+
+
+.inner-btn{
+  margin-top: 2em;
+  position: relative;
+  border-radius: 100%; 
+  display: inline;
+}
+
+   
+
+
+
+#line{
+  margin-left: 1.6em; 
+  margin-top: 1.5em; 
+  height: 0em;
+  width: 0.25em;
+  position: absolute;
+  background-color: red;
+  opacity: 0.7; 
+
+
+}
+#line.when{
+  transition-timing-function: linear;
+  transition-duration: 3.7s;
+  transition-delay: 0.25s;
+  height: 19em;
+}
+.inner-descript{
+  text-align: left;
+  
+  position: relative;
+  margin-left: 5em;
+  margin-top: -1em;
+  transform: scale(0); 
+}
+.inner-descript.loy1.upText{
+  transition-delay: 0.5s;
+  transform: scale(1);
+  transition-duration: 1s;
+}
+
+.inner-descript.loy2.upText{
+  transition-delay: 1s;
+  transition-duration: 1s;
+  transform: scale(1);
+  
+}
+.inner-descript.loy3.upText{
+  transition-delay: 2s;
+  transform: scale(1);
+  transition-duration: 1s;
+
+}
+.inner-descript.loy4.upText{
+  transition-delay: 3s;
+  transform: scale(1);
+  transition-duration: 1s;
+}
+
+.loy-outer.loyBig{
+  height: 4em;
+  width: 4em;
+  border: 0.25em solid rgb(255,0,57);
+  margin-left: -0.5em;
+
+}
+
+.pop-when .content .inner-descript h2{
+  font-size: 1.675em;
+  height: auto;
+}
+.pop-when .content .inner-descript p{
+  margin-left: 0.5em;
+  font-size: 1.5em;
+  height: auto;
+  position: relative;
 }
 
 /* Who */
@@ -573,19 +710,36 @@ i.fa {
   transform: rotate(180deg);
 }
 
-@media only screen  and (min-width : 768px) {
-
+@media screen and (max-width: 1078px) {
+  html,body{
+    font-size: 14.3px;
+   
+  }
+  .pop-where .image-wippo { 
+    height: 360px; 
+  }
+  .pop-where .content{
+    width: 29em;
+  }
+  .star-front .star-3{
+    visibility: hidden;
+  }
+  .star-mid .star-2{
+    visibility: hidden;
+  }
 }
 
-@media screen and (min-width: 1078px) {
 
+@media only screen  and (max-width : 1224px) {
+  html,body{
+    font-size: 14.6px;
+  }
 }
 
-@media only screen  and (min-width : 1224px) {
+@media only screen  and (max-width : 1366px) {
 
 }
-
-@media only screen  and (min-width : 1824px) {
+@media only screen  and (max-width : 1824px) {
 
 }
 
@@ -633,7 +787,8 @@ i.fa {
 
 @keyframes roll {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  50% { transform: rotate(359deg); }
+  0% { transform: rotate(0deg); }
 }
 
 @keyframes star_flash {
@@ -650,4 +805,10 @@ i.fa {
 @keyframes preload {
   0% , 60%{ opacity: 1; z-index: 200;}
   100% { opacity: 0 ; z-index: 200; display: none;}
+}
+
+@keyframes reg_ani {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
