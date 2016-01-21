@@ -31,7 +31,15 @@ p{
   font-size: 1.25em;
 }
 
+/*spotlight*/
+
+#spotlight{
+  position: absolute;
+  z-index: 1;
+  opacity: 0.2;
+}
  /* 1 # Main Section */
+}
 
 #main {
 	position: relative;
