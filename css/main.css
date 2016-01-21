@@ -182,7 +182,7 @@ p{
   left: 50% !important;
   width: 250px;
   margin: 0 auto;
-  
+  opacity: 0;
 }
 
 .reg img{
