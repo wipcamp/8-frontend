@@ -2,7 +2,9 @@
 
 $(document).ready(function(e){
   
-  // $('#scene').parallax();
+  $('#scene').parallax({
+    limitY: 1,
+  });
 
   // StartUP Preload
 
@@ -14,8 +16,8 @@ $(document).ready(function(e){
   TweenMax.from('.section .contact', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3});
   TweenMax.from('.section .description', 1,{css: {opacity: 0}, delay:4.5});
 
-  TweenMax.from('.layout .town-front', 1.5,{css: {bottom: "-100%"}, delay:4});
-  TweenMax.from('.layout .town-back', 1.5,{css: {bottom: "-100%"}, delay:4.2});
+  TweenMax.from('.layout .town-front', 1,{css: {bottom: "-100%"}, delay:3.5, ease: Back.easeOut.config(.5)});
+  TweenMax.from('.layout .town-back', 1,{css: {bottom: "-100%"}, delay:3.8, ease: Back.easeOut.config(.5)});
 
 
   // Section
