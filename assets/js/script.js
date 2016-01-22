@@ -4,13 +4,23 @@ $(document).ready(function(e){
   
   // $('#scene').parallax();
 
+  // StartUP Preload
+
+  TweenMax.from('.section .what', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
+  TweenMax.from('.section .who', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
+  TweenMax.from('.section .where', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
+  TweenMax.from('.section .when', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
+  TweenMax.from('.section .faqs', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
+  TweenMax.from('.section .contact', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
+  TweenMax.from('.section .description', 1,{css: {opacity: 0}, delay:4.5});
+
   // Section
     var chkPop = 0;
 
     $('.sec').click(function(e){
       e.stopPropagation();
       var section = $(this).data('sec');
-      console.log(section);
+      // console.log(section);
 
       var name = ".pop-"+section;
 
@@ -31,11 +41,6 @@ $(document).ready(function(e){
         TweenMax.to(".overlay", 1, {className:"+=active"});
         TweenMax.to("#scene", 2, {transform:"scale(1.4)"});
 
-        $('.loy-outer').removeClass('loyBig');
-        $('.loy-outer').removeClass('delay');
-        $('.inner-descript').removeClass('upText');
-        $('#line').removeClass('when'); 
-        
         chkPop++;
         
       }
@@ -60,6 +65,12 @@ $(document).ready(function(e){
         TweenMax.to(".overlay", 1, {className:"-=active"});
         TweenMax.to("#scene", 1, {transform:"scale(1)"})
         chkPop--;
+
+        $('.loy-outer').removeClass('loyBig');
+        $('.loy-outer').removeClass('delay');
+        $('.inner-descript').removeClass('upText');
+        $('#line').removeClass('when'); 
+        
      }
     });
 
@@ -82,7 +93,7 @@ $(document).ready(function(e){
     // When
     $('.when').click(function(){
       // Chang Big circle //
-      $('.loy-outer.loy2').addClass('loyBig');
+      $('.loy1').find(".loy-outer,.inner-descript").addClass('loyBig');
       $('.loy-outer').addClass('delay');
       $('#line').addClass('when');
       $('.inner-descript').addClass('upText');

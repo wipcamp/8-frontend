@@ -34,6 +34,7 @@ html,body{
   font-family: Thaisans_lite;
   letter-spacing: .0291341em;
   overflow: hidden;
+  transition: font-size .2s;
 }
 
 h1{
@@ -53,21 +54,45 @@ p{
 		II. Layout
 /----------------/
 */
+/* ! Starter */
 
+#preload {
+  background-color: #0c141e;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  z-index: -8;
+  animation: preload 4s;
+}
+.pre-logo {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  z-index:200;
+}
+.pre-logo .img-logo {
+  height: 300px;
+  transform: scale(1);
+  animation: scale_preload 4s ;
+  opacity: 0;
+  margin-left: -50%;
+  position: relative;
+  z-index: 200;
+  border-radius: 50%;
+}
+
+/* ! Main Site */
 
 #scene {
-	/*background-image: url("../img/bg2.jpg");*/
+	background-image: url("../img/bg5.jpg");
+  background-position: 100% 100%;
+  background-size: 100% 100%;
 	position: relative;
 	height: 100%;
 	width: 100%; 
   min-height: 580px;
   min-width: 980px;
-}
-
-#scene .layout .town img{
-	position: absolute;
-	bottom: 0;
-	width: 100%
 }
 
 .overlay {
@@ -87,6 +112,51 @@ p{
   transition-delay:0s;
 }
 
+#scene .layout .header {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+}
+#scene .layout .header .logo {
+  display: block;
+  position: relative;
+  left: -50%;
+}
+
+#scene .layout .header .camp_name {
+  background-image: url(../img/layout/camp_name.png);
+  width: 539px;
+  height: 214px;
+}
+#scene .layout .header .camp_way {
+  background-image: url(../img/layout/camp_way.png);  
+  width: 500px;
+  height: 138px;
+  margin: -4.0625em auto 0 auto;
+}
+
+#scene .layout .town > div{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-size: contain;
+  background-size: 100%;
+
+}
+
+#scene .layout .town .town-front{
+  background-image: url("../img/layout/townintown2-1.png");
+  background-position: bottom;
+  bottom: -15px;
+  z-index: 2;
+  height: 600px;
+}
+#scene .layout .town .town-back{
+  background-image: url("../img/layout/townintown2-2.png");
+  z-index: 1;
+  height: 800px;
+}
+
 /* 
 /---------------------/
 			III. Section
@@ -94,7 +164,8 @@ p{
 */
 
 .section {
-	color: #000;
+	color: #fff;
+  z-index: 8;
 }
 .section:hover .sec{
   opacity: .6 !important;
@@ -106,6 +177,7 @@ p{
   position: absolute;
   cursor: pointer;
   opacity: 1;
+  z-index: 8;
   transition: opacity .6s;
 }
 
@@ -117,14 +189,16 @@ p{
 	top: 30%;
 	left: 4%;
 }
-.sec.where {
-	top: 50%;
-	left: 8%;
-}
 .sec.when {
-	top: 10%;
-	right: 8%;
+  top: 50%;
+  left: 8%;
 }
+
+.sec.where {
+	top: 10%;
+  right: 8%;
+}
+
 .sec.faqs {
 	top: 30%;
 	right: 4%;
@@ -209,7 +283,7 @@ p{
   transition: all 0.4s;
  }
 
-.section .sec:hover .description{
+.sec:hover .description{
   transform: scale(1.1);
   transition: transform .4s;
 }
@@ -244,13 +318,14 @@ p{
 .triangle {
 	position: relative;
 	right: 100%;
+  min-height: 900px;
 	height: 100%;
 }
 .popup.left .triangle {
-	right: -100%;
+	right: -99.8%;
 }
 .popup.right .triangle{
-	right: 100%;
+	right: 99.8%;
 }
 .popup.right img{
   float: right;
@@ -285,7 +360,7 @@ p{
 }
 
 /* # fix superman wippo */
-.popup.pop-faq .image-wippo {
+.popup.pop-faqs .image-wippo {
 	right: -50%;
 }
 
@@ -344,7 +419,7 @@ p{
   border-radius: 100%;
   background-color: white; 
   position: absolute;
-  border: 0.25em solid red;
+  border: 0.25em solid #f00;
   transform: scale(0);
   margin-top: 0.25em;
 }
@@ -376,12 +451,12 @@ p{
 }
 #line{
   margin-left: 1.6em; 
-  margin-top: 1.5em; 
+  margin-top: 3em; 
   height: 0em;
   width: 0.25em;
   position: absolute;
   background-color: red;
-  opacity: 0.7; 
+  opacity: 1; 
 }
 #line.when{
   transition-timing-function: linear;
@@ -427,12 +502,23 @@ p{
   margin-left: -0.5em;
 
 }
-.pop-when .content .inner-descript h2{
-  font-size: 1.675em;
+
+.pop-when .content .inner-descript.loyBig h3{
+  font-size: 2.5em;
+  opacity: 1;
+}
+.pop-when .content .inner-descript.loyBig p{
+  font-size: 1.8em;
+  opacity: 1;
+}
+
+.pop-when .content .inner-descript h3{
+  opacity: 0.7;
+  font-size: 1.775em;
   height: auto;
 }
 .pop-when .content .inner-descript p{
-  margin-left: 0.5em;
+  opacity: 0.7;
   font-size: 1.5em;
   height: auto;
   position: relative;
@@ -486,8 +572,9 @@ p{
 .pop-where .image-wippo {
   left: -200%;
   position: absolute;
-  height:700px;
-  bottom:0;
+  max-height: 700px;
+  min-height: inherit;
+  bottom: -40px;
   opacity: 0;
 }
 
@@ -498,6 +585,9 @@ p{
   height: 100%;
 }
 
+.popup.maps .content h1 {
+  border-bottom: 3px solid #fff;
+}
 .popup.maps .content h2 {
   font-size: 3.75em;
   margin: 0.275em 0 0.225em;
@@ -551,8 +641,9 @@ p{
   display: inline-block;
   vertical-align: top;
 }
-.pop-contact .inner .information h2{
+.pop-contact .inner .information h3{
   font-size: 3.125em;
+  margin: 0;
 }
 .pop-contact .inner .information p{
   font-size: 2.125em;
@@ -624,9 +715,36 @@ i.fa {
   100% {opacity: 1;}
 }
 
+@keyframes preload {
+  0% , 60%{ opacity: 1; z-index: 200;}
+  90% { opacity: 0 ; z-index: 200;}
+  100% { display: none;}
+}
 
+@keyframes scale_preload {
+  0% {opacity: 0 }
+  40% {transform: scale(1); opacity: 1;}
+  60% {transform: scale(1.5); opacity: 1;}
+  100% {transform: scale(.5); opacity: 0;}
+}
 
+/* 
+/---------------------------------------/
+    VII. Responsive Media Query
+/---------------------------------------/
+*/
 
-
-
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  html,body {
+    font-size: 13px;
+  }
+  .popup.left .image-wippo {
+    left: -50%;
+  }
+  .popup.right .image-wippo {
+    right: -50%;
+  }
+  .popup.pop-faqs .image-wippo {
+    right: -75%;
+  }
+}
