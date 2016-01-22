@@ -8,10 +8,10 @@ $(document).ready(function(e){
 
   TweenMax.from('.section .what', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
   TweenMax.from('.section .who', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
-  TweenMax.from('.section .where', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
+  TweenMax.from('.section .where', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3});
   TweenMax.from('.section .when', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
-  TweenMax.from('.section .faqs', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
-  TweenMax.from('.section .contact', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
+  TweenMax.from('.section .faqs', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3});
+  TweenMax.from('.section .contact', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3});
   TweenMax.from('.section .description', 1,{css: {opacity: 0}, delay:4.5});
   TweenLite.set("#element", {clearProps:"all"});
   // Section
