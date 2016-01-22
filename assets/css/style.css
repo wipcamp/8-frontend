@@ -130,18 +130,6 @@ p{
   left: -50%;
 }
 
-#scene .layout .reg {
-  position: absolute;
-  left: 50%;
-  bottom: 20%;
-}
-
-#scene .layout .reg img {
-  margin-left: -50%;
-  width: 300px;
-  animation: reg_ani 1s linear infinite;
-}
-
 #scene .layout .header .camp_name {
   background-image: url(../img/layout/camp_name.png);
   width: 539px;
@@ -164,7 +152,7 @@ p{
   position: absolute;
   bottom: 0;
   width: 120%;
-  left: -100px;
+  left: -6em;
   background-size: contain;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -174,13 +162,12 @@ p{
 
 #scene .layout .town .town-front{
   background-image: url("../img/layout/townintown2-1.png");
-  bottom: -30px;
-  z-index: 2;
+  bottom: -60px;
   height: 600px;
 }
 #scene .layout .town .town-back{
   background-image: url("../img/layout/townintown2-2.png");
-  z-index: 1;
+  bottom: -80px;
   height: 600px;
 }
 
@@ -206,6 +193,17 @@ p{
   opacity: 1;
   z-index: 8;
   transition: opacity .6s;
+}
+
+.reg {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+}
+.reg img {
+  margin-left: -50%;
+  width: 300px;
+  animation: reg_ani 3s linear infinite;
 }
 
 .sec.what {
