@@ -205,7 +205,7 @@ p{
 }
 
 .map .element {
-  color: #fff;
+  color: #000;
 }
 
 .map .element:hover .section{
@@ -391,7 +391,6 @@ p{
   height: 100%;
   padding:1.875em;
   left: -30%;
-
 }
 .popup.right .image-wippo {
   position: absolute;

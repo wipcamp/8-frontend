@@ -61,7 +61,7 @@
     // Section
     var chkPop = 0;
 
-    $('.section').click(function(e){
+    $('.sec').click(function(e){
       e.stopPropagation();
       var section = $(this).data('sec');
       console.log(section);

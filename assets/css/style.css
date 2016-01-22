@@ -1,0 +1,632 @@
+/* 
+		 WIPCAMP #8 
+ ! CSS stylesheet !
+
+	I. 	->	Typography , import and config
+	II. ->	Layout
+	III.->	Section
+	IV. -> 	Popup
+	V.  ->	Each Popup
+	VI. -> 	Keyframes
+	VII.->	Responsive Media Query
+	VIII. -> Editor Name.
+
+	# Base font-size is 18px in normal.
+
+*/
+
+/* 
+/---------------------------------------/
+		I. typography , import and config
+/---------------------------------------/
+*/
+
+@font-face {
+    font-family: 'Thaisans_lite';
+    src: url('../fonts/thaisanslite_r1.ttf');
+    font-weight: normal;
+}
+
+html,body{
+	padding: 0;
+	margin: 0;
+  font-size: 18px;
+  font-family: Thaisans_lite;
+  letter-spacing: .0291341em;
+  overflow: hidden;
+}
+
+h1{
+  font-size: 3.835em;
+}
+
+h2{
+	font-size: 2.6em;
+}
+
+p{
+  font-size: 1.25em;
+}
+
+/*
+/----------------/
+		II. Layout
+/----------------/
+*/
+
+
+#scene {
+	/*background-image: url("../img/bg2.jpg");*/
+	position: relative;
+	height: 100%;
+	width: 100%; 
+  min-height: 580px;
+  min-width: 980px;
+}
+
+#scene .layout .town img{
+	position: absolute;
+	bottom: 0;
+	width: 100%
+}
+
+.overlay {
+  visibility: hidden;
+  background-color: rgba(0,0,0,0.6);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  top:0;
+  z-index: 7;
+  transition:visibility 0s linear 1s,opacity 1s linear;
+}
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+  transition-delay:0s;
+}
+
+/* 
+/---------------------/
+			III. Section
+/---------------------/
+*/
+
+.section {
+	color: #000;
+}
+.section:hover .sec{
+  opacity: .6 !important;
+}
+.section .sec:hover {
+  opacity: 1 !important;
+}
+.sec {
+  position: absolute;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity .6s;
+}
+
+.sec.what {
+	top: 10%;
+	left: 8%;
+}
+.sec.who {
+	top: 30%;
+	left: 4%;
+}
+.sec.where {
+	top: 50%;
+	left: 8%;
+}
+.sec.when {
+	top: 10%;
+	right: 8%;
+}
+.sec.faqs {
+	top: 30%;
+	right: 4%;
+}
+.sec.contact {
+	top: 50%;
+	right: 8%;
+}
+
+.section .sec img{
+  display: inline-block;
+  height: 7em;
+}
+
+.section .sec .description{
+  display: inline-block;  
+  vertical-align: top;
+  padding-top: .8em;
+}
+.emblem{
+  height: 7em;
+  width: 7em;
+  position: relative;
+  display: inline-block;
+  transition: all 0.5s;
+}
+.section .sec .description h2{
+  margin: 0;
+  text-shadow: 0 0 0.83em rgba(255,255,255,0.7);
+}
+
+.section .sec .description p {
+  margin: 0;
+  line-height: .6em;
+}
+.section .right .description {
+	text-align: right;
+}
+
+.section .left .lowerImage{
+  left: 0.38em;
+  position: absolute;
+  z-index: 2;
+  transform: scale(0);
+  transition: 0.2s;  
+}
+
+.section .right .lowerImage{
+	right: 0.38em;
+  position: absolute;
+  z-index: 2;
+  transform: scale(0);
+  transition: 0.2s; 
+}
+
+.section .sec .upperImage{
+  position: absolute;
+  z-index: 3;
+  transition: 0.2s;
+}
+
+.section .sec .emblem{
+  height: 7em;
+  width: 7em;
+  position: relative;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+.sec:hover .upperImage{
+  transform: scale(0);
+  transition: all 0.2s;
+}
+
+.sec:hover .lowerImage{
+  transform: scale(2);
+  transition: all 0.2s; 
+  
+}
+.sec:hover .emblem{
+  width: 8em;
+  transition: all 0.4s;
+ }
+
+.section .sec:hover .description{
+  transform: scale(1.1);
+  transition: transform .4s;
+}
+
+/*
+/-----------------/
+		 IV. Popup
+/-----------------/
+*/
+
+.popup .content {
+  position: absolute;
+  padding: 1.25em;
+  background-color: rgba(255,255,255,0.8);
+}
+.popup {
+  background-color: white;
+  width: 50%;
+  min-height: 580px;
+  height: 100%;
+  position: fixed; 
+  top: 0; 
+  right: -100%; 
+  z-index: 8;
+}
+.popup.left {
+  left: -100%; 
+}
+.popup.right {
+  right: -100%; 
+}
+.triangle {
+	position: relative;
+	right: 100%;
+	height: 100%;
+}
+.popup.left .triangle {
+	right: -100%;
+}
+.popup.right .triangle{
+	right: 100%;
+}
+.popup.right img{
+  float: right;
+}
+
+.popup .content h1{
+	border-bottom: 3px solid #000;
+  font-weight: bold;
+  margin: 0 auto .2em;
+}
+
+.popup .image-wippo {
+  transform: scale(1.5); 
+  transition: transform 1s;
+  transition-delay: .5s;
+}
+.popup.active .image-wippo {
+  transform: scale(1); 
+}
+
+.popup .image-wippo {
+	position: absolute;
+  min-height: 800px;
+  height: 100%;
+  padding:1.875em;
+}
+.popup.left .image-wippo {
+  left: -30%;
+}
+.popup.right .image-wippo {
+  right: -30%
+}
+
+/* # fix superman wippo */
+.popup.pop-faq .image-wippo {
+	right: -50%;
+}
+
+.left .content {
+  margin: 0 0 0 8.125em;
+  height: 100%;
+}
+.right .content {
+  text-align: right;
+  margin: 0 8.125em 0 0;
+  height: 100%;
+  right: 0;
+}
+
+.content .inner {
+  margin-top: 1.625em;
+}
+
+.content .inner p {
+  margin: 0.2em 0;
+}
+
+.content .inner .highlight {
+  font-size: 1.475em;
+}
+
+/*
+/------------------------/
+		  V. Each Popup
+/------------------------/
+*/
+
+
+/* ! When */
+.pop-when ul{
+  list-style: none;
+  padding: 0;
+}
+.pop-when h3 {
+  margin: 0;
+}
+.pop-when ul li{
+  margin-top: 3em;
+}
+.pop-when p {
+  margin: 0;
+}
+.inner-topic{
+  height: 10%;
+  width: 15%;
+  margin-top: 2em; 
+}
+.loy-outer{
+  width: 3em;
+  height: 3em;
+  border-radius: 100%;
+  background-color: white; 
+  position: absolute;
+  border: 0.25em solid red;
+  transform: scale(0);
+  margin-top: 0.25em;
+}
+.loy-outer.loy1.delay{
+  transform: scale(1);
+  transition:  1s;
+  transition-delay: 0.2s;
+}
+.loy-outer.loy2.delay{
+  transform: scale(1);
+  transition:  1s;
+  transition-delay: 0.6s;
+}
+.loy-outer.loy3.delay{
+  transform: scale(1);
+  transition:  1s;
+  transition-delay: 1s;
+}
+.loy-outer.loy4.delay{
+  transform: scale(1);
+  transition:  1s;
+  transition-delay: 1.4s;
+}
+.inner-btn{
+  margin-top: 2em;
+  position: relative;
+  border-radius: 100%; 
+  display: inline;
+}
+#line{
+  margin-left: 1.6em; 
+  margin-top: 1.5em; 
+  height: 0em;
+  width: 0.25em;
+  position: absolute;
+  background-color: red;
+  opacity: 0.7; 
+}
+#line.when{
+  transition-timing-function: linear;
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+  height: 19em;
+}
+.inner-descript{
+  text-align: left;
+  
+  position: relative;
+  margin-left: 5em;
+  margin-top: -1em;
+  transform: scale(0); 
+}
+.inner-descript.loy1.upText{
+  transition-delay: 0.2s;
+  transform: scale(1);
+  transition-duration: .5s;
+}
+
+.inner-descript.loy2.upText{
+  transition-delay: .6s;
+  transition-duration: .5s;
+  transform: scale(1);
+  
+}
+.inner-descript.loy3.upText{
+  transition-delay: 1s;
+  transform: scale(1);
+  transition-duration: .5s;
+
+}
+.inner-descript.loy4.upText{
+  transition-delay: 1.4s;
+  transform: scale(1);
+  transition-duration: .5s;
+}
+.loy-outer.loyBig{
+  height: 4em;
+  width: 4em;
+  border: 0.25em solid rgb(255,0,57);
+  margin-left: -0.5em;
+
+}
+.pop-when .content .inner-descript h2{
+  font-size: 1.675em;
+  height: auto;
+}
+.pop-when .content .inner-descript p{
+  margin-left: 0.5em;
+  font-size: 1.5em;
+  height: auto;
+  position: relative;
+}
+
+/* ! Who */
+.pop-who h3 {
+  font-size: 1.525em;
+  display: inline-block;
+  margin: 0;
+}
+.pop-who .des {
+  margin-top: 2.5em;
+}
+.pop-who .des .item {
+  display: inline-block;
+  margin-left: .5em;
+}
+.pop-who .des .icon {
+  display: inline-block;
+  margin: 0 .325em;
+  font-size: 1em;
+  vertical-align: top;
+  margin-top: 1em;
+}
+
+.pop-who.active .sec1 {
+ animation: who_des_action 1.5s;
+}
+.pop-who.active .sec2 {
+ animation: who_des_action 2s;
+}
+.pop-who.active .sec3 {
+ animation: who_des_action 2.5s;
+}
+.pop-who.active .sec4 {
+ animation: who_des_action 3s;
+}
+
+/* Where */
+.pop-where {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: fixed; 
+  top: 0; 
+  right: -100%; 
+  z-index: 8;
+}
+
+.pop-where .image-wippo {
+  left: -200%;
+  position: absolute;
+  height:700px;
+  bottom:0;
+  opacity: 0;
+}
+
+.popup.maps .content {
+  right: 0;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  height: 100%;
+}
+
+.popup.maps .content h2 {
+  font-size: 3.75em;
+  margin: 0.275em 0 0.225em;
+}
+
+.popup.maps .content .highlight {
+  font-size: 1.65em;
+  font-weight: bold;
+}
+
+.pop-where .exit{
+	position: absolute;
+  left: -80px;
+  top: 10px;
+  height: 70px;
+  cursor: pointer;
+  transition: transform .7s;
+}
+.pop-where .exit:hover {
+	transform: scale(.8);
+}
+
+/* FAQs */
+.accordion {
+  position: relative;
+  height: 2em;
+  cursor: pointer;
+  padding: 0.3em 0.3em .3em;
+  background: rgba(238, 238, 238, 0.6);
+  width: 100%;
+  font-size: 1.325em;
+  letter-spacing: .01em;
+  font-weight: bold;
+  margin-top: .4em;
+  box-sizing: border-box;
+}
+.accContent {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  font-size: 1.125em;
+  margin-bottom: 1em;
+  background: rgba(255,255,255,.6);
+  padding: .3em;
+  box-sizing: border-box;
+}
+
+/* Contact */
+
+.pop-contact .inner .information {
+  display: inline-block;
+  vertical-align: top;
+}
+.pop-contact .inner .information h2{
+  font-size: 3.125em;
+}
+.pop-contact .inner .information p{
+  font-size: 2.125em;
+  margin: 0;
+}
+.pop-contact .inner .social {
+  position: relative;
+  margin-top: 1.625em;
+}
+.pop-contact .inner .social ul{
+  list-style: none;
+  font-size: 2.8em;
+  margin: 1.225em 0;
+  padding: 0;
+}
+.pop-contact .inner .social ul li{
+  display: inline-block;
+  border: 0.0625em solid #000;
+  margin: 0.0125em;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  background: rgba(255,255,255,.9);
+  transition: transform .2s, opacity .2s;
+}
+i.fa {
+    padding-top: .25em;
+}
+.pop-contact ul:hover li {
+  opacity: 0.6;
+}
+.pop-contact li:hover {
+  opacity: 1 !important;
+  transform: scale(1.2);
+}
+
+/* 
+/---------------------------------------/
+		VI. Keyframes
+/---------------------------------------/
+*/
+
+@keyframes line-one {
+  0% {width: 0px;}
+  100% {width: 150px;}
+}
+@keyframes line-two {
+  0% {width: 0px;}
+  100% {width: 300px;}
+}
+@keyframes line-three {
+  0% {width: 0px;}
+  100% {width: 200px;}
+}
+@keyframes line-four {
+  0% {width: 0px;}
+  100% {width: 150px;}
+}
+
+@keyframes topic-point-action {
+  0% {transform: scale(0);}
+  55% {background-color: #000; transform: scale(1);}
+  85% {background-color: #fff;}
+  100% {background-color: #000;}
+}
+
+@keyframes who_des_action {
+  0%, 50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+
+
+
+
+
