@@ -13,7 +13,11 @@ $(document).ready(function(e){
   TweenMax.from('.section .faqs', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3});
   TweenMax.from('.section .contact', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3});
   TweenMax.from('.section .description', 1,{css: {opacity: 0}, delay:4.5});
-  TweenLite.set("#element", {clearProps:"all"});
+
+  TweenMax.from('.layout .town-front', 1.5,{css: {bottom: "-100%"}, delay:4});
+  TweenMax.from('.layout .town-back', 1.5,{css: {bottom: "-100%"}, delay:4.2});
+
+
   // Section
     var chkPop = 0;
 
