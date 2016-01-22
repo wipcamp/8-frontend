@@ -95,6 +95,11 @@ p{
   min-width: 980px;
 }
 
+#scene .layer{
+  height: 100%;
+  width: 100%;
+}
+
 .overlay {
   visibility: hidden;
   background-color: rgba(0,0,0,0.6);
@@ -133,6 +138,12 @@ p{
   width: 500px;
   height: 138px;
   margin: -4.0625em auto 0 auto;
+}
+#scene .layout .header .sponser {
+  background-image: url(../img/layout/camp_spon1.png);
+  width: 539px;
+  height: 214px;
+  margin: -87px -22px;
 }
 
 #scene .layout .town > div{
