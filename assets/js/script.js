@@ -8,7 +8,10 @@ $(document).ready(function(e){
 
   var tl = new TimelineMax({delay:5});
   // StartUP Preload
-
+  TweenMax.to('.pre-logo .img-logo' , 1 ,{css:{transform:"scale(.2)",opacity:0},delay:2});
+  TweenMax.to('#preload' , 3, {css:{opacity:0},delay:2,onComplete:function(){
+    TweenMax.to('#preload', 1, {css: {visibility:"hidden"}});
+  }});
   TweenMax.from('.section .what', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
   TweenMax.from('.section .who', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3.1});
   TweenMax.from('.section .where', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.2});
@@ -109,5 +112,15 @@ $(document).ready(function(e){
       $('.inner-descript').addClass('upText');
     });
 
+    // Reg
+    $('.reg').click(function(){
+      TweenMax.to('.pre-redirect',2,{css:{opacity:1,visibility:"visible"}});
+      TweenMax.to(".overlay", 2, {className:"+=active"});
+    });
+    $('.pre-redirect').click(function(){
+      TweenMax.to('.pre-redirect',1,{css:{opacity:0}});
+      TweenMax.to('.pre-redirect',1,{css:{visibility:"hidden"},delay:1});
+      TweenMax.to(".overlay", 2, {className:"-=active"});
+    });
 
 });

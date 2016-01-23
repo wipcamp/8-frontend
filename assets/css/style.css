@@ -61,24 +61,22 @@ p{
   height: 100%;
   width: 100%;
   position: absolute;
-  opacity: 0;
-  z-index: -8;
-  animation: preload 4s;
+  opacity: 1;
+  z-index: 9;
 }
 .pre-logo {
   position: absolute;
   left: 50%;
   top: 30%;
-  z-index:200;
+  z-index: 9;
 }
 .pre-logo .img-logo {
   height: 300px;
   transform: scale(1);
-  animation: scale_preload 4s ;
-  opacity: 0;
+  animation: scale_preload 2s infinite linear;
   margin-left: -50%;
   position: relative;
-  z-index: 200;
+  z-index: 9;
   border-radius: 50%;
 }
 
@@ -177,6 +175,23 @@ p{
   height: 600px;
 }
 
+
+/* Pre Redirect */
+.pre-redirect {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: white;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pre-redirect h1{
+  text-align: center;
+  padding: 20% 0;
+}
 /* 
 /---------------------/
 			III. Section
@@ -753,10 +768,9 @@ i.fa {
 }
 
 @keyframes scale_preload {
-  0% {opacity: 0 }
-  40% {transform: scale(1); opacity: 1;}
-  60% {transform: scale(1.5); opacity: 1;}
-  100% {transform: scale(.5); opacity: 0;}
+  0% {transform: scale(1)}
+  50% {transform: scale(1.2)}
+  100% {transform: scale(1)}
 }
 
 @keyframes reg_ani {
