@@ -161,16 +161,16 @@ p{
 }
 
 #scene .layout .town .town-front{
-  background-image: url("../img/layout/first.png");
+  background-image: url("../img/layout/f.png");
   height: 600px;
 }
 #scene .layout .town .town-mid{
-  background-image: url("../img/layout/second.png");
+  background-image: url("../img/layout/s.png");
   bottom: -30px;
   height: 600px;
 }
 #scene .layout .town .town-back{
-  background-image: url("../img/layout/third.png");
+  background-image: url("../img/layout/t.png");
   bottom: -30px;
   height: 600px;
 }
