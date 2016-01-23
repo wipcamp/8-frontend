@@ -127,10 +127,12 @@ $(document).ready(function(e){
     });
 
     // Starfall
-      
       var randomPosX;
       var randomPosX2;
       var randomPosX3;
+      var randomPosX4;
+      var randomPosX5;
+      var randomPosX6;
       var changePosX;
 
       // change random to Position X of Starfall
@@ -138,21 +140,30 @@ $(document).ready(function(e){
           randomPosX = Math.random()*1000-500;
           randomPosX2 = Math.random()*1000-500;
           randomPosX3 = Math.random()*1000-500;
-          changePosX = 900;
+          randomPosX4 = Math.random()*1000-700;
+          randomPosX5 = Math.random()*1000-700;
+          randomPosX6 = Math.random()*1000-700;
+          changePosX = 1000;
           
       }
       else if($('body').width() > 1500 && $('body').width() <= 2000){
           randomPosX = Math.random()*2000-1000;
           randomPosX2 = Math.random()*2000-1000;
           randomPosX3 = Math.random()*2000-1000;
-          changePosX = 1300;
+          randomPosX4 = Math.random()*2000-1300;
+          randomPosX5 = Math.random()*2000-1300;
+          randomPosX6 = Math.random()*2000-1300;
+          changePosX = 1100;
           
       }
       else if($('body').width() > 2000 && $('body').width() <= 2560){
           randomPosX = Math.random()*3200-1000;
           randomPosX2 = Math.random()*3200-1000;
           randomPosX3 = Math.random()*3200-1000;
-          changePosX = 1700;
+          randomPosX4 = Math.random()*3200-1500;
+          randomPosX5 = Math.random()*3200-1500;
+          randomPosX6 = Math.random()*3200-1500;
+          changePosX = 1600;
       }
 
       var setExplosion = function(bomb,randomSpeed){
@@ -215,6 +226,67 @@ $(document).ready(function(e){
           }
           }); 
         }
+
+       var setExplosion4 = function(bomb,randomSpeed){
+            setTimeout(function(){
+            $(bomb).css({left: (randomPosX4+changePosX)});
+            $(bomb).addClass('active');
+            },randomSpeed);
+            setTimeout(function(){
+              $(bomb).removeClass('active');
+              fall4('.ds-b1','.exp-b1');
+            },2500);
+      } 
+
+      function fall4(el,bomb){     
+        var randomSpeed = Math.random()*1.5+2;
+        TweenMax.fromTo(el,randomSpeed,
+          {css : {left: randomPosX4, top:"-30%"}},
+          {css : {left: (randomPosX4+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+            setExplosion4(bomb,randomSpeed);
+          }
+          }); 
+        }
+      var setExplosion5 = function(bomb,randomSpeed){
+            setTimeout(function(){
+            $(bomb).css({left: (randomPosX5+changePosX)});
+            $(bomb).addClass('active');
+            },randomSpeed);
+            setTimeout(function(){
+              $(bomb).removeClass('active');
+              fall5('.ds-b2','.exp-b2');
+            },2500);
+      } 
+
+      function fall5(el,bomb){      
+        var randomSpeed = Math.random()*1.5+1;   
+        TweenMax.fromTo(el,randomSpeed,
+          {css : {left: randomPosX5, top:"-30%"}},
+          {css : {left: (randomPosX5+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+            setExplosion5(bomb,randomSpeed);
+          }
+          }); 
+        }
+      var setExplosion6 = function(bomb,randomSpeed){
+            setTimeout(function(){
+            $(bomb).css({left: (randomPosX6+changePosX)});
+            $(bomb).addClass('active');
+            },randomSpeed);
+            setTimeout(function(){
+              $(bomb).removeClass('active');
+              fall6('.ds-b3','.exp-b3');
+            },2500);
+      } 
+
+      function fall6(el,bomb){    
+        var randomSpeed = Math.random()*1.5+0.5;     
+        TweenMax.fromTo(el,randomSpeed,
+          {css : {left: randomPosX6, top:"-30%"}},
+          {css : {left: (randomPosX6+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+            setExplosion6(bomb,randomSpeed);
+          }
+          }); 
+        } 
       
       setTimeout(function(){
         fall('.ds1','.exp1');
@@ -226,6 +298,18 @@ $(document).ready(function(e){
       
       setTimeout(function(){
         fall3('.ds3','.exp3');
+      },11000);
+
+      setTimeout(function(){
+        fall4('.ds-b1','.exp-b1');
+      },7000);
+      
+      setTimeout(function(){
+        fall5('.ds-b2','.exp-b2');
+      },9000);
+      
+      setTimeout(function(){
+        fall6('.ds-b3','.exp-b3');
       },11000);
 
 });

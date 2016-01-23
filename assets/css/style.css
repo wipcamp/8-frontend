@@ -83,7 +83,7 @@ p{
 /* ! Main Site */
 
 #scene {
-	background-image: url("../img/b5.jpg");
+	background-image: url("../img/b51.jpg");
   /*background-color: #03062B;*/
   background-position: 100% 100%;
   background-size: 100% 100%;
@@ -158,11 +158,11 @@ p{
 }
 
 #scene .layout .town .town-front{
-  background-image: url("../img/layout/f.png");
+  background-image: url("../img/layout/t1_1.png");
   height: 600px;
 }
 #scene .layout .town .town-mid{
-  background-image: url("../img/layout/s.png");
+  background-image: url("../img/layout/t2.png");
   bottom: -30px;
   height: 600px;
 }
@@ -192,18 +192,21 @@ p{
 
 /*   Starfall  */
 
-.explosion {
+.deadstar-front-scene {
+  top: 90%;
+}
+.deadstar-back-scene {
   top: 80%;
-  height: 18em;
-  width: 18em;
+}
+.explosion {
+  height: 17em;
+  width: 17em;
   border-radius: 50%;
   background: radial-gradient(circle, #FFf, #FFCD4F);
   position: absolute;
-  box-shadow: 0px 0px 8.333em #FFCD4F;
-  z-index: 150;
+  box-shadow: 0px 0px 5em #FFCD4F;
+  z-index: 9;
   opacity: 0;
-  
-  
 }
 .explosion.active{
   animation: explosion 2.5s;
@@ -216,6 +219,9 @@ p{
   height: 4.444em;
   transform: rotate(-90deg);
   position: absolute; 
+}
+.back-scene {
+  z-index: 7;
 }
 
 /* 
