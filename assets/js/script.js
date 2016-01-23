@@ -126,4 +126,106 @@ $(document).ready(function(e){
       }
     });
 
+    // Starfall
+      
+      var randomPosX;
+      var randomPosX2;
+      var randomPosX3;
+      var changePosX;
+
+      // change random to Position X of Starfall
+      if($('body').width() <= 1500){
+          randomPosX = Math.random()*1000-500;
+          randomPosX2 = Math.random()*1000-500;
+          randomPosX3 = Math.random()*1000-500;
+          changePosX = 900;
+          
+      }
+      else if($('body').width() > 1500 && $('body').width() <= 2000){
+          randomPosX = Math.random()*2000-1000;
+          randomPosX2 = Math.random()*2000-1000;
+          randomPosX3 = Math.random()*2000-1000;
+          changePosX = 1300;
+          
+      }
+      else if($('body').width() > 2000 && $('body').width() <= 2560){
+          randomPosX = Math.random()*3200-1000;
+          randomPosX2 = Math.random()*3200-1000;
+          randomPosX3 = Math.random()*3200-1000;
+          changePosX = 1700;
+      }
+
+      var setExplosion = function(bomb,randomSpeed){
+            setTimeout(function(){
+            $(bomb).css({left: (randomPosX+changePosX)});
+            $(bomb).addClass('active');
+            },randomSpeed);
+            setTimeout(function(){
+              $(bomb).removeClass('active');
+              fall('.ds1','.exp1');
+            },2500);
+      } 
+
+      function fall(el,bomb){     
+        var randomSpeed = Math.random()*1.5+2;
+        TweenMax.fromTo(el,randomSpeed,
+          {css : {left: randomPosX, top:"-30%"}},
+          {css : {left: (randomPosX+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+            setExplosion(bomb,randomSpeed);
+          }
+          }); 
+        }
+      var setExplosion2 = function(bomb,randomSpeed){
+            setTimeout(function(){
+            $(bomb).css({left: (randomPosX2+changePosX)});
+            $(bomb).addClass('active');
+            },randomSpeed);
+            setTimeout(function(){
+              $(bomb).removeClass('active');
+              fall2('.ds2','.exp2');
+            },2500);
+      } 
+
+      function fall2(el,bomb){      
+        var randomSpeed = Math.random()*1.5+1;   
+        TweenMax.fromTo(el,randomSpeed,
+          {css : {left: randomPosX2, top:"-30%"}},
+          {css : {left: (randomPosX2+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+            setExplosion2(bomb,randomSpeed);
+          }
+          }); 
+        }
+      var setExplosion3 = function(bomb,randomSpeed){
+            setTimeout(function(){
+            $(bomb).css({left: (randomPosX3+changePosX)});
+            $(bomb).addClass('active');
+            },randomSpeed);
+            setTimeout(function(){
+              $(bomb).removeClass('active');
+              fall3('.ds3','.exp3');
+            },2500);
+      } 
+
+      function fall3(el,bomb){    
+        var randomSpeed = Math.random()*1.5+0.5;     
+        TweenMax.fromTo(el,randomSpeed,
+          {css : {left: randomPosX3, top:"-30%"}},
+          {css : {left: (randomPosX3+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+            setExplosion3(bomb,randomSpeed);
+          }
+          }); 
+        }
+      
+      setTimeout(function(){
+        fall('.ds1','.exp1');
+      },7000);
+      
+      setTimeout(function(){
+        fall2('.ds2','.exp2');
+      },9000);
+      
+      setTimeout(function(){
+        fall3('.ds3','.exp3');
+      },11000);
+
 });
