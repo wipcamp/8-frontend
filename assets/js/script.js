@@ -27,9 +27,9 @@ $(document).ready(function(e){
   TweenMax.from('.layout .header', 2, {css: {top: "-100%"} ,delay:5.5});
   TweenMax.from('.reg', 2, {css: {opacity:0} ,delay:7});
 
-  star.to('.star-front',1.5,{opacity:1})
-      .to('.star-mid',1.5,{opacity:1})
-      .to('.star-back',1.5,{opacity:1});
+  star.to('.star-front',2,{opacity:1})
+      .to('.star-mid',2,{opacity:1})
+      .to('.star-back',2,{opacity:1});
 
   // Section
     var chkPop = 0;
