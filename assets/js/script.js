@@ -9,16 +9,19 @@ $(document).ready(function(e){
   // StartUP Preload
 
   TweenMax.from('.section .what', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
-  TweenMax.from('.section .who', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
-  TweenMax.from('.section .where', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3});
-  TweenMax.from('.section .when', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
-  TweenMax.from('.section .faqs', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3});
-  TweenMax.from('.section .contact', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3});
+  TweenMax.from('.section .who', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3.1});
+  TweenMax.from('.section .where', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.2});
+  TweenMax.from('.section .when', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3.3});
+  TweenMax.from('.section .faqs', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.4});
+  TweenMax.from('.section .contact', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.5});
   TweenMax.from('.section .description', 1,{css: {opacity: 0}, delay:4.5});
 
-  TweenMax.from('.layout .town-front', 1,{css: {bottom: "-100%"}, delay:3.5, ease: Back.easeOut.config(.5)});
-  TweenMax.from('.layout .town-back', 1,{css: {bottom: "-100%"}, delay:3.8, ease: Back.easeOut.config(.5)});
+  TweenMax.from('.layout .town-front', 1,{css: {bottom: "-100%"}, delay:5,});
+  TweenMax.from('.layout .town-mid', 1.2,{css: {bottom: "-100%"}, delay:5.5,});
+  TweenMax.from('.layout .town-back', 1.4,{css: {bottom: "-100%"}, delay:6,});
 
+  TweenMax.from('.layout .header', 2, {css: {top: "-100%"} ,delay:5});
+  TweenMax.from('.reg', 2, {css: {opacity:0} ,delay:5});
 
   // Section
     var chkPop = 0;
