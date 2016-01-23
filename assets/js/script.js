@@ -114,13 +114,16 @@ $(document).ready(function(e){
 
     // Reg
     $('.reg').click(function(){
-      TweenMax.to('.pre-redirect',2,{css:{opacity:1,visibility:"visible"}});
-      TweenMax.to(".overlay", 2, {className:"+=active"});
+      TweenMax.to('.pre-redirect', 1,{css:{opacity:1,visibility:"visible"}});
+      TweenMax.to(".pre-redirect", 1, {className:"+=active",delay:1});
+      TweenMax.from(".pre-redirect h1", 1, {css:{transform:"scale(.8)",opacity:0}, delay:.3})
     });
     $('.pre-redirect').click(function(){
-      TweenMax.to('.pre-redirect',1,{css:{opacity:0}});
-      TweenMax.to('.pre-redirect',1,{css:{visibility:"hidden"},delay:1});
-      TweenMax.to(".overlay", 2, {className:"-=active"});
+      if($(this).hasClass("active")){
+        TweenMax.to('.pre-redirect',1,{css:{opacity:0}});
+        TweenMax.to('.pre-redirect',1,{css:{visibility:"hidden"},delay:1});
+        TweenMax.to(".pre-redirect", 1, {className:"-=active",delay:1});
+      }
     });
 
 });
