@@ -6,7 +6,7 @@ $(document).ready(function(e){
     limitY: 1,
   });
 
-  var tl = new TimelineMax({delay:5});
+  var star = new TimelineMax({delay:7});
   // StartUP Preload
   TweenMax.to('.pre-logo .img-logo' , 1 ,{css:{transform:"scale(.2)",opacity:0},delay:2});
   TweenMax.to('#preload' , 3, {css:{opacity:0},delay:2,onComplete:function(){
@@ -20,22 +20,27 @@ $(document).ready(function(e){
   TweenMax.from('.section .contact', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:4});
   TweenMax.from('.section .description', 1.5,{css: {opacity: 0}, delay:5});
 
-  TweenMax.from('.layout .town-front', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.5), delay: 5.2})
-  TweenMax.from('.layout .town-mid', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.5), delay: 5.8})
-  TweenMax.from('.layout .town-back', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.5), delay: 6.2});
+  TweenMax.from('.layout .town-front', 1.5,{css: {bottom: "-100%"}, delay: 5.2})
+  TweenMax.from('.layout .town-mid', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.8), delay: 5.8})
+  TweenMax.from('.layout .town-back', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.8), delay: 6.2});
 
   TweenMax.from('.layout .header', 2, {css: {top: "-100%"} ,delay:5.5});
   TweenMax.from('.reg', 2, {css: {opacity:0} ,delay:7});
 
+  star.to('.star-front',1.5,{opacity:1})
+      .to('.star-mid',1.5,{opacity:1})
+      .to('.star-back',1.5,{opacity:1});
+
   // Section
     var chkPop = 0;
+    var name;
 
     $('.sec').click(function(e){
       e.stopPropagation();
       var section = $(this).data('sec');
       // console.log(section);
 
-      var name = ".pop-"+section;
+      name = ".pop-"+section;
 
       if(chkPop == 0){
         if($(name).hasClass('left'))
@@ -45,13 +50,12 @@ $(document).ready(function(e){
         }
         else if($(name).hasClass('right')){
           TweenMax.to($(name),1,{ right: "0%",delay: 0.2, ease:SlowMo.easeIn});
-          $(name).addClass('active');
         }else{
           TweenMax.to($(name),1,{ right: "0%",delay: 0.2, ease:SlowMo.easeIn});
           TweenMax.to(".pop-where .image-wippo", 1,{css:{left: 0,opacity: 1}});
-          $(name).addClass('active');
         }
         TweenMax.to(".overlay", 1, {className:"+=active"});
+        TweenMax.to(name, 1, {className:"+=active",delay:.2});
         TweenMax.to("#scene", 2, {transform:"scale(1.4)"});
 
         chkPop++;
@@ -60,21 +64,21 @@ $(document).ready(function(e){
     });
 
     $(' .overlay , .triangle , .exit').click(function(){
-     if($('#popup .popup').find('.active') && chkPop == 1){
-        var item = $('#popup').find('.active');
+      console.log(name +" "+ chkPop);
+     if($(name).hasClass('active') && chkPop == 1){
+        var item = name;
+        console.log("item"+item);
         if($(item).hasClass('left')){
           TweenMax.to(item,1,{ left: "-100%",  ease:SlowMo.easeIn});
-          item.removeClass('active');
         }
         else if ($(item).hasClass('right'))
         {
           TweenMax.to(item,1,{ right: "-100%",  ease:SlowMo.easeIn});
-          item.removeClass('active');
         }else{
           TweenMax.to(item,1,{ right: "-100%",  ease:SlowMo.easeIn});
           TweenMax.to(".pop-where .image-wippo", 1,{css:{left: "-200%",opacity: 0}});
-          item.removeClass('active');
         }
+        TweenMax.to(item, 1, {className:"-=active",delay:1});
         TweenMax.to(".overlay", 1, {className:"-=active"});
         TweenMax.to("#scene", 1, {transform:"scale(1)"})
         chkPop--;
@@ -83,7 +87,7 @@ $(document).ready(function(e){
         $('.loy-outer').removeClass('delay');
         $('.inner-descript').removeClass('upText');
         $('#line').removeClass('when'); 
-        
+        name = "";
      }
     });
 
@@ -137,32 +141,32 @@ $(document).ready(function(e){
 
       // change random to Position X of Starfall
       if($('body').width() <= 1500){
-          randomPosX = Math.random()*1000-800;
-          randomPosX2 = Math.random()*1000-800;
-          randomPosX3 = Math.random()*1000-800;
-          randomPosX4 = Math.random()*1000-1000;
-          randomPosX5 = Math.random()*1000-1000;
-          randomPosX6 = Math.random()*1000-1000;
+          randomPosX = Math.random()*1500-800;
+          randomPosX2 = Math.random()*1500-800;
+          randomPosX3 = Math.random()*1500-800;
+          randomPosX4 = Math.random()*1500-1000;
+          randomPosX5 = Math.random()*1500-1000;
+          randomPosX6 = Math.random()*1500-1000;
           changePosX = 1000;
           
       }
       else if($('body').width() > 1500 && $('body').width() <= 2000){
           randomPosX = Math.random()*2000-1300;
-          randomPosX2 = Math.random()*2000-1300;
-          randomPosX3 = Math.random()*2000-1300;
-          randomPosX4 = Math.random()*2000-1600;
-          randomPosX5 = Math.random()*2000-1600;
-          randomPosX6 = Math.random()*2000-1600;
+          randomPosX2 = Math.random()*2500-1300;
+          randomPosX3 = Math.random()*2500-1300;
+          randomPosX4 = Math.random()*2500-1600;
+          randomPosX5 = Math.random()*2500-1600;
+          randomPosX6 = Math.random()*2500-1600;
           changePosX = 1100;
           
       }
       else if($('body').width() > 2000 && $('body').width() <= 2560){
-          randomPosX = Math.random()*3200-1300;
-          randomPosX2 = Math.random()*3200-1300;
-          randomPosX3 = Math.random()*3200-1300;
-          randomPosX4 = Math.random()*3200-1800;
-          randomPosX5 = Math.random()*3200-1800;
-          randomPosX6 = Math.random()*3200-1800;
+          randomPosX = Math.random()*3700-1300;
+          randomPosX2 = Math.random()*3700-1300;
+          randomPosX3 = Math.random()*3700-1300;
+          randomPosX4 = Math.random()*3700-1800;
+          randomPosX5 = Math.random()*3700-1800;
+          randomPosX6 = Math.random()*3700-1800;
           changePosX = 1600;
       }
 
@@ -290,26 +294,26 @@ $(document).ready(function(e){
       
       setTimeout(function(){
         fall('.ds1','.exp1');
-      },7000);
+      },9007);
       
       setTimeout(function(){
         fall2('.ds2','.exp2');
-      },9000);
+      },9264);
       
       setTimeout(function(){
         fall3('.ds3','.exp3');
-      },11000);
+      },14305);
 
       setTimeout(function(){
         fall4('.ds-b1','.exp-b1');
-      },7000);
+      },7291);
       
       setTimeout(function(){
         fall5('.ds-b2','.exp-b2');
-      },9000);
+      },13238);
       
       setTimeout(function(){
         fall6('.ds-b3','.exp-b3');
-      },11000);
+      },8599);
 
 });
