@@ -10,22 +10,22 @@ $(document).ready(function(e){
   // StartUP Preload
   TweenMax.to('.pre-logo .img-logo' , 1 ,{css:{transform:"scale(.2)",opacity:0},delay:2});
   TweenMax.to('#preload' , 3, {css:{opacity:0},delay:2,onComplete:function(){
-    TweenMax.to('#preload', 1, {css: {visibility:"hidden"}});
+    $('#preload').remove();
   }});
   TweenMax.from('.section .what', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3});
-  TweenMax.from('.section .who', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3.1});
-  TweenMax.from('.section .where', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.2});
-  TweenMax.from('.section .when', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3.3});
-  TweenMax.from('.section .faqs', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.4});
-  TweenMax.from('.section .contact', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.5});
-  TweenMax.from('.section .description', 1,{css: {opacity: 0}, delay:4.5});
+  TweenMax.from('.section .who', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3.2});
+  TweenMax.from('.section .when', 1,{css: {left: "44%", top: "39%", opacity: 0}, delay:3.4});
+  TweenMax.from('.section .where', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.6});
+  TweenMax.from('.section .faqs', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.8});
+  TweenMax.from('.section .contact', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:4});
+  TweenMax.from('.section .description', 1.5,{css: {opacity: 0}, delay:5});
 
-  TweenMax.from('.layout .town-front', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.5), delay: 5})
-  TweenMax.from('.layout .town-mid', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.5), delay: 5.2})
-  TweenMax.from('.layout .town-back', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.5), delay: 5.4});
+  TweenMax.from('.layout .town-front', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.5), delay: 5.2})
+  TweenMax.from('.layout .town-mid', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.5), delay: 5.8})
+  TweenMax.from('.layout .town-back', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.5), delay: 6.2});
 
-  TweenMax.from('.layout .header', 2, {css: {top: "-100%"} ,delay:5});
-  TweenMax.from('.reg', 2, {css: {opacity:0} ,delay:5});
+  TweenMax.from('.layout .header', 2, {css: {top: "-100%"} ,delay:5.5});
+  TweenMax.from('.reg', 2, {css: {opacity:0} ,delay:7});
 
   // Section
     var chkPop = 0;
