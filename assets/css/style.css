@@ -410,6 +410,11 @@ p{
 	right: -50%;
 }
 
+.popup.pop-faqs .inner{
+  overflow: scroll;
+  height: 88%;
+}
+
 .left .content {
   margin: 0 0 0 8.125em;
   height: 100%;
