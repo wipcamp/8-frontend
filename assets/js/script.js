@@ -137,32 +137,32 @@ $(document).ready(function(e){
 
       // change random to Position X of Starfall
       if($('body').width() <= 1500){
-          randomPosX = Math.random()*1000-500;
-          randomPosX2 = Math.random()*1000-500;
-          randomPosX3 = Math.random()*1000-500;
-          randomPosX4 = Math.random()*1000-700;
-          randomPosX5 = Math.random()*1000-700;
-          randomPosX6 = Math.random()*1000-700;
+          randomPosX = Math.random()*1000-800;
+          randomPosX2 = Math.random()*1000-800;
+          randomPosX3 = Math.random()*1000-800;
+          randomPosX4 = Math.random()*1000-1000;
+          randomPosX5 = Math.random()*1000-1000;
+          randomPosX6 = Math.random()*1000-1000;
           changePosX = 1000;
           
       }
       else if($('body').width() > 1500 && $('body').width() <= 2000){
-          randomPosX = Math.random()*2000-1000;
-          randomPosX2 = Math.random()*2000-1000;
-          randomPosX3 = Math.random()*2000-1000;
-          randomPosX4 = Math.random()*2000-1300;
-          randomPosX5 = Math.random()*2000-1300;
-          randomPosX6 = Math.random()*2000-1300;
+          randomPosX = Math.random()*2000-1300;
+          randomPosX2 = Math.random()*2000-1300;
+          randomPosX3 = Math.random()*2000-1300;
+          randomPosX4 = Math.random()*2000-1600;
+          randomPosX5 = Math.random()*2000-1600;
+          randomPosX6 = Math.random()*2000-1600;
           changePosX = 1100;
           
       }
       else if($('body').width() > 2000 && $('body').width() <= 2560){
-          randomPosX = Math.random()*3200-1000;
-          randomPosX2 = Math.random()*3200-1000;
-          randomPosX3 = Math.random()*3200-1000;
-          randomPosX4 = Math.random()*3200-1500;
-          randomPosX5 = Math.random()*3200-1500;
-          randomPosX6 = Math.random()*3200-1500;
+          randomPosX = Math.random()*3200-1300;
+          randomPosX2 = Math.random()*3200-1300;
+          randomPosX3 = Math.random()*3200-1300;
+          randomPosX4 = Math.random()*3200-1800;
+          randomPosX5 = Math.random()*3200-1800;
+          randomPosX6 = Math.random()*3200-1800;
           changePosX = 1600;
       }
 
