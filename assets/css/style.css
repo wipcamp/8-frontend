@@ -151,7 +151,7 @@ p{
 #scene .layout .town > div{
   position: absolute;
   bottom: 0;
-  width: 110%;
+  width: 120%;
   left: -6em;
   background-size: contain;
   background-size: 100%;
@@ -162,17 +162,16 @@ p{
 
 #scene .layout .town .town-front{
   background-image: url("../img/layout/first.png");
-  /*bottom: -60px;*/
   height: 600px;
 }
 #scene .layout .town .town-mid{
   background-image: url("../img/layout/second.png");
-  /*bottom: -70px;*/
+  bottom: -30px;
   height: 600px;
 }
 #scene .layout .town .town-back{
   background-image: url("../img/layout/third.png");
-  /*bottom: -80px;*/
+  bottom: -30px;
   height: 600px;
 }
 
