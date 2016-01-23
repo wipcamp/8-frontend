@@ -129,19 +129,16 @@ p{
 }
 
 #scene .layout .header .camp_name {
-  background-image: url(../img/layout/camp_name.png);
   width: 539px;
   height: 214px;
 }
 #scene .layout .header .camp_way {
-  background-image: url(../img/layout/camp_way.png);  
   width: 500px;
   height: 138px;
   background-size: 90%;
   margin: -4.0625em auto 0 auto;
 }
 #scene .layout .header .sponser {
-  background-image: url(../img/layout/camp_spon1.png);
   width: 539px;
   height: 214px;
   background-size: 90%;
