@@ -159,6 +159,7 @@ p{
 
 #scene .layout .town .town-front{
   background-image: url("../img/layout/t1_1.png");
+  bottom: -0.2em;
   height: 34em;
 }
 #scene .layout .town .town-mid{
