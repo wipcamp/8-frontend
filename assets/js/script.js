@@ -25,7 +25,7 @@ $(document).ready(function(e){
   TweenMax.from('.layout .town-back', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.8), delay: 6.2});
 
   TweenMax.from('.layout .header', 2, {css: {top: "-100%"} ,delay:5.5});
-  TweenMax.from('.reg', 2, {css: {opacity:0} ,delay:7});
+  TweenMax.to('.reg', 2, {css: {opacity:1,visibility:"visible"} ,delay:7});
 
   star.to('.star-front',2,{opacity:1})
       .to('.star-mid',2,{opacity:1})

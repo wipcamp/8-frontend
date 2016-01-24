@@ -121,7 +121,7 @@ p{
 #scene .layout .header {
   position: absolute;
   left: 50%;
-  top: 0%;
+  top: 3%;
 }
 #scene .layout .header .logo {
   display: block;
@@ -130,7 +130,7 @@ p{
 }
 
 #scene .layout .header .camp_name {
-  width: 27.7em;
+  width: 28.7em;
   height: auto;
   margin: 0 auto;
 }
@@ -183,11 +183,15 @@ p{
   left: 0;
   opacity: 0;
   visibility: hidden;
+  cursor: pointer;
 }
 
 .pre-redirect h1{
   text-align: center;
-  padding: 20% 0;
+  position: relative;
+  top: 50%;
+  margin-top: -60px;
+
 }
 
 /*   Starfall  */
@@ -314,7 +318,7 @@ p{
   z-index: 8;
 }
 .section:hover .sec{
-  opacity: .6 !important;
+  opacity: .4 !important;
 }
 .section .sec:hover {
   opacity: 1 !important;
@@ -330,38 +334,40 @@ p{
 .reg {
   position: absolute;
   left: 50%;
-  bottom: 20%;
+  bottom: 18%;
+  opacity: 0;
+  visibility: hidden;
 }
 .reg img {
   margin-left: -50%;
-  width: 16.6em;
+  width: 22.6em;
   animation: reg_ani 3s linear infinite;
 }
 
 .sec.what {
-	top: 10%;
+	top: 15%;
 	left: 8%;
 }
 .sec.who {
-	top: 30%;
+	top: 35%;
 	left: 4%;
 }
 .sec.when {
-  top: 50%;
+  top: 55%;
   left: 8%;
 }
 
 .sec.where {
-	top: 10%;
+	top: 15%;
   right: 8%;
 }
 
 .sec.faqs {
-	top: 30%;
+	top: 35%;
 	right: 4%;
 }
 .sec.contact {
-	top: 50%;
+	top: 55%;
 	right: 8%;
 }
 
