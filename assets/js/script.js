@@ -18,10 +18,10 @@ $(document).ready(function(e){
   TweenMax.from('.section .where', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.6});
   TweenMax.from('.section .faqs', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:3.8});
   TweenMax.from('.section .contact', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:4});
-  TweenMax.from('.section .description', 1.5,{css: {opacity: 0}, delay:5});
+  TweenMax.from('.section .description', 1.5,{css: {opacity: 0}, delay:4.8});
 
-  TweenMax.from('.layout .town-front', 1.5,{css: {bottom: "-100%"}, delay: 5.2})
-  TweenMax.from('.layout .town-mid', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.8), delay: 5.8})
+  TweenMax.from('.layout .town-front', 1.5,{css: {bottom: "-100%"}, delay: 5.5})
+  TweenMax.from('.layout .town-mid', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.8), delay: 6})
   TweenMax.from('.layout .town-back', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.8), delay: 6.2});
 
   TweenMax.from('.layout .header', 2, {css: {top: "-100%"} ,delay:5.5});
@@ -295,11 +295,11 @@ $(document).ready(function(e){
       setTimeout(function(){
         fall('.ds1','.exp1');
       },9007);
-      
+
       setTimeout(function(){
         fall2('.ds2','.exp2');
       },9264);
-      
+
       setTimeout(function(){
         fall3('.ds3','.exp3');
       },14305);
@@ -307,13 +307,12 @@ $(document).ready(function(e){
       setTimeout(function(){
         fall4('.ds-b1','.exp-b1');
       },7291);
-      
+
       setTimeout(function(){
         fall5('.ds-b2','.exp-b2');
       },13238);
-      
+
       setTimeout(function(){
         fall6('.ds-b3','.exp-b3');
       },8599);
-
 });

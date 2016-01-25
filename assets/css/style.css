@@ -23,7 +23,8 @@
 
 @font-face {
     font-family: 'Thaisans_lite';
-    src: url('../fonts/thaisanslite_r1.ttf');
+    src: url('../fonts/thaisanslite_r1.ttf') format('truetype'),
+    url('../fonts/thaisanslite_r1.ttf') format("opentype");
     font-weight: normal;
 }
 
@@ -682,12 +683,12 @@ p{
 }
 
 .pop-when .content .inner-descript h3{
-  opacity: 0.7;
+  opacity: 0.4;
   font-size: 1.775em;
   height: auto;
 }
 .pop-when .content .inner-descript p{
-  opacity: 0.7;
+  opacity: 0.4;
   font-size: 1.5em;
   height: auto;
   position: relative;
@@ -769,8 +770,8 @@ p{
 
 .pop-where .exit{
 	position: absolute;
-  left: -4.5em;
-  top: .5em;
+  right: 1.1em;
+  top: 1.1em;
   height: 4em;
   cursor: pointer;
   transition: transform .7s;
@@ -791,6 +792,7 @@ p{
   letter-spacing: .01em;
   font-weight: bold;
   margin-top: .4em;
+  text-align: left;
   box-sizing: border-box;
 }
 .accContent {
