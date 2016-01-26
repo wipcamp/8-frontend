@@ -2,7 +2,7 @@
 
 $(document).ready(function(e){
 
-  msieversion();
+  detectIE();
 
   $('#scene').parallax({
     limitY: 1,
