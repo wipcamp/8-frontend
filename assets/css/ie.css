@@ -1,10 +1,12 @@
 /* Black Screen on IE / Egde*/
 
 .popup {
-  min-height: 900px !important;
+  min-height: 850px !important;
+	overflow: scroll;
 }
 
 #scene {
-  min-height: 900px !important;
+  min-height: 850px !important;
+  overflow: scroll;
 }
 

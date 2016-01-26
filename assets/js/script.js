@@ -69,6 +69,36 @@ $(document).ready(function(e){
       }
     });
 
+    /**
+     * detect IE
+     * returns version of IE or false, if browser is not Internet Explorer
+     */
+    function detectIE() {
+        var ua = window.navigator.userAgent;
+
+        var msie = ua.indexOf('MSIE ');
+        if (msie > 0) {
+            // IE 10 or older => return version number
+          $('head').append('<link rel="stylesheet" href="assets/css/ie.css" type="text/css" />');           
+            
+        }
+
+        var trident = ua.indexOf('Trident/');
+        if (trident > 0) {
+            // IE 11 => return version number
+          $('head').append('<link rel="stylesheet" href="assets/css/ie.css" type="text/css" />');           
+        }
+
+        var edge = ua.indexOf('Edge/');
+        if (edge > 0) {
+           // Edge (IE 12+) => return version number
+          $('head').append('<link rel="stylesheet" href="assets/css/ie.css" type="text/css" />');           
+        }
+
+        // other browser
+        return false;
+    }
+
     function msieversion() {
 
         var ua = window.navigator.userAgent;
