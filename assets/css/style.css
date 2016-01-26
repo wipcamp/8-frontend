@@ -24,7 +24,7 @@
 @font-face {
     font-family: 'Thaisans_lite';
     src: url('../fonts/thaisanslite_r1.ttf') format('truetype'),
-    url('../fonts/thaisanslite_r1.ttf') format("opentype");
+    url('../fonts/thaisanslite_r1.otf') format("opentype");
     font-weight: normal;
 }
 
