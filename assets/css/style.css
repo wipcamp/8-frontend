@@ -30,7 +30,6 @@
          url('../fonts/thaisanslite_r1-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 html,body{
@@ -604,7 +603,7 @@ p{
   border-radius: 100%;
   background-color: white; 
   position: absolute;
-  border: 0.25em solid #f00;
+  border: 0.25em solid #ff0039;
   transform: scale(0);
   margin-top: 0.25em;
 }
@@ -685,7 +684,7 @@ p{
   width: 4em;
   border: 0.25em solid rgb(255,0,57);
   margin-left: -0.5em;
-
+  background-color: #ff0039;
 }
 
 .pop-when .content .inner-descript.loyBig h3{
@@ -856,7 +855,7 @@ p{
   transition: transform .2s, opacity .2s;
 }
 i.fa {
-    padding-top: .25em;
+  padding-top: .25em;
 }
 .pop-contact ul:hover li {
   opacity: 0.6;
@@ -864,6 +863,37 @@ i.fa {
 .pop-contact li:hover {
   opacity: 1 !important;
   transform: scale(1.2);
+}
+.pop-contact .lineat {
+  vertical-align: top;
+  height: 1.5em !important;
+}
+
+.pop-contact a {
+  color: #000;
+}
+
+.pop-contact .lineat img{
+  padding-top: 0.55em;
+  width: 65px;
+  float: none;
+  margin: 0 auto;
+}
+
+
+
+.modal {
+  width: 23em;
+  height: 23em;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -11.5em;
+  margin-left: -11.5em;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* 
