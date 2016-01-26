@@ -92,6 +92,7 @@ p{
 	position: relative;
 	height: 100%;
 	width: 100%; 
+  min-height: 580px !important;
   min-width: 980px;
 }
 
@@ -473,6 +474,7 @@ p{
 .popup {
   background-color: white;
   width: 50%;
+  min-height: 580px !important;
   height: 100%;
   position: fixed; 
   top: 0; 
