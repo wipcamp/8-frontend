@@ -23,9 +23,14 @@
 
 @font-face {
     font-family: 'Thaisans_lite';
-    src: url('../fonts/thaisanslite_r1.ttf') format('truetype'),
-    url('../fonts/thaisanslite_r1.otf') format("opentype");
+    src: url('../fonts/thaisanslite_r1-webfont.eot');
+    src: url('../fonts/thaisanslite_r1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisanslite_r1-webfont.woff2') format('woff2'),
+         url('../fonts/thaisanslite_r1-webfont.woff') format('woff'),
+         url('../fonts/thaisanslite_r1-webfont.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+
 }
 
 html,body{
@@ -151,7 +156,6 @@ p{
   bottom: 0;
   width: 120%;
   left: -6em;
-  background-size: contain;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -216,6 +220,7 @@ p{
 }
 .explosion.active{
   animation: explosion 2.5s;
+  -webkit-animation: explosion 2.5s;
 }
 
 
