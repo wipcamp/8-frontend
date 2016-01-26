@@ -6,7 +6,7 @@ $(document).ready(function(e){
 
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
    // some code..
-   window.location.replace("http://site.freezer.wip.camp/old_version");
+   window.location.replace("http://site.freezer.wip.camp/m");
   }
 
   $('#scene').parallax({
