@@ -1,5 +1,9 @@
 /* Black Screen on IE / Egde*/
 
+html,body{
+	overflow: hidden;
+}
+
 .popup {
   min-height: 850px !important;
 	overflow: scroll;
