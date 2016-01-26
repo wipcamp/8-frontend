@@ -4,6 +4,11 @@ $(document).ready(function(e){
 
   detectIE();
 
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   // some code..
+   window.location.replace("http://site.freezer.wip.camp/old_version");
+  }
+
   $('#scene').parallax({
     limitY: 1,
   });
@@ -80,7 +85,7 @@ $(document).ready(function(e){
         if (msie > 0) {
             // IE 10 or older => return version number
           $('head').append('<link rel="stylesheet" href="assets/css/ie.css" type="text/css" />');           
-            
+
         }
 
         var trident = ua.indexOf('Trident/');
