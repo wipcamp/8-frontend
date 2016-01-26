@@ -77,6 +77,7 @@ $(document).ready(function(e){
         if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){   // If Internet Explorer, return version number
             console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
             console.log('ie');
+            $('head').append('<link rel="stylesheet" href="assets/css/ie.css" type="text/css" />');
             }
         else{                // If another browser, return 0
             console.log('otherbrowser');
