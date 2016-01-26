@@ -97,7 +97,7 @@ p{
 	position: relative;
 	height: 100%;
 	width: 100%; 
-  min-height: 100vh !important;
+  min-height: 700px !important;
   min-width: 980px;
 }
 
@@ -165,17 +165,20 @@ p{
 #scene .layout .town .town-front{
   background-image: url("../img/layout/t1_1.png");
   bottom: -0.2em;
-  height: 34em;
+  max-height: 34em;
+  height: 100%;
 }
 #scene .layout .town .town-mid{
   background-image: url("../img/layout/t2.png");
   bottom: -1.6em;
-  height: 34em;
+  max-height: 34em;
+  height: 100%;
 }
 #scene .layout .town .town-back{
   background-image: url("../img/layout/t.png");
   bottom: -1.6em;
-  height: 34em;
+  max-height: 34em;
+  height: 100%;
 }
 
 
@@ -479,7 +482,7 @@ p{
 .popup {
   background-color: white;
   width: 50%;
-  min-height: 100vh !important;
+  min-height: 700px !important;
   height: 100%;
   position: fixed; 
   top: 0; 
