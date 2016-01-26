@@ -1,7 +1,9 @@
 "use strict";
 
 $(document).ready(function(e){
-  
+
+  msieversion();
+
   $('#scene').parallax({
     limitY: 1,
   });
@@ -66,6 +68,21 @@ $(document).ready(function(e){
         
       }
     });
+
+    function msieversion() {
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){   // If Internet Explorer, return version number
+            console.log(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+            console.log('ie');
+            }
+        else{                // If another browser, return 0
+            console.log('otherbrowser');
+        }
+       return false;
+    }
 
     function exit_modal(){
       if($('.modal').hasClass('active')){
