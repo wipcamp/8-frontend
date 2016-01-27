@@ -90,6 +90,11 @@ section {
     padding: 20px 0;
 }
 
+.images img{
+  border-radius: 6px;
+  width: 70%;
+  margin: 0 auto;
+}
 
 #Home {
   background-color: #2a234b;

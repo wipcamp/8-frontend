@@ -251,12 +251,11 @@ $(document).ready(function(e){
           randomPosX6 = Math.random()*3700-1800;
           changePosX = 1600;
       }
-
       var setExplosion = function(bomb,randomSpeed){
-            setTimeout(function(){
+            
             $(bomb).css({left: (randomPosX+changePosX)});
             $(bomb).addClass('active');
-            },randomSpeed);
+            
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall('.ds1','.exp1');
@@ -267,16 +266,16 @@ $(document).ready(function(e){
         var randomSpeed = Math.random()*1.5+2;
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX, top:"-30%"}},
-          {css : {left: (randomPosX+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+          {css : {left: (randomPosX+changePosX), top: "93%"},delay: 2,onComplete: function(){  
             setExplosion(bomb,randomSpeed);
           }
           }); 
         }
       var setExplosion2 = function(bomb,randomSpeed){
-            setTimeout(function(){
+            
             $(bomb).css({left: (randomPosX2+changePosX)});
             $(bomb).addClass('active');
-            },randomSpeed);
+           
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall2('.ds2','.exp2');
@@ -287,16 +286,16 @@ $(document).ready(function(e){
         var randomSpeed = Math.random()*1.5+1;   
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX2, top:"-30%"}},
-          {css : {left: (randomPosX2+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+          {css : {left: (randomPosX2+changePosX), top: "93%"},delay: 2.5,onComplete: function(){  
             setExplosion2(bomb,randomSpeed);
           }
           }); 
         }
       var setExplosion3 = function(bomb,randomSpeed){
-            setTimeout(function(){
+            
             $(bomb).css({left: (randomPosX3+changePosX)});
             $(bomb).addClass('active');
-            },randomSpeed);
+           
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall3('.ds3','.exp3');
@@ -307,17 +306,17 @@ $(document).ready(function(e){
         var randomSpeed = Math.random()*1.5+0.5;     
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX3, top:"-30%"}},
-          {css : {left: (randomPosX3+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+          {css : {left: (randomPosX3+changePosX), top: "93%"},delay: 2.5,onComplete: function(){  
             setExplosion3(bomb,randomSpeed);
           }
           }); 
         }
 
        var setExplosion4 = function(bomb,randomSpeed){
-            setTimeout(function(){
+           
             $(bomb).css({left: (randomPosX4+changePosX)});
             $(bomb).addClass('active');
-            },randomSpeed);
+            
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall4('.ds-b1','.exp-b1');
@@ -328,16 +327,16 @@ $(document).ready(function(e){
         var randomSpeed = Math.random()*1.5+2;
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX4, top:"-30%"}},
-          {css : {left: (randomPosX4+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+          {css : {left: (randomPosX4+changePosX), top: "93%"},delay: 2.5,onComplete: function(){  
             setExplosion4(bomb,randomSpeed);
           }
           }); 
         }
       var setExplosion5 = function(bomb,randomSpeed){
-            setTimeout(function(){
+            
             $(bomb).css({left: (randomPosX5+changePosX)});
             $(bomb).addClass('active');
-            },randomSpeed);
+            
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall5('.ds-b2','.exp-b2');
@@ -348,16 +347,16 @@ $(document).ready(function(e){
         var randomSpeed = Math.random()*1.5+1;   
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX5, top:"-30%"}},
-          {css : {left: (randomPosX5+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+          {css : {left: (randomPosX5+changePosX), top: "90%"},delay: 2.5,onComplete: function(){  
             setExplosion5(bomb,randomSpeed);
           }
           }); 
         }
       var setExplosion6 = function(bomb,randomSpeed){
-            setTimeout(function(){
+            
             $(bomb).css({left: (randomPosX6+changePosX)});
             $(bomb).addClass('active');
-            },randomSpeed);
+            
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall6('.ds-b3','.exp-b3');
@@ -368,12 +367,11 @@ $(document).ready(function(e){
         var randomSpeed = Math.random()*1.5+0.5;     
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX6, top:"-30%"}},
-          {css : {left: (randomPosX6+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
+          {css : {left: (randomPosX6+changePosX), top: "90%"},delay: 2.5,onComplete: function(){  
             setExplosion6(bomb,randomSpeed);
           }
           }); 
         } 
-      
       setTimeout(function(){
         fall('.ds1','.exp1');
       },9007);
