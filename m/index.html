@@ -11,6 +11,17 @@
     position: relative;
   }
   
+	.navbar-brand .emblem {
+		height: 50px;
+		display: inline-block;
+	}
+
+	.navbar-brand {
+		padding: 0;
+	}
+
+	.navbar-brand h1{font-size:20px;display: inline-block;color:white;padding: 0;margin: 0;vertical-align:middle;}
+
   .full-nav {
     height: 100vh;
     width: 100vw;
@@ -53,7 +64,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Wip Camp 8</a>
+        <a class="navbar-brand">Wip Camp 8</a>
       </div>
       <div class="full-nav" id="full-nav">
     <ul class="nav navbar-nav">
@@ -206,6 +217,27 @@
         } else {
           $('.navbar').fadeOut();
         }
+
+      	var section = "<h1>" + ($("#full-nav li[class*='active']").text()) + "</h1>";
+
+      	var emblem = function(){
+      		var src;
+      		if( $("#full-nav li[class*='active']").text() == "Home" ) src = "cap";
+      		if( $("#full-nav li[class*='active']").text() == "What" ) src = "cap";
+      		if( $("#full-nav li[class*='active']").text() == "Who" )	src = "cyp";
+      		if( $("#full-nav li[class*='active']").text() == "When" )	src = "scr";
+      		if( $("#full-nav li[class*='active']").text() == "Where" ) src = "thr";
+      		if( $("#full-nav li[class*='active']").text() == "FAQs" ) src = "spm";
+      		if( $("#full-nav li[class*='active']").text() == "Contact" ) src = "agl";
+
+      		return "<img class=\"emblem img-responsive\" src=\"images/emblem/" + src +".png\">";
+      	}
+      	;
+      	$('.navbar-brand').html(emblem() + section).animate({
+        opacity: 1 // Animate opacity to 1 with a duration of 2 sec
+    }, 200);;
+
+
       });
     });
     $('.navbar-toggle').click(function(){
@@ -219,6 +251,8 @@
     		}});
     	}
     });
+
+    $()
 
     $('#full-nav a').click(function(){
     	TweenMax.to('#full-nav',.2,{css:{opacity:0,visibility:"hidden"},onComplete:function(){
