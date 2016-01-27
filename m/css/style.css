@@ -92,8 +92,9 @@ section {
 
 
 #Home {
-    background-color: #2a234b;
+  background-color: #2a234b;
   height: 100vh;
+  padding: 0;
 }
 
 #Home .col-sm-12 {
@@ -104,6 +105,10 @@ section {
 
 #Home .wip {
   padding-top: 2em;
+}
+
+#Home .way {
+      margin-top: -2em;
 }
 
 #Home .spon {
