@@ -592,7 +592,7 @@ p{
 }
 
 .popup.pop-faqs .inner{
-  overflow: scroll;
+  overflow: hidden;
   height: 88%;
 }
 
