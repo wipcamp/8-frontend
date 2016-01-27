@@ -84,3 +84,52 @@ p {
   font-size: 25px;
   padding: 10px 20px;
 }
+
+#Home {
+    background-color: #183a60;
+}
+
+#What {
+    background-color: #183a60;
+}
+#What h1,p {
+   color: #fff;
+   margin: 15px;
+}
+#Who {
+    background-color: #323436;
+}
+#Who h1,p {
+    color: #fff;
+}
+#When {
+    background-color: #116350;
+}
+#When h1,p {
+    color: #fff;
+}
+#Where {
+    background-color:#7a2b2b;
+}
+#Where h1,p {
+    color: #fff;
+}
+
+#FAQs {
+    background-color: #584155;
+}
+#FAQs h1,p {
+    color: #fff;
+}
+
+#Contact {
+    background-color: gray;
+}
+#Contact h1,p {
+    color: #fff;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+}

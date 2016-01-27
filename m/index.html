@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
 
 <body data-spy="scroll" data-target="#navbar">
@@ -38,17 +39,22 @@
   <div class="container">
     <section id="Home">
       <div class="container">
-        <div class="col-sm-12">
+       <div class="wow bounceInUp">
+         <div class="col-sm-12">
           <img src="images/finalwip1.png" class="img-responsive img-rounded">
           <img src="images/finalway.png" class="img-responsive img-rounded">
         </div>
       </div>
+      </div>
     </section>
+
+
     <section id="What">
       <div class="container">
         <div class="col-sm-12">
+          <div class="wow bounceInUp">
           <div class="row header text-center">
-            <h1>What is WIP Camp ?</h1>
+            <h1>What is WIP Camp?</h1>
           </div>
           <div class="row images">
             <img class="img-responsive img-rounded" src="images/wippo-captainamerica.png">
@@ -57,11 +63,15 @@
             <p>ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้องๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้องๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริง ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ระยะเวลา 5 วันเต็ม</p>
           </div>
         </div>
+        </div>
       </div>
     </section>
+
+
     <section id="Who">
       <div class="container">
         <div class="col-sm-12">
+         <div class="wow fadeInLeft">
           <div class="row header text-center">
             <h1>ค่ายนี้เหมาะกับใคร</h1>
           </div>
@@ -72,11 +82,13 @@
             <p>น้องๆ มัธยมศึกษาตอนปลายแผนการเรียนวิทย์-คณิต, ศิลป์-คำนวณ หรือสาขาใกล้เคียงน้องๆ ที่มีความสนใจด้านไอทีหรือต้องการค้นหาตนเองเพื่อศึกษาต่อในระดับมหาวิทยาลัยน้องๆ ที่ได้รับการอนุญาตจากผู้ปกครองโดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้องน้องๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน</p>
           </div>
         </div>
+        </div>
       </div>
     </section>
     <section id="When">
       <div class="container">
         <div class="col-sm-12">
+         <div class="wow fadeInLeft">
           <div class="row header text-center">
             <h1>ค่ายนี้จัดเมื่อไหร่</h1>
           </div>
@@ -94,11 +106,15 @@
               <br> 25 พฤษภาคม 2558 - 29 พฤษภาคม 2558</p>
           </div>
         </div>
+        </div>
       </div>
     </section>
+
+
     <section id="Where">
       <div class="container">
         <div class="col-sm-12">
+         <div class="wow fadeInLeft">
           <div class="row header text-center">
             <h1>สถานที่จัดค่าย</h1>
           </div>
@@ -110,11 +126,16 @@
               <br>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี 126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140</p>
           </div>
         </div>
+        </div>
       </div>
     </section>
+
+
+
     <section id="FAQs">
       <div class="container">
         <div class="col-sm-12">
+         <div class="wow fadeInLeft">
           <div class="row header text-center">
             <h1>ค่ายนี้จัดเมื่อไหร่</h1>
           </div>
@@ -128,11 +149,13 @@
             <p>ได้สิครับ คนเราไม่ใช่เทพทุกคนซะหน่อย ขอแค่พอมีพื้นฐานมาบ้าง เพื่อจะฟังพี่พูดเกี่ยวกับไอทีรู้เรื่องก็โอเคแล้วครับ</p>
           </div>
         </div>
+        </div>
       </div>
     </section>
     <section id="Contact">
       <div class="container">
         <div class="col-sm-12">
+          <div class="wow fadeInLeft">
           <div class="row header text-center">
             <h1>ติดต่อสอบถาม</h1>
           </div>
@@ -147,19 +170,24 @@
               <p>wippo@wipcamp.com</p>
           </div>
         </div>
+        </div>
       </div>
     </section>
   </div>
+
   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <script src="smooth-scroll.js"></script>
+  <script src="js/smooth-scroll.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script>
   $(document).ready(function() {
     // hide .navbar first
     smoothScroll.init({
     	offset: 50
     });
+
+    new WOW().init();
 
     $(".navbar").hide();
 
