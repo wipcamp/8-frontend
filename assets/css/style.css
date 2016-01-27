@@ -625,6 +625,12 @@ p{
 /------------------------/
 */
 
+/* ! What */
+
+.popup.pop-what p strong{
+  font-size: 1.2em !important;
+}
+
 
 /* ! When */
 .pop-when ul{
@@ -852,9 +858,9 @@ p{
 .pop-where .image-wippo {
   left: -200%;
   position: absolute;
-  max-height: 700px;
+  max-height: 400px;
   min-height: inherit;
-  bottom: -2.2em;
+  bottom: -3.2em;
   opacity: 0;
   filter: alpha(opacity=0);
 }
