@@ -51,6 +51,10 @@
   	border:0;
   }
 
+  .navbar-inverse .navbar-nav>li>a {
+  	color: black;
+  }
+
   </style>
 </head>
 
@@ -222,31 +226,30 @@
 
       	var emblem = function(){
       		var src;
-      		if( $("#full-nav li[class*='active']").text() == "Home" ) src = "cap";
-      		if( $("#full-nav li[class*='active']").text() == "What" ) src = "cap";
-      		if( $("#full-nav li[class*='active']").text() == "Who" )	src = "cyp";
-      		if( $("#full-nav li[class*='active']").text() == "When" )	src = "scr";
-      		if( $("#full-nav li[class*='active']").text() == "Where" ) src = "thr";
-      		if( $("#full-nav li[class*='active']").text() == "FAQs" ) src = "spm";
-      		if( $("#full-nav li[class*='active']").text() == "Contact" ) src = "agl";
-
-      		return "<img class=\"emblem img-responsive\" src=\"images/emblem/" + src +".png\">";
+      		if( $("#full-nav li[class*='active']").text() == "Home" ) src = "wippppp";
+      		else if( $("#full-nav li[class*='active']").text() == "What" ) src = "cap";
+      		else if( $("#full-nav li[class*='active']").text() == "Who" )	src = "cyp";
+      		else if( $("#full-nav li[class*='active']").text() == "When" )	src = "scr";
+      		else if( $("#full-nav li[class*='active']").text() == "Where" ) src = "thr";
+      		else if( $("#full-nav li[class*='active']").text() == "FAQs" ) src = "spm";
+      		else if( $("#full-nav li[class*='active']").text() == "Contact" ) src = "agl";
+      		else src = "wippppp";
+      		return "<img class=\"emblem img-responsive\" src=\"images/emblem/" + src +".png\">"+section;
       	}
-      	;
-      	$('.navbar-brand').html(emblem() + section).animate({
-        opacity: 1 // Animate opacity to 1 with a duration of 2 sec
-    }, 200);;
-
+      	
+      	var cerrent_section = $("#full-nav li[class*='active']").text();
+      	if( cerrent_section != $('.navbar-brand h1').text())
+      		$('.navbar-brand').stop().html(emblem()).hide(0).fadeIn("slow");
 
       });
     });
     $('.navbar-toggle').click(function(){
     	if($("#full-nav").hasClass('active')){
-    		TweenMax.to('#full-nav',.2,{css:{opacity:0,visibility:"hidden"},onComplete:function(){
+    		TweenMax.to('#full-nav',.8,{css:{opacity:0,visibility:"hidden"},onComplete:function(){
     			$("#full-nav").removeClass('active');
     		}});
     	}else{
-    		TweenMax.to('#full-nav',.2,{css:{opacity:1,visibility:"visible"},onComplete:function(){
+    		TweenMax.to('#full-nav',.8,{css:{opacity:1,visibility:"visible"},onComplete:function(){
     			$("#full-nav").addClass('active');
     		}});
     	}
