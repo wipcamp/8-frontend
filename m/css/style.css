@@ -1,26 +1,86 @@
 @font-face {
-    font-family: 'Thaisans_lite';
-    src: url('../fonts/thaisanslite_r1-webfont.eot');
-    src: url('../fonts/thaisanslite_r1-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/thaisanslite_r1-webfont.woff2') format('woff2'),
-         url('../fonts/thaisanslite_r1-webfont.woff') format('woff'),
-         url('../fonts/thaisanslite_r1-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Thaisans_lite';
+  src: url('../fonts/thaisanslite_r1-webfont.eot');
+  src: url('../fonts/thaisanslite_r1-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/thaisanslite_r1-webfont.woff2') format('woff2'), url('../fonts/thaisanslite_r1-webfont.woff') format('woff'), url('../fonts/thaisanslite_r1-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-html,body{
-	font-family: 'Thaisans_lite';
+html,
+body {
+  font-family: 'Thaisans_lite';
+  position: relative;
 }
 
 h1 {
-	font-size: 44px;
+  font-size: 44px;
 }
 
 p {
-	font-size: 20px;
+  font-size: 20px;
 }
 
-#what container{
-	background: red;
+#what container {
+  background: red;
+}
+
+.navbar-brand .emblem {
+  height: 50px;
+  display: inline-block;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-brand h1 {
+  font-size: 20px;
+  display: inline-block;
+  color: white;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.full-nav {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  z-index: 10000;
+  background: white;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.full-nav .navbar-nav {
+  text-align: center;
+  padding: 18vh 0;
+}
+
+.navbar-nav>li>a {
+  font-size: 20px;
+  color: black;
+}
+
+.navbar-inverse .navbar-toggle {
+  border: 0;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: black;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.navbar-inverse .navbar-nav span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  padding: 10px 20px;
 }

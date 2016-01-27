@@ -6,56 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-  body {
-    position: relative;
-  }
-  
-	.navbar-brand .emblem {
-		height: 50px;
-		display: inline-block;
-	}
-
-	.navbar-brand {
-		padding: 0;
-	}
-
-	.navbar-brand h1{font-size:20px;display: inline-block;color:white;padding: 0;margin: 0;vertical-align:middle;}
-
-  .full-nav {
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    z-index: 10000;
-    background: white;
-    top: 0;
-    bottom: 0;
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-  }
-  
-  .full-nav .navbar-nav {
-    text-align: center;
-    padding: 18vh 0;
-  }
-  
-  .navbar-nav>li>a {
-    font-size: 20px;
-    color: black;
-  }
-
-  .navbar-inverse .navbar-toggle {
-  	border:0;
-  }
-
-  .navbar-inverse .navbar-nav>li>a {
-  	color: black;
-  }
-
-  </style>
 </head>
 
 <body data-spy="scroll" data-target="#navbar">
@@ -79,6 +29,7 @@
       <li><a data-scroll href="#Where">Where</a></li>
       <li><a data-scroll href="#FAQs">FAQs</a></li>
       <li><a data-scroll href="#Contact">Contact</a></li>
+      <span>x</span>
     </ul>
   </div>
     </div>
@@ -243,7 +194,7 @@
 
       });
     });
-    $('.navbar-toggle').click(function(){
+    $('.navbar-toggle,.navbar-inverse .navbar-nav span').click(function(){
     	if($("#full-nav").hasClass('active')){
     		TweenMax.to('#full-nav',.8,{css:{opacity:0,visibility:"hidden"},onComplete:function(){
     			$("#full-nav").removeClass('active');
