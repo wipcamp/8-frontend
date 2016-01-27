@@ -86,8 +86,36 @@ p {
   padding: 10px 20px;
 }
 
+section {
+    padding: 20px 0;
+}
+
+
 #Home {
-    background-color: #183a60;
+    background-color: #2a234b;
+  height: 100vh;
+}
+
+#Home .col-sm-12 {
+  height: 100vh;
+  padding: 0;
+  margin-top: 0em;  
+}
+
+#Home .wip {
+  padding-top: 2em;
+}
+
+#Home .spon {
+  position: relative;
+  margin-top: -2em;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#Home .town {
+  position: absolute;
+  bottom: 0;
 }
 
 #What {
