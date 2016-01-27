@@ -10,6 +10,7 @@ html,
 body {
   font-family: 'Thaisans_lite';
   position: relative;
+  font-size: 18px;
 }
 
 h1 {
@@ -122,6 +123,10 @@ p {
     color: #fff;
 }
 
+#FAQs .description {
+  margin-bottom: 2em;
+}
+
 #Contact {
     background-color: gray;
 }
@@ -132,4 +137,29 @@ p {
 .container {
     margin: 0;
     padding: 0;
+}
+
+.accordion {
+  position: relative;
+  height: auto;
+  cursor: pointer;
+  padding: 0.4em 0.6em .4em;
+  background: rgba(238, 238, 238, 0.6);
+  width: 100%;
+  font-size: 1.225em;
+  letter-spacing: .01em;
+  font-weight: bold;
+  margin-top: .4em;
+  text-align: center;
+  box-sizing: border-box;
+}
+.accContent {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  font-size: 1.125em;
+  margin-bottom: 1em;
+  background: rgba(255,255,255,.6);
+  padding: .5em;
+  box-sizing: border-box;
 }
