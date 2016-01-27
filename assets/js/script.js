@@ -1,13 +1,13 @@
 "use strict";
 
-$(document).ready(function(e){
-
-  detectIE();
-
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
    // some code..
    window.location.replace("http://site.freezer.wip.camp/m");
   }
+
+$(document).ready(function(e){
+
+  detectIE();
 
   $('#scene').parallax({
     limitY: 1,

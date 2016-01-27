@@ -1,168 +1,232 @@
 <!doctype html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  body {
+    position: relative;
+  }
+  
+  .full-nav {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    z-index: 10000;
+    background: white;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .full-nav .navbar-nav {
+    text-align: center;
+    padding: 18vh 0;
+  }
+  
+  .navbar-nav>li>a {
+    font-size: 20px;
+    color: black;
+  }
 
+  .navbar-inverse .navbar-toggle {
+  	border:0;
+  }
+
+  </style>
 </head>
-<body>
 
-	<header text-center role="banner" id="fh5co-header text-center">
-			<div class="container" >
-				<!-- <div class="row"> -->
-			    <nav class="navbar navbar-default">
-		        <div class="navbar-header text-center">
-		        	<!-- Mobile Toggle Menu Button -->
-					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		          	<a class="navbar-brand" href="index.html">WIP CAMP#8</a> 
-		        </div>
-		        <div id="navbar" class="navbar-collapse collapse">
-		          <ul class="nav navbar-nav navbar-right">
-		            <li><a href="#" data-nav-section="what"><span>What</span></a></li>
-		            <li><a href="#" data-nav-section="who"><span>Who</span></a></li>
-		            <li><a href="#" data-nav-section="where"><span>Where</span></a></li>
-		            <li><a href="#" data-nav-section="when"><span>When</span></a></li>
-		            <li><a href="#" data-nav-section="faq"><span>FAQs</span></a></li>
-		            <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
-		          </ul>
-		        </div>
-			    </nav>
-		  </div>
-	</header text-center>
+<body data-spy="scroll" data-target="#navbar">
+  <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Wip Camp 8</a>
+      </div>
+    </div>
+  </nav>
+  <div class="full-nav" id="full-nav">
+    <ul class="nav navbar-nav">
+      <li><a data-scroll href="#Home">Home</a></li>
+      <li><a data-scroll href="#What">What</a></li>
+      <li><a data-scroll href="#Who">Who</a></li>
+      <li><a data-scroll href="#When">When</a></li>
+      <li><a data-scroll href="#Where">Where</a></li>
+      <li><a data-scroll href="#FAQs">FAQs</a></li>
+      <li><a data-scroll href="#Contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <section id="Home">
+      <div class="container">
+        <div class="col-sm-12">
+          <img src="images/finalwip1.png" class="img-responsive img-rounded">
+          <img src="images/finalway.png" class="img-responsive img-rounded">
+        </div>
+      </div>
+    </section>
+    <section id="What">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="row header text-center">
+            <h1>What is WIP Camp ?</h1>
+          </div>
+          <div class="row images">
+            <img class="img-responsive img-rounded" src="images/wippo-captainamerica.png">
+          </div>
+          <div class="row description text-center">
+            <p>ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้องๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้องๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริง ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ระยะเวลา 5 วันเต็ม</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Who">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="row header text-center">
+            <h1>ค่ายนี้เหมาะกับใคร</h1>
+          </div>
+          <div class="row images">
+            <img class="img-responsive img-rounded" src="images/wippo-cyclops.png">
+          </div>
+          <div class="row description text-center">
+            <p>น้องๆ มัธยมศึกษาตอนปลายแผนการเรียนวิทย์-คณิต, ศิลป์-คำนวณ หรือสาขาใกล้เคียงน้องๆ ที่มีความสนใจด้านไอทีหรือต้องการค้นหาตนเองเพื่อศึกษาต่อในระดับมหาวิทยาลัยน้องๆ ที่ได้รับการอนุญาตจากผู้ปกครองโดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้องน้องๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="When">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="row header text-center">
+            <h1>ค่ายนี้จัดเมื่อไหร่</h1>
+          </div>
+          <div class="row images">
+            <img class="img-responsive img-rounded" src="images/wippo-scarlet.png">
+          </div>
+          <div class="row description text-center">
+            <p><strong>เปิดรับสมัครเข้าค่าย</strong>
+              <br> 6 กุมภาพันธ์ 2558 - 7 มีนาคม 2558</p>
+            <p><strong>ปิดรับสมัครเข้าค่าย</strong>
+              <br> 7 มีนาคม 2558</p>
+            <p><strong>ประกาศผลผู้มีสิทธ์เข้าค่าย</strong>
+              <br> 27 มีนาคม 2558</p>
+            <p><strong>เปิดค่าย!</strong>
+              <br> 25 พฤษภาคม 2558 - 29 พฤษภาคม 2558</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Where">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="row header text-center">
+            <h1>สถานที่จัดค่าย</h1>
+          </div>
+          <div class="row images">
+            <img class="img-responsive img-rounded" src="images/wippo-thor.png">
+          </div>
+          <div class="row description text-center">
+            <p>ค่ายของเรานี้จะจัดขึ้นที่"คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี วิทยาเขตบางมด"สามารถติดต่อได้ตามรายละเอียดด้านล่าง
+              <br>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี 126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="FAQs">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="row header text-center">
+            <h1>ค่ายนี้จัดเมื่อไหร่</h1>
+          </div>
+          <div class="row images">
+            <img class="img-responsive img-rounded" src="images/wippo-superman.png">
+          </div>
+          <div class="row description text-center">
+            <p><strong>Q: อยากเป็นส่วนหนึ่งของค่ายนี้มากๆ ต้องทำอย่างไร ?</strong></p>
+            <p>น้องๆ เพียงแค่ตอบคำถามในการสมัครด้วยตัวเองเพื่อแสดงถึงตัวตนของน้อง และมีความตั้งใจในการตอบคำถามครับ เพียงแค่น้องมีความตั้งใจ พี่เชื่อว่าน้องๆ จะได้มีส่วนร่วมในค่ายนี้อย่างแน่นอนครับ รวมถึงสิ่งที่สำคัญ คือ อย่าลืมอัพโหลดเอกสารให้ครบถ้วนและถูกต้องตามที่กำหนดด้วยนะครับ</p>
+            <p><strong>Q: ไม่มีความรู้เกี่ยวกับคอมพิวเตอร์มากนัก จะเข้าค่ายนี้ได้หรือไม่ ?</strong></p>
+            <p>ได้สิครับ คนเราไม่ใช่เทพทุกคนซะหน่อย ขอแค่พอมีพื้นฐานมาบ้าง เพื่อจะฟังพี่พูดเกี่ยวกับไอทีรู้เรื่องก็โอเคแล้วครับ</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Contact">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="row header text-center">
+            <h1>ติดต่อสอบถาม</h1>
+          </div>
+          <div class="row images">
+            <img class="img-responsive img-rounded" src="images/wippo-angel.png">
+          </div>
+          <div class="row description text-center">
+            <p><strong>โทรศัพท์</strong>
+              <p>06-2931-1726 (พี่เมย์)</p>
+              <p>06-2931-1727 (พี่แหวน)</p>
+              <p><strong>อีเมล</strong></p>
+              <p>wippo@wipcamp.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="smooth-scroll.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    // hide .navbar first
+    smoothScroll.init({
+    	offset: 50
+    });
 
-	<div class="container">
+    $(".navbar").hide();
 
-	<section id="Home">
-		<div class="container">
-			<div class="col-sm-12">
-				<img src="images/finalwip1.png" class="img-responsive img-rounded">
-				<img src="images/finalway.png" class="img-responsive img-rounded" >
-			</div>
-		</div>
-	</section>
+    // fade in .navbar
+    $(function() {
+      $(window).scroll(function() {
 
-	<section id="What">
-		<div class="container">
-			<div class="col-sm-12">
-				<div class="row header text-center">
-					<h1>What is WIP Camp ?</h1>
-				</div>
-				<div class="row images">
-					<img class="img-responsive img-rounded" src="images/wippo-captainamerica.png">
-				</div>
-				<div class="row description text-center">
-					<p>ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้องๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้องๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริง ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ระยะเวลา 5 วันเต็ม</p>
-				</div>
-			</div>
-		</div>
-	</section>
+        if ($(this).scrollTop() > $('#Home').height()) {
+          $('.navbar').fadeIn();
+        } else {
+          $('.navbar').fadeOut();
+        }
+      });
+    });
+    $('.navbar-toggle').click(function(){
+    	if($("#full-nav").hasClass('active')){
+    		TweenMax.to('#full-nav',.2,{css:{opacity:0,visibility:"hidden"},onComplete:function(){
+    			$("#full-nav").removeClass('active');
+    		}});
+    	}else{
+    		TweenMax.to('#full-nav',.2,{css:{opacity:1,visibility:"visible"},onComplete:function(){
+    			$("#full-nav").addClass('active');
+    		}});
+    	}
+    });
 
+    $('#full-nav a').click(function(){
+    	TweenMax.to('#full-nav',.2,{css:{opacity:0,visibility:"hidden"},onComplete:function(){
+    			$("#full-nav").removeClass('active');
+    		}});
+    })
+    
+    });
+  </script>
+</body>
 
-
-	<section id="Who">
-		<div class="container">
-			<div class="col-sm-12">
-				<div class="row header text-center">
-					<h1>ค่ายนี้เหมาะกับใคร</h1>
-				</div>
-				<div class="row images">
-					<img class="img-responsive img-rounded" src="images/wippo-cyclops.png">
-				</div>
-				<div class="row description text-center">
-					<p>น้องๆ มัธยมศึกษาตอนปลายแผนการเรียนวิทย์-คณิต, ศิลป์-คำนวณ หรือสาขาใกล้เคียงน้องๆ ที่มีความสนใจด้านไอทีหรือต้องการค้นหาตนเองเพื่อศึกษาต่อในระดับมหาวิทยาลัยน้องๆ ที่ได้รับการอนุญาตจากผู้ปกครองโดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้องน้องๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-	<section id="When">
-		<div class="container">
-			<div class="col-sm-12">
-				<div class="row header text-center">
-					<h1>ค่ายนี้จัดเมื่อไหร่</h1>
-				</div>
-				<div class="row images">
-					<img class="img-responsive img-rounded" src="images/wippo-scarlet.png">
-				</div>
-				<div class="row description text-center">
-					<p><strong>เปิดรับสมัครเข้าค่าย</strong><br>
-					6 กุมภาพันธ์ 2558 - 7 มีนาคม 2558</p>
-
-					<p><strong>ปิดรับสมัครเข้าค่าย</strong><br>
-					7 มีนาคม 2558</p>
-
-					<p><strong>ประกาศผลผู้มีสิทธ์เข้าค่าย</strong><br>
-					27 มีนาคม 2558</p>
-					<p><strong>เปิดค่าย!</strong><br>
-					25 พฤษภาคม 2558 - 29 พฤษภาคม 2558</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="Where">
-		<div class="container">
-			<div class="col-sm-12">
-				<div class="row header text-center">
-					<h1>สถานที่จัดค่าย</h1>
-				</div>
-				<div class="row images">
-					<img class="img-responsive img-rounded" src="images/wippo-thor.png">
-				</div>
-				<div class="row description text-center">
-					<p>ค่ายของเรานี้จะจัดขึ้นที่"คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี วิทยาเขตบางมด"สามารถติดต่อได้ตามรายละเอียดด้านล่าง<br>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี 126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-	<section id="FAQs">
-		<div class="container">
-			<div class="col-sm-12">
-				<div class="row header text-center">
-					<h1>ค่ายนี้จัดเมื่อไหร่</h1>
-				</div>
-				<div class="row images">
-					<img class="img-responsive img-rounded" src="images/wippo-superman.png">
-				</div>
-				<div class="row description text-center">
-					<p><strong>Q: อยากเป็นส่วนหนึ่งของค่ายนี้มากๆ ต้องทำอย่างไร ?</strong></p>
-					<p>น้องๆ เพียงแค่ตอบคำถามในการสมัครด้วยตัวเองเพื่อแสดงถึงตัวตนของน้อง และมีความตั้งใจในการตอบคำถามครับ เพียงแค่น้องมีความตั้งใจ พี่เชื่อว่าน้องๆ จะได้มีส่วนร่วมในค่ายนี้อย่างแน่นอนครับ รวมถึงสิ่งที่สำคัญ คือ อย่าลืมอัพโหลดเอกสารให้ครบถ้วนและถูกต้องตามที่กำหนดด้วยนะครับ</p>
-					<p><strong>Q: ไม่มีความรู้เกี่ยวกับคอมพิวเตอร์มากนัก จะเข้าค่ายนี้ได้หรือไม่ ?</strong></p>
-					<p>ได้สิครับ คนเราไม่ใช่เทพทุกคนซะหน่อย ขอแค่พอมีพื้นฐานมาบ้าง เพื่อจะฟังพี่พูดเกี่ยวกับไอทีรู้เรื่องก็โอเคแล้วครับ</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-	<section id="Contact">
-		<div class="container">
-			<div class="col-sm-12">
-				<div class="row header text-center">
-					<h1>ติดต่อสอบถาม</h1>
-				</div>
-				<div class="row images">
-					<img class="img-responsive img-rounded" src="images/wippo-angel.png">
-				</div>
-				<div class="row description text-center">
-					<p><strong>โทรศัพท์</strong>
- 					<p>06-2931-1726 (พี่เมย์)</p>
- 					<p>06-2931-1727 (พี่แหวน)</p>
-					<p><strong>อีเมล</strong></p> 
- 					<p>wippo@wipcamp.com</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	</div>
-
-	</body>
 </html>
