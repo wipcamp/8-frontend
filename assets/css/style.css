@@ -1010,6 +1010,21 @@ i.fa {
   visibility: hidden;
 }
 
+.modal .final_qr {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.modal .exit_modal {
+  position: absolute;
+  width: 2em;
+  right: -1em;
+  top: -1em;
+  cursor: pointer;
+}
+
+
 /* 
 /---------------------------------------/
     VI. Keyframes
