@@ -33,10 +33,10 @@ $(document).ready(function(e){
 
   TweenMax.from('.layout .header', 2, {css: {top: "-100%"} ,delay:5.5});
   TweenMax.to('.reg', 2, {css: {opacity:1,visibility:"visible"} ,delay:7});
-  TweenMax.to('.modal', 0.8, {css: {opacity:1,visibility:"visible",transform:"scale(1)"},delay:7,onComplete:function(){
-    $('.modal').addClass('active');
-    TweenMax.to(".overlay", 0.4, {className:"+=active"});
-  }});
+  // TweenMax.to('.modal', 0.8, {css: {opacity:1,visibility:"visible",transform:"scale(1)"},delay:7,onComplete:function(){
+  //   $('.modal').addClass('active');
+  //   TweenMax.to(".overlay", 0.4, {className:"+=active"});
+  // }});
 
   star.to('.star-front',2,{opacity:1})
       .to('.star-mid',2,{opacity:1})
