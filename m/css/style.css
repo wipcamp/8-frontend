@@ -100,6 +100,7 @@ section {
 
 #Home {
   background-color: #0c141e;
+  background-position: center top;
   height: 100vh;
   padding: 0;
 }
@@ -136,13 +137,25 @@ section {
   margin: 0 auto;
 }
 
+#Home .star img {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  z-index: 8;
+}
+
 #Home .town {
   position: absolute;
   bottom: 0;
+  z-index: 10;
+}
+
+#Home .town img{
+  width: 100vw;
 }
 
 #What {
-    background-color: #183a60;
+  background-color: #0c141e;
 }
 #What h1,p {
    color: #fff;
