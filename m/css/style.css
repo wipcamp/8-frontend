@@ -99,7 +99,7 @@ section {
 }
 
 #Home {
-  background-color: #2a234b;
+  background-color: #0c141e;
   height: 100vh;
   padding: 0;
 }
@@ -110,14 +110,25 @@ section {
   margin-top: 0em;  
 }
 
+#Home .div-wip {
+  padding-top: 2em;
+  position: relative;
+}
 #Home .wip {
   padding-top: 2em;
 }
-
-#Home .way {
-      margin-top: -2em;
+#Home .div-way {
+  top: -2em;
+  position: relative;
 }
-
+#Home .way {
+  width: 80%;
+  margin: 0 auto;
+}
+#Home .div-spon {
+  position: relative;
+  top: -3.2em;
+}
 #Home .spon {
   position: relative;
   margin-top: -2em;
@@ -202,7 +213,7 @@ section {
     padding: 0;
 }
 
-.accordion {
+#FAQs.accordion {
   position: relative;
   height: auto;
   cursor: pointer;
@@ -213,9 +224,10 @@ section {
   font-weight: bold;
   margin-top: .4em;
   text-align: center;
+  letter-spacing: 0;
   box-sizing: border-box;
 }
-.accContent {
+#FAQs.accContent {
   width: 100%;
   text-align: left;
   position: relative;

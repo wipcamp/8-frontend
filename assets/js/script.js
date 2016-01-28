@@ -27,9 +27,9 @@ $(document).ready(function(e){
   TweenMax.from('.section .contact', 1,{css: {right: "44%", top: "39%", opacity: 0}, delay:4});
   TweenMax.from('.section .description', 1.5,{css: {opacity: 0}, delay:4.8});
 
-  TweenMax.from('.layout .town-front', 1.5,{css: {bottom: "-100%"}, delay: 5.5})
-  TweenMax.from('.layout .town-mid', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.8), delay: 6})
-  TweenMax.from('.layout .town-back', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.8), delay: 6.2});
+  TweenMax.from('.layout .town-front', 1.5,{css: {bottom: "-100%"}, delay: 5.2})
+  TweenMax.from('.layout .town-mid', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.8), delay: 5.8})
+  TweenMax.from('.layout .town-back', 1.5,{css: {bottom: "-100%"},ease: Back.easeOut.config(.8), delay: 6});
 
   TweenMax.from('.layout .header', 2, {css: {top: "-100%"} ,delay:5.5});
   TweenMax.to('.reg', 2, {css: {opacity:1,visibility:"visible"} ,delay:7});
