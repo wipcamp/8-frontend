@@ -212,7 +212,7 @@ $(document).ready(function(e){
       }
     });
 
-    // Starfall
+    // Falling Star
       var randomPosX;
       var randomPosX2;
       var randomPosX3;
@@ -221,57 +221,43 @@ $(document).ready(function(e){
       var randomPosX6;
       var changePosX;
 
-      // change random to Position X of Starfall
+      // Change random to Position X for Falling Star
       if($('body').width() <= 1500){
-          randomPosX = Math.random()*1500-800;
-          randomPosX2 = Math.random()*1500-800;
-          randomPosX3 = Math.random()*1500-800;
-          randomPosX4 = Math.random()*1500-1000;
-          randomPosX5 = Math.random()*1500-1000;
-          randomPosX6 = Math.random()*1500-1000;
-          changePosX = 1000;
-          
+          changePosX = 1000;    
       }
       else if($('body').width() > 1500 && $('body').width() <= 2000){
-          randomPosX = Math.random()*2000-1300;
-          randomPosX2 = Math.random()*2500-1300;
-          randomPosX3 = Math.random()*2500-1300;
-          randomPosX4 = Math.random()*2500-1600;
-          randomPosX5 = Math.random()*2500-1600;
-          randomPosX6 = Math.random()*2500-1600;
           changePosX = 1100;
-          
       }
       else if($('body').width() > 2000 && $('body').width() <= 2560){
-          randomPosX = Math.random()*3700-1300;
-          randomPosX2 = Math.random()*3700-1300;
-          randomPosX3 = Math.random()*3700-1300;
-          randomPosX4 = Math.random()*3700-1800;
-          randomPosX5 = Math.random()*3700-1800;
-          randomPosX6 = Math.random()*3700-1800;
           changePosX = 1600;
       }
-      var setExplosion = function(bomb,randomSpeed){
-            
+      var setExplosion = function(bomb){
             $(bomb).css({left: (randomPosX+changePosX)});
             $(bomb).addClass('active');
-            
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall('.ds1','.exp1');
             },2500);
       } 
-
-      function fall(el,bomb){     
+      function fall(el,bomb){
+        if($('body').width() <= 1500){
+            randomPosX = Math.random()*1500-800;     
+        }
+        else if($('body').width() > 1500 && $('body').width() <= 2000){
+            randomPosX = Math.random()*2000-1300; 
+        }
+        else if($('body').width() > 2000 && $('body').width() <= 2560){
+            randomPosX = Math.random()*3700-1300;
+        }     
         var randomSpeed = Math.random()*1.5+2;
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX, top:"-30%"}},
-          {css : {left: (randomPosX+changePosX), top: "93%"},delay: 2,onComplete: function(){  
+          {css : {left: (randomPosX+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
             setExplosion(bomb,randomSpeed);
           }
           }); 
         }
-      var setExplosion2 = function(bomb,randomSpeed){
+      var setExplosion2 = function(bomb){
             
             $(bomb).css({left: (randomPosX2+changePosX)});
             $(bomb).addClass('active');
@@ -281,69 +267,97 @@ $(document).ready(function(e){
               fall2('.ds2','.exp2');
             },2500);
       } 
-
-      function fall2(el,bomb){      
+      function fall2(el,bomb){
+        if($('body').width() <= 1500){
+            randomPosX2 = Math.random()*1500-800;     
+        }
+        else if($('body').width() > 1500 && $('body').width() <= 2000){
+            randomPosX2 = Math.random()*2000-1300;         
+        }
+        else if($('body').width() > 2000 && $('body').width() <= 2560){
+            randomPosX2 = Math.random()*3700-1300;
+        }               
         var randomSpeed = Math.random()*1.5+1;   
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX2, top:"-30%"}},
-          {css : {left: (randomPosX2+changePosX), top: "93%"},delay: 2.5,onComplete: function(){  
+          {css : {left: (randomPosX2+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
             setExplosion2(bomb,randomSpeed);
           }
           }); 
         }
-      var setExplosion3 = function(bomb,randomSpeed){
-            
+      var setExplosion3 = function(bomb){ 
             $(bomb).css({left: (randomPosX3+changePosX)});
             $(bomb).addClass('active');
-           
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall3('.ds3','.exp3');
             },2500);
       } 
-
       function fall3(el,bomb){    
+        if($('body').width() <= 1500){
+            randomPosX3 = Math.random()*1500-800;      
+        }
+        else if($('body').width() > 1500 && $('body').width() <= 2000){
+            randomPosX3 = Math.random()*2000-1300;
+            
+        }
+        else if($('body').width() > 2000 && $('body').width() <= 2560){
+            randomPosX3 = Math.random()*3700-1300;
+        }           
         var randomSpeed = Math.random()*1.5+0.5;     
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX3, top:"-30%"}},
-          {css : {left: (randomPosX3+changePosX), top: "93%"},delay: 2.5,onComplete: function(){  
+          {css : {left: (randomPosX3+changePosX), top: "100%"},delay: 2.5,onComplete: function(){  
             setExplosion3(bomb,randomSpeed);
           }
           }); 
         }
-
-       var setExplosion4 = function(bomb,randomSpeed){
-           
+      var setExplosion4 = function(bomb){
             $(bomb).css({left: (randomPosX4+changePosX)});
             $(bomb).addClass('active');
-            
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall4('.ds-b1','.exp-b1');
             },2500);
-      } 
-
-      function fall4(el,bomb){     
+      }
+      function fall4(el,bomb){    
+        if($('body').width() <= 1500){
+            randomPosX4 = Math.random()*1500-800;      
+        }
+        else if($('body').width() > 1500 && $('body').width() <= 2000){
+            randomPosX4 = Math.random()*2000-1300;
+            
+        }
+        else if($('body').width() > 2000 && $('body').width() <= 2560){
+            randomPosX4 = Math.random()*3700-1300;
+        }       
         var randomSpeed = Math.random()*1.5+2;
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX4, top:"-30%"}},
-          {css : {left: (randomPosX4+changePosX), top: "93%"},delay: 2.5,onComplete: function(){  
+          {css : {left: (randomPosX4+changePosX), top: "90%"},delay: 2.5,onComplete: function(){  
             setExplosion4(bomb,randomSpeed);
           }
           }); 
         }
-      var setExplosion5 = function(bomb,randomSpeed){
-            
+      var setExplosion5 = function(bomb){
             $(bomb).css({left: (randomPosX5+changePosX)});
             $(bomb).addClass('active');
-            
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall5('.ds-b2','.exp-b2');
             },2500);
       } 
-
-      function fall5(el,bomb){      
+      function fall5(el,bomb){ 
+        if($('body').width() <= 1500){
+            randomPosX5 = Math.random()*1500-800;      
+        }
+        else if($('body').width() > 1500 && $('body').width() <= 2000){
+            randomPosX5 = Math.random()*2000-1300;
+            
+        }
+        else if($('body').width() > 2000 && $('body').width() <= 2560){
+            randomPosX5 = Math.random()*3700-1300;
+        }           
         var randomSpeed = Math.random()*1.5+1;   
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX5, top:"-30%"}},
@@ -352,18 +366,25 @@ $(document).ready(function(e){
           }
           }); 
         }
-      var setExplosion6 = function(bomb,randomSpeed){
-            
+      var setExplosion6 = function(bomb){
             $(bomb).css({left: (randomPosX6+changePosX)});
             $(bomb).addClass('active');
-            
             setTimeout(function(){
               $(bomb).removeClass('active');
               fall6('.ds-b3','.exp-b3');
             },2500);
       } 
-
       function fall6(el,bomb){    
+        if($('body').width() <= 1500){
+            randomPosX6 = Math.random()*1500-800;      
+        }
+        else if($('body').width() > 1500 && $('body').width() <= 2000){
+            randomPosX6 = Math.random()*2000-1300;
+            
+        }
+        else if($('body').width() > 2000 && $('body').width() <= 2560){
+            randomPosX6 = Math.random()*3700-1300;
+        }        
         var randomSpeed = Math.random()*1.5+0.5;     
         TweenMax.fromTo(el,randomSpeed,
           {css : {left: randomPosX6, top:"-30%"}},
@@ -371,7 +392,7 @@ $(document).ready(function(e){
             setExplosion6(bomb,randomSpeed);
           }
           }); 
-        } 
+      } 
       setTimeout(function(){
         fall('.ds1','.exp1');
       },9007);
