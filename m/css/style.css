@@ -313,3 +313,25 @@ i.fa {
   margin: 0 auto;
   margin-top: 0.2em;
 }
+
+
+@media only screen and (orientation : landscape) {
+  #Home{
+    height: 1000px;
+  }
+  #Home .div-wip {
+    width: 60vw;
+    margin:0 auto;
+  }
+  #Home .div-way {
+    width: 60vw;
+    margin:0 auto;
+  }
+  #Home .div-spon {
+    width: 60vw;
+    margin:0 auto;
+  }
+  #Home .col-sm-12 {
+    height: 1000px;
+  }
+}
