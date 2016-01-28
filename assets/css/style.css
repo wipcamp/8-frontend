@@ -1062,6 +1062,76 @@ i.fa {
     cursor: pointer;
 }
 
+/* Easter Egg */
+
+.easter {
+  position: absolute;
+  width: 135%;
+  height: 50%;
+  background-color: #fff;
+  z-index: 999;
+  top: 21%;
+  left: -30%;
+  opacity: 0;
+}
+.easter img {
+  height: 12.667em;
+  position: absolute;
+}
+.easter .easter_pic_center {
+  left: 53%;
+  top: 8%;
+  z-index: 10;
+  height: 15.6em;
+  opacity: 0;
+}
+.easter .easter_pic_linetwo{
+  top: 5%;
+  z-index: 9;
+  opacity: 0;
+}
+.easter .linetwo-left {
+  left: 51%;
+}
+.easter .linetwo-right {
+  left: 57%;
+}
+.easter .easter_pic_linethree{
+  z-index: 8;
+  opacity: 0;
+}
+.easter .linethree-left {
+  left: 48%;
+}
+.easter .linethree-right {
+  left: 61%;
+}
+.easter .easter_pic_linefour{
+  z-index: 7;
+  top: -2%;
+  opacity: 0;
+}
+.easter .linefour-1 {
+  left: 40%;
+}
+.easter .linefour-2{
+  left: 45%;
+}
+.easter .linefour-3 {
+  left: 66%;
+  height: 11.5em;
+}
+.easter .linefour-4 {
+  left: 63%;
+  height: 12em;
+}
+.easter h1 {
+  position: absolute;
+  z-index: 11;
+  left: 50%;
+  top: 55%;
+  opacity: 0;
+}
 
 /* 
 /---------------------------------------/
