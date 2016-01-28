@@ -1,6 +1,6 @@
 "use strict";
 
-if( /Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
    // some code..
    window.location.replace("http://site.freezer.wip.camp/m");
   }
