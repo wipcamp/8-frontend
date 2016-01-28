@@ -62,6 +62,18 @@ p{
 */
 /* ! Starter */
 
+img[src=""]{
+    content: "";
+}
+
+img:-moz-loading {
+    visibility: hidden;
+}
+
+img:-webkit-loading{
+    visibility: hidden;
+}
+
 #preload {
     background-color: #0c141e;
     height: 100%;

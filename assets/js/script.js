@@ -484,16 +484,18 @@ function loaded() {
         this.parent.imageCounter++;
         //remove the source
         var src = this.element.attr("src");
-        this.element.removeAttr("src");
-        var that = this;
-        //bind the load even
-        setTimeout(function () {
-            that.element.on("load error", that, function (e) {
-                e.data.completeLoading();
-            });
-            //put the source back
-            that.element.attr("src", src);
-        }, 1);
+        if (src != "assets/img/emblem/wippppp_blank.png" & src != "assets/img/emblem/wippppp_loaded.png") {
+            this.element.removeAttr("src");
+            var that = this;
+            //bind the load even
+            setTimeout(function () {
+                that.element.on("load error", that, function (e) {
+                    e.data.completeLoading();
+                });
+                //put the source back
+                that.element.attr("src", src);
+            }, 1);
+        }
     };
 
     PreloadImage.prototype.completeLoading = function () {
