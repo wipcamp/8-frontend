@@ -242,14 +242,6 @@
     window.location.replace("http://site.freezer.wip.camp");
   }
 
-  $(window).bind("orientationchange", function(){
-    var orientation = window.orientation;
-    var new_orientation = (orientation) ? 0 : 180 + orientation;
-    $('body').css({
-        "-webkit-transform": "rotate(" + new_orientation + "deg)"
-    });
-});
-
   $(document).ready(function() {
     // hide .navbar first
     smoothScroll.init({
