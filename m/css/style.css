@@ -213,7 +213,7 @@ section {
     padding: 0;
 }
 
-#FAQs.accordion {
+#FAQs .accordion {
   position: relative;
   height: auto;
   cursor: pointer;
@@ -227,7 +227,7 @@ section {
   letter-spacing: 0;
   box-sizing: border-box;
 }
-#FAQs.accContent {
+#FAQs .accContent {
   width: 100%;
   text-align: left;
   position: relative;
