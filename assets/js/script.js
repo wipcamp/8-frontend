@@ -481,10 +481,10 @@ function loaded() {
     };
 
     PreloadImage.prototype.bindLoadEvent = function () {
-        this.parent.imageCounter++;
         //remove the source
         var src = this.element.attr("src");
         if (src != "assets/img/emblem/wippppp_blank.png" & src != "assets/img/emblem/wippppp_loaded.png") {
+        this.parent.imageCounter++;
             this.element.removeAttr("src");
             var that = this;
             //bind the load even
