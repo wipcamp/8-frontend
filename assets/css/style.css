@@ -1074,48 +1074,49 @@ i.fa {
 /* Easter Egg */
 
 .easter {
-  opacity: 0;
   visibility: hidden;
   position: absolute;
-  width: 135%;
-  height: 50%;
+  width: 110%;
+  left: -5%;
+  height: 19.792em; /* 475/24 */
   background-color: #fff;
   z-index: 999;
-  top: 21%;
-  left: -30%;
-  opacity: 0;
+  top: 8.75em; /* 210/24 */
+  margin: auto;
+
 }
 .easter img {
   height: 12.667em;
   position: absolute;
 }
 .easter .easter_pic_center {
-  left: 53%;
-  top: 8%;
   z-index: 10;
-  height: 15.6em;
   opacity: 0;
+  left: 38.542em;
+  top: 2.708em;
 }
 .easter .easter_pic_linetwo{
-  top: 5%;
   z-index: 9;
   opacity: 0;
 }
 .easter .linetwo-left {
-  left: 51%;
+  left: 34.292em;
 }
 .easter .linetwo-right {
-  left: 57%;
+  left: 41.417em;
 }
 .easter .easter_pic_linethree{
   z-index: 8;
   opacity: 0;
 }
 .easter .linethree-left {
-  left: 48%;
+  left: 30.208em;
+  top: 1.042em;
+  height: 14.583em;
 }
 .easter .linethree-right {
-  left: 61%;
+  left: 45em;
+  top: 1.083em;
 }
 .easter .easter_pic_linefour{
   z-index: 7;
@@ -1123,25 +1124,31 @@ i.fa {
   opacity: 0;
 }
 .easter .linefour-1 {
-  left: 40%;
+  left: 24.208em;
+  height: 13.75em;
+  top: -1.708em;
 }
 .easter .linefour-2{
-  left: 45%;
+  left: 29.542em;
+  top: 0em;
 }
 .easter .linefour-3 {
-  left: 66%;
-  height: 11.5em;
+  left: 50.458em;
+  top: -0.833em;
+  height: 12.917em;
 }
 .easter .linefour-4 {
-  left: 63%;
+  left: 47.625em;
+  top: 0.542em;
   height: 12em;
 }
 .easter h1 {
   position: absolute;
-  z-index: 11;
-  left: 50%;
-  top: 60%;
+  left: 733px;
+  top: 263px;
   opacity: 0;
+  font-size: 2.75em;
+  z-index: 11;
 }
 
 .easter .container {
