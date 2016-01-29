@@ -12,8 +12,6 @@ $(document).ready(function (e) {
         limitY: 1,
     });
 
-
-
     // Section
     var chkPop = 0;
     var name;

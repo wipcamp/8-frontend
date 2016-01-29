@@ -259,15 +259,15 @@
     $(function() {
       $(window).scroll(function() {
 
-        if ($(this).scrollTop() > $('#Home').height() - 51) {
+        if ($(this).scrollTop() > $('#Home').height() - 49) {
           $('.navbar').fadeIn();
         } else {
           $('.navbar').fadeOut();
         }
 
-        var section =  ( $("#full-nav li[class*='active']").text() == "Home" 
+        var section =  ( $("#full-nav li[class*='active']").text() == "Home"
           ? "<h1>What</h1>":
-          "<h1>" + ($("#full-nav li[class*='active']").text()) + "</h1>");           
+          "<h1>" + ($("#full-nav li[class*='active']").text()) + "</h1>");
 
         var emblem = function() {
           var src;
@@ -315,10 +315,10 @@
             $("#full-nav").removeClass('active');
           }
         });
-        
+
         TweenMax.to('body', 1, {
           css: {
-            overflow: "auto"            
+            overflow: "auto"
           }
         });
 
@@ -343,7 +343,7 @@
 
     // $('.scrollDown').click(function(){
     //   var height = $('#Home').height();
-      
+
     // });
 
     $('#full-nav a').click(function() {
@@ -358,7 +358,7 @@
       });
       TweenMax.to('body', 1, {
           css: {
-            overflow: "auto"            
+            overflow: "auto"
           }
         });
     })
