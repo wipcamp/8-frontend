@@ -72,12 +72,13 @@ p {
 
 .navbar-inverse .navbar-toggle {
   border: 0;
+  z-index: 10008 !important;
 }
 
 .navbar-inverse .navbar-nav>li>a {
   color: black;
   font-size: 1.35em;
-  padding: 1.22em;
+  padding: 1em;
 }
 
 .navbar-inverse .navbar-nav span {
