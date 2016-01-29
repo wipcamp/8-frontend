@@ -19,10 +19,31 @@
             TweenMax.to('.easter',1,{css:{opacity:1,visibility:"visible"}});
             $('.easter').addClass('fadeInRight animated');
           }
-
+         var textColor = function(el,time){
+         	setTimeout(function(){
+            	$(el).addClass('hero active');          	
+            },time);
+         }
+          if($('.easter').find('fadeInRight animated')){
           setTimeout(function(){
             $('.easter .slogan').addClass('bounceIn animated');
           },3800);
+          setTimeout(function(){
+           $('.easter .slogan').removeClass('bounceIn animated');	        	
+          },5000);
+          	textColor('#w-W',5300);
+     		textColor('#w-E',5400);
+     		textColor('#a-A',5700);
+     		textColor('#a-R',6000);
+     		textColor('#a-E',6300);
+     		textColor('#H',6600);
+     		textColor('#E',6900);
+     		textColor('#R',7200);
+     		textColor('#O',7500);
+     		textColor('#S',7800);
+     		textColor('#audjeri',8100);
+
+      	}
           setTimeout(function(){
             $('.easter .easter_pic_center').addClass('fadeInUp animated');
           },1900);
