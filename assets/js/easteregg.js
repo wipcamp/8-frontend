@@ -17,6 +17,7 @@
           key = 0;
         }
           if(key == lock){
+            TweenMax.to('.easter',1,{css:{opacity:1,visibility:"visible"}});
             $('.easter').addClass('fadeInRight animated');
           }
 

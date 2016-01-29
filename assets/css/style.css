@@ -1065,6 +1065,8 @@ i.fa {
 /* Easter Egg */
 
 .easter {
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   width: 135%;
   height: 50%;
