@@ -12,11 +12,9 @@ $(document).ready(function (e) {
         limitY: 1,
     });
 
-    // Test Git
     // Section
     var chkPop = 0;
     var name;
-
     $('.sec').click(function (e) {
         e.stopPropagation();
         var section = $(this).data('sec');
@@ -135,6 +133,7 @@ $(document).ready(function (e) {
         if (e.keyCode == 27) {
             exit_pop();
             exit_modal();
+            TweenMax.to('.easter',1,{css:{opacity:0,visibility:"hidden"}});
         }
     });
 
