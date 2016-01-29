@@ -154,6 +154,19 @@ section {
   width: 100vw;
 }
 
+#Home .scrollDown {
+  z-index: 100;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  animation: readmore 1.5s infinite linear;
+}
+
+#Home .scrollDown {
+  margin: 0 auto;
+  height: 31vw;
+}
+
 #What {
   background-color: #0c141e;
 }
@@ -312,6 +325,12 @@ i.fa {
   float: none;
   margin: 0 auto;
   margin-top: 0.2em;
+}
+
+@keyframes readmore {
+  0% { bottom: 0; opacity: 0.8}
+  50% {  bottom: .3em ; opacity: 1}
+  100% {  bottom: 0 ; opacity: 0.8 }
 }
 
 

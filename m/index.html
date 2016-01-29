@@ -59,8 +59,11 @@
           <div class="town">
             <img src="images/town.png" alt="" class="wow fadeInUp">
           </div>
-          <div class="scrollDown">
-          </div>
+          <a data-scroll href="#What">
+            <div class="scrollDown">
+              <img src="images/readmore.png"  class="scroll wow fadeInUp" alt="">
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -256,17 +259,19 @@
     $(function() {
       $(window).scroll(function() {
 
-        if ($(this).scrollTop() > $('#Home').height()) {
+        if ($(this).scrollTop() > $('#Home').height() - 51) {
           $('.navbar').fadeIn();
         } else {
           $('.navbar').fadeOut();
         }
 
-        var section = "<h1>" + ($("#full-nav li[class*='active']").text()) + "</h1>";
+        var section =  ( $("#full-nav li[class*='active']").text() == "Home" 
+          ? "<h1>What</h1>":
+          "<h1>" + ($("#full-nav li[class*='active']").text()) + "</h1>");           
 
         var emblem = function() {
           var src;
-          if ($("#full-nav li[class*='active']").text() == "Home") src = "wippppp";
+          if ($("#full-nav li[class*='active']").text() == "Home") src = "cap";
           else if ($("#full-nav li[class*='active']").text() == "What") src = "cap";
           else if ($("#full-nav li[class*='active']").text() == "Who") src = "cyp";
           else if ($("#full-nav li[class*='active']").text() == "When") src = "scr";
@@ -336,7 +341,10 @@
       }
     });
 
-
+    // $('.scrollDown').click(function(){
+    //   var height = $('#Home').height();
+      
+    // });
 
     $('#full-nav a').click(function() {
       TweenMax.to('#full-nav', .2, {
