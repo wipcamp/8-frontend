@@ -127,20 +127,12 @@ $(document).ready(function (e) {
 
     $('.close-easter').click(function () {
         $('.easter').removeClass('fadeInRight animated');
-        $('.easter img').removeClass("fadeInUp animated");
-        $('.easter .slogan').removeClass('bounceIn animated');
-        $('.easter img').addClass("fadeOutDown animated");
-        $('.easter .slogan').addClass('bounceOut animated');
-        setTimeout(function () {
-            $('.easter').addClass("fadeOutRight animated");
-        }, 800);
+        $('.easter').addClass("fadeOutRight animated");
         setTimeout(function () {
             TweenMax.to('.easter', 1, {css: {opacity: 0, visibility: "hidden"}});
             $('.easter').removeClass("fadeOutRight animated");
-            $('.easter img').removeClass("fadeOutDown animated");
-            $('.easter .slogan').removeClass('bounceOut animated');
-        }, 1800)
-
+        }, 1000)
+        key = 0;
     });
 
     $(' .overlay , .triangle , .exit').click(function () {
