@@ -125,6 +125,10 @@ $(document).ready(function (e) {
         }
     }
 
+    $('.close-easter').click(function () {
+        TweenMax.to('.easter',1,{css:{opacity:0,visibility:"hidden"}});
+    });
+
     $(' .overlay , .triangle , .exit').click(function () {
         exit_pop();
     });
@@ -139,6 +143,7 @@ $(document).ready(function (e) {
 
     $('.exit_modal,.overlay').click(function () {
         exit_modal();
+        TweenMax.to('.easter',1,{css:{opacity:0,visibility:"hidden"}});
     });
     // FAQ
     $('.accordion').click(function () {
