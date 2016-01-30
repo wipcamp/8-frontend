@@ -1,5 +1,4 @@
 //Easter Egg?
-// So Sleepy Want to sleep so Fogive me about BAD LOGIC..
       var lock = 5;
       var key = 0;
       $(document).keydown(function(e){
@@ -20,11 +19,32 @@
             TweenMax.to('.easter',1,{css:{opacity:1,visibility:"visible"}});
             $('.easter').addClass('fadeInRight animated');
           }
-
-          //Have to use Animate.css so LAZY and SLEEPY..
+         var textColor = function(el,time){
+         	setTimeout(function(){
+            	$(el).addClass('hero active');
+            },time);
+         }
+          if($('.easter').find('fadeInRight animated')){
           setTimeout(function(){
-            $('.easter h1').addClass('bounceIn animated');
-          },3000);
+            $('.easter .slogan').addClass('bounceIn animated');
+          },3800);
+          setTimeout(function(){
+           $('.easter .slogan').removeClass('bounceIn animated');
+          },5000);
+          	textColor('#w-W',5300);
+     		textColor('#w-E',5400);
+     		textColor('#a-A',5700);
+     		textColor('#a-R',6000);
+     		textColor('#a-E',6300);
+     		textColor('#H',6600);
+     		textColor('#E',6900);
+     		textColor('#R',7200);
+     		textColor('#O',7500);
+        textColor('#E2',7800);
+     		textColor('#S',8100);
+     		textColor('#audjeri',8400);
+
+      	}
           setTimeout(function(){
             $('.easter .easter_pic_center').addClass('fadeInUp animated');
           },1900);
@@ -35,6 +55,9 @@
             $('.easter .easter_pic_linethree').addClass('fadeInUp animated');
           },2500);
           setTimeout(function(){
-            $('.easter .easter_pic_linefour').addClass('fadeInUp animated');
+            $('.easter .first').addClass('fadeInUp animated');
           },2800);
+          setTimeout(function(){
+            $('.easter .easter_pic_linefour').addClass('fadeInUp animated');
+          },3100);
       });
