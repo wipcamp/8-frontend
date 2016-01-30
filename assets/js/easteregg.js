@@ -21,7 +21,7 @@
           }
          var textColor = function(el,time){
          	setTimeout(function(){
-            	$(el).addClass('hero active');          	
+            	$(el).addClass('hero active');
             },time);
          }
           if($('.easter').find('fadeInRight animated')){
@@ -29,7 +29,7 @@
             $('.easter .slogan').addClass('bounceIn animated');
           },3800);
           setTimeout(function(){
-           $('.easter .slogan').removeClass('bounceIn animated');	        	
+           $('.easter .slogan').removeClass('bounceIn animated');
           },5000);
           	textColor('#w-W',5300);
      		textColor('#w-E',5400);
@@ -40,8 +40,9 @@
      		textColor('#E',6900);
      		textColor('#R',7200);
      		textColor('#O',7500);
-     		textColor('#S',7800);
-     		textColor('#audjeri',8100);
+        textColor('#E2',7800);
+     		textColor('#S',8100);
+     		textColor('#audjeri',8400);
 
       	}
           setTimeout(function(){

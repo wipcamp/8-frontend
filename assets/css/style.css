@@ -1006,6 +1006,7 @@ img:-webkit-loading{
     text-align: center;
     background: rgba(255,255,255,.9);
     -webkit-transition: -webkit-transform .2s, opacity .2s;
+    -ms-transition: transform .2s, opacity .2s;
     transition: transform .2s, opacity .2s;
 }
 i.fa {
@@ -1077,7 +1078,7 @@ i.fa {
   visibility: hidden;
   position: absolute;
   width: 110%;
-  
+
   left: -5%;
   height: 19.792em; /* 475/24 */
   background-color: #fff;
@@ -1150,7 +1151,7 @@ i.fa {
   opacity: 0;
   font-size: 2.75em;
   z-index: 11;
- 
+
 }
 
 .easter .container {
@@ -1184,19 +1185,26 @@ i.fa {
 #O{
     left:16.8em;
 }
-#s{
+#E2{
     left:17.34em;
 }
+#s{
+    left:17.7em;
+}
 #audjeri{
-     left:17.65em;
+     left:18.1em;
 }
-.hero.active{  
+.hero.active{
     opacity: 1;
     animation: co-easter 10s infinite linear;
+    -webkit-animation: co-easter 10s infinite linear;
+    -ms-animation: co-easter 10s infinite linear;
 }
-.hero7.active{  
+.hero7.active{
     opacity: 1;
     animation: co-easter 10s infinite linear;
+    -webkit-animation: co-easter 10s infinite linear;
+    -ms-animation: co-easter 10s infinite linear;
 }
 
 /*
@@ -1292,6 +1300,19 @@ i.fa {
     100% {opacity: 0.2;filter: alpha(opacity=20);}
 }
 @keyframes co-easter{
+    0%{color: black;}
+    10%{color: white;}
+    20%{color: #DC143C;}
+    30%{color: #8B4513;}
+    40%{color: brown;}*/
+    50%{color: #191970;}
+   60%{color: #32CD32;}
+    70%{color: #F08080;}
+    80%{color: purple;}
+    90%{color: #CD5C5C;}
+    100%{color: gray;}
+}
+@-webkit-keyframes co-easter{
     0%{color: black;}
     10%{color: white;}
     20%{color: #DC143C;}
