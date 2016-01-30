@@ -1194,6 +1194,12 @@ i.fa {
 #audjeri{
      left:18.1em;
 }
+.easter .close-easter {
+  height: 2.292em; /* 55/24 */
+  position: absolute;
+  right: 6%;
+  top: -1%;
+}
 .hero.active{
     opacity: 1;
     animation: co-easter 10s infinite linear;
