@@ -126,7 +126,13 @@ $(document).ready(function (e) {
     }
 
     $('.close-easter').click(function () {
-        TweenMax.to('.easter',1,{css:{opacity:0,visibility:"hidden"}});
+        $('.easter').removeClass('fadeInRight animated');
+        $('.easter').addClass("fadeOutRight animated");
+        setTimeout(function () {
+            TweenMax.to('.easter', 1, {css: {opacity: 0, visibility: "hidden"}});
+            $('.easter').removeClass("fadeOutRight animated");
+        }, 1000)
+        key = 0;
     });
 
     $(' .overlay , .triangle , .exit').click(function () {
@@ -137,13 +143,13 @@ $(document).ready(function (e) {
         if (e.keyCode == 27) {
             exit_pop();
             exit_modal();
-            TweenMax.to('.easter',1,{css:{opacity:0,visibility:"hidden"}});
+            TweenMax.to('.easter', 1, {css: {opacity: 0, visibility: "hidden"}});
         }
     });
 
     $('.exit_modal,.overlay').click(function () {
         exit_modal();
-        TweenMax.to('.easter',1,{css:{opacity:0,visibility:"hidden"}});
+        TweenMax.to('.easter', 1, {css: {opacity: 0, visibility: "hidden"}});
     });
     // FAQ
     $('.accordion').click(function () {
@@ -487,7 +493,7 @@ function loaded() {
         //remove the source
         var src = this.element.attr("src");
         if (src != "assets/img/emblem/wippppp_blank.png" & src != "assets/img/emblem/wippppp_loaded.png") {
-        this.parent.imageCounter++;
+            this.parent.imageCounter++;
             this.element.removeAttr("src");
             var that = this;
             //bind the load even
