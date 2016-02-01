@@ -4,17 +4,10 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<<<<<<< HEAD
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-=======
->>>>>>> 3af140c3f99294988111a8f293f659ca287026e0
 
 <url>
   <loc>https://wip.camp/</loc>
   <lastmod>2016-01-30T17:14:41+00:00</lastmod>
-<<<<<<< HEAD
-</url>
-=======
   <changefreq>always</changefreq>
 </url>
 </urlset>
@@ -24,5 +17,4 @@
         <loc>https://wip.camp/m</loc>
         <mobile:mobile/>
     </url>
->>>>>>> 3af140c3f99294988111a8f293f659ca287026e0
 </urlset>
