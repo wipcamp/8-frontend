@@ -273,7 +273,7 @@ img:-webkit-loading{
     background: radial-gradient(circle, #FFf, #FFCD4F);
     position: absolute;
     box-shadow: 0 0 5em #FFCD4F;
-    z-index: 9;
+    z-index: -2;
     opacity: 0;
     filter: alpha(opacity=0);
 }

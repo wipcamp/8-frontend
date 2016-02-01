@@ -221,10 +221,15 @@ function loaded() {
     //   TweenMax.to(".overlay", 0.4, {className:"+=active"});
     // }});
 
-    var star = new TimelineMax({delay: 7});
-    star.to('.star-front', 2, {opacity: 1})
-            .to('.star-mid', 2, {opacity: 1})
-            .to('.star-back', 2, {opacity: 1});
+    TweenMax.to('.star-front', 2, {css: {opacity: 1, visibility: "visible"}, delay: 7});
+    TweenMax.to('.star-mid', 2, {css: {opacity: 1, visibility: "visible"}, delay: 8});
+    if (navigator.userAgent.toLowerCase().indexOf('firefox') <= -1) {
+        TweenMax.to('.star-back', 2, {css: {opacity: 1, visibility: "visible"}, delay: 9});
+    };
+    // var star = new TimelineMax({delay: 7});
+    // star.to('.star-front', 2, {opacity: 1})
+    //         .to('.star-mid', 2, {opacity: 1})
+    //         .to('.star-back', 2, {opacity: 1});
 
     // Falling Star
     var randomPosX;
