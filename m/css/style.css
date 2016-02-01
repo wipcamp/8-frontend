@@ -109,7 +109,7 @@ section {
 #Home .col-sm-12 {
   height: 100vh;
   padding: 0;
-  margin-top: 0em;  
+  margin-top: 0em;
 }
 
 #Home .div-wip {
@@ -319,6 +319,7 @@ i.fa {
 
 #Contact a {
   color: #000;
+  border-bottom: 1px dotted #000;
 }
 
 #Contact .lineat img{

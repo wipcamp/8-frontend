@@ -1,0 +1,10 @@
+User-Agent: *
+Disallow: 
+Disallow: /assets
+Disallow: /m/images
+Disallow: /m/css
+Disallow: /m/fonts
+Disallow: /m/js
+Disallow: /loykrathong/assets
+Disallow: /loykrathong/facebook-php-sdk
+Disallow: /loykrathong/nbproject
