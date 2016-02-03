@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>WIP Camp #8 : Ways to IT Professional Camp : ค่ายเส้นทางสู่ฝันสู่นัก ไอที</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="55">
+  <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Wip Camp 8</a>
+      </div>
+      <div class="full-nav" id="full-nav">
+        <ul class="nav navbar-nav">
+          <li><a data-scroll href="#Home">Home</a></li>
+          <li><a data-scroll href="#What">What</a></li>
+          <li><a data-scroll href="#Who">Who</a></li>
+          <li><a data-scroll href="#When">When</a></li>
+          <li><a data-scroll href="#Where">Where</a></li>
+          <li><a data-scroll href="#FAQs">FAQs</a></li>
+          <li><a data-scroll href="#Contact">Contact</a></li>
+          <span style="color:black;">x</span>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <section id="Home">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="header">
+            <div class="div-wip">
+              <img src="images/finalwip1.png" class="wow fadeInDown img-responsive wip">
+            </div>
+            <div class="div-way">
+              <img src="images/finalway.png" class="wow fadeInDown img-responsive way">
+            </div>
+            <div class="div-spon">
+              <img src="images/logosponsor.png" class="wow fadeInDown img-responsive spon">
+            </div>
+          </div>
+          <div class="star ">
+            <img src="images/star.png" alt="" class="wow fadeIn">
+          </div>
+          <div class="town">
+            <img src="images/town.png" alt="" class="wow fadeInUp">
+          </div>
+          <a data-scroll href="#What">
+            <div class="scrollDown">
+              <img src="images/readmore.png"  class="scroll wow fadeInUp" alt="">
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="What">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="wow fadeInDown row header text-center">
+            <h1>What is WIP Camp?</h1>
+          </div>
+          <div class="row images wow fadeIn">
+            <img class="img-responsive img-rounded" src="images/wippo-captainamerica.png">
+          </div>
+          <div class="row description text-center">
+            <p class="wow fadeIn ">
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp)</strong> คือ ค่ายสำหรับน้องๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้องๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริง
+                <br>ณ <strong>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</strong> เป็นระยะเวลา 5 วันเต็ม</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Who">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="wow fadeInDown row header text-center">
+            <h1>ค่ายนี้เหมาะกับใคร</h1>
+          </div>
+          <div class="row images wow fadeIn">
+            <img class="img-responsive img-rounded" src="images/wippo-cyclops.png">
+          </div>
+          <div class="wow fadeIn row description text-center">
+            <ul>
+              <li>
+                <h3>- น้องๆ มัธยมศึกษาตอนปลาย -</h3>
+                <p>แผนการเรียนวิทย์-คณิต, ศิลป์-คำนวณ หรือสาขาใกล้เคียง</p>
+              </li>
+              <li>
+                <h3>- น้องๆ ที่มีความสนใจด้านไอที -</h3>
+                <p>หรือต้องการค้นหาตนเองเพื่อศึกษาต่อในระดับมหาวิทยาลัย</p>
+              </li>
+              <li>
+                <h3>- น้องๆ ที่ได้รับการอนุญาตจากผู้ปกครอง -</h3>
+                <p>โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง</p>
+              </li>
+              <li>
+                <h3>- น้องๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ -</h3>
+                <p>ตลอดระยะเวลา 5 วัน</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="When">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="wow fadeInDown row header text-center">
+            <h1>ค่ายนี้จัดเมื่อไร</h1>
+          </div>
+          <div class="row images wow fadeIn">
+            <img class="img-responsive img-rounded" src="images/wippo-scarlet.png">
+          </div>
+          <div class="wow fadeIn row description text-center">
+            <p><strong>- เปิดรับสมัครเข้าค่าย -</strong>
+              <br> 6 กุมภาพันธ์ 2559 - 6 มีนาคม 2559</p>
+            <p><strong>- ปิดรับสมัครเข้าค่าย -</strong>
+              <br> 6 มีนาคม 2559</p>
+            <p><strong>- ประกาศผลผู้มีสิทธิ์เข้าค่าย -</strong>
+              <br> 31 มีนาคม 2559</p>
+            <p><strong>- เปิดค่าย! -</strong>
+              <br> 25 พฤษภาคม 2559 - 29 พฤษภาคม 2559</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Where">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="wow fadeInDown row header text-center">
+            <h1>สถานที่จัดค่าย</h1>
+          </div>
+          <div class="row images wow fadeIn">
+            <img class="img-responsive img-rounded" src="images/wippo-thor.png">
+          </div>
+          <div class="wow fadeIn row description text-center">
+            <p>ค่ายของเรานี้จะจัดขึ้นที่
+              <br><strong>คณะเทคโนโลยีสารสนเทศ</strong>
+              <br><strong>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</strong>
+              <br>สามารถติดต่อได้ตามรายละเอียดด้านล่าง
+              <br>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี 126 ถนนประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="FAQs">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="wow fadeInDown row header text-center">
+            <h1>คำถามที่พบบ่อย</h1>
+          </div>
+          <div class="row images wow fadeIn">
+            <img class="img-responsive img-rounded" src="images/wippo-superman.png">
+          </div>
+          <div class="wow fadeIn row description text-center">
+            <div class="accordion">Q: อยากเป็นส่วนหนึ่งของค่ายนี้มากๆ
+              <br>ต้องทำอย่างไร ?</div>
+            <div class="accContent first">น้องๆ เพียงแค่ตอบคำถามในการสมัครด้วยตัวเองเพื่อแสดงถึงตัวตนของน้อง และมีความตั้งใจในการตอบคำถามครับ เพียงแค่น้องมีความตั้งใจ พี่เชื่อว่าน้องๆ จะได้มีส่วนร่วมในค่ายนี้อย่างแน่นอนครับ รวมถึงสิ่งที่สำคัญ คือ อย่าลืมอัพโหลดเอกสารให้ครบถ้วนและถูกต้องตามที่กำหนดด้วยนะครับ</div>
+            <div class="accordion">Q: ไม่มีความรู้เกี่ยวกับคอมพิวเตอร์มากนัก
+              <br>จะเข้าค่ายนี้ได้หรือไม่ ?</div>
+            <div class="accContent">ได้สิครับ คนเราไม่ใช่เทพทุกคนซะหน่อย ขอแค่พอมีพื้นฐานมาบ้าง เพื่อจะฟังพี่พูดเกี่ยวกับไอทีรู้เรื่องก็โอเคแล้วครับ</div>
+            <div class="accordion">Q: ค่ายนี้เป็นค่ายวิชาการ เครียดมากไหม
+              <br>มีกิจกรรมไหม ?</div>
+            <div class="accContent">ค่ายนี้มีสัดส่วนในด้านวิชาการ กับกิจกรรมพอๆ กันเลยครับ ไม่ต้องห่วงว่าน้องจะเครียด เพราะแค่เห็นหน้าพวกพี่ก็ไม่เครียดแล้วครับ รับรองได้ว่าพี่ๆ มีกิจกรรมเพื่อที่จะไม่ให้น้องๆ เครียด อยู่ตลอดเวลาครับ</div>
+            <div class="accordion">Q: นอนที่ไหน ห้องน้ำเป็นอย่างไรบ้าง?</div>
+            <div class="accContent">สำหรับเรื่องการค้างคืนในค่ายจะค้างในห้องพักปรับอากาศของหอพักมหาวิทยาลัยครับ โดยจะมีห้องน้ำอยู่ในแต่ละชั้น มีแบ่งออกเป็นห้องๆ ไว้รองรับสำหรับน้องๆ โดยจะมีพี่ๆ ดูแลน้องๆ ตลอด 24 ชั่วโมง รวมถึงพี่พยาบาลที่ได้รับการอบรมจากทางมหาวิทยาลัยดูแลน้องๆ ในกรณีที่น้องๆ ไม่สบาย รวมถึงปฐมพยาบาลเบื้องต้นให้น้องๆ ตลอดระยะเวลาค่าย บอกผู้ปกครองได้เลยครับว่าไม่ต้องกังวล</div>
+            <div class="accordion">Q: เวลาเรียน เรียนที่ไหน ?</div>
+            <div class="accContent">น้องๆ จะได้เรียน ณ ตึกคณะเทคโนโลยีสารสนเทศ
+              <br>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เรียกได้ว่า ได้เรียนในสถานที่เรียนจริงเลยก็ว่าได้ โดยจะมีพี่วิชาการคอยดูแล และให้คำแนะนำแก่น้องๆ ตลอดการเรียนการสอนในค่ายครับ</div>
+            <div class="accordion">Q: น้องๆ จะได้รับอะไรจากการมาค่าย ?</div>
+            <div class="accContent">ค่ายของเราจะทำให้น้องๆ ได้รับข้อมูลอย่างแท้จริง และลึกซึ้งเกี่ยวกับการศึกษาทางด้านไอที ในหลักสูตรของคณะเทคโนโลยีสารสนเทศ สาขาเทคโนโลยีสารสนเทศ (IT) ของเราครับ รวมถึงความสนุกสนานที่พี่ๆ เตรียมไว้ต้อนรับน้องๆ ทุกคน รวมถึงใบประกาศนียบัตรจากทางค่าย เพื่อรับรองว่าน้องๆ ได้มาเข้าร่วมค่ายนี้จริงครับ</div>
+            <div class="accordion">Q: วันค่ายจัดตรงกับช่วงเปิดเทอม จะทำอย่างไร ?</div>
+            <div class="accContent">สำหรับเรื่องนี้ทางค่ายจะออกจดหมายยืนยันว่าน้องมีสิทธิ์ในการเข้าค่ายนี้ หลังจากที่น้องโอนเงินเพื่อยืนยันสิทธิ์ครับ น้องๆ สามารถนำจดหมายนี้แนบกับใบลากิจส่งให้ทางโรงเรียนของน้องๆ ได้ครับ รวมถึงหลังจากจบค่ายน้องๆ จะได้รับจดหมายยืนยันการเข้าค่าย และใบประกาศนียบัตรอีกรอบครับ</div>
+            <div class="accordion">Q: ทำไม mascot ค่ายต้องเป็นไอติม ?</div>
+            <div class="accContent">พี่ๆ ขอเก็บไว้ตอบในค่ายนะครับ ถ้าอยากรู้อย่าลืมมาสมัครเป็นส่วนหนึ่งของค่ายนี้ และมาร่วมสนุกกันในค่ายนะครับ (:</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Contact">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="wow fadeInDown row header text-center">
+            <h1>ติดต่อสอบถาม</h1>
+          </div>
+          <div class="row images wow fadeIn">
+            <img class="img-responsive img-rounded" src="images/wippo-angel.png">
+          </div>
+          <div class="wow fadeIn row description text-center">
+            <div class="information">
+              <h3>โทรศัพท์</h3>
+              <p><i class="fa fa-mobile"></i> <a href="tel:0629311726">06-2931-1726</a> (พี่เมย์)</p>
+              <p><i class="fa fa-mobile"></i> <a href="tel:0629311727">06-2931-1727</a> (พี่แหวน)</p>
+              <h3>อีเมล์</h3>
+              <p><i class="fa fa-envelope"></i> wippo@wipcamp.com</p>
+            </div>
+            <div class="social">
+              <ul>
+                <a href="https://www.facebook.com/wipcamp/?fref=ts" target="_blank">
+                  <li><i class="fa fa-facebook"></i></li>
+                </a>
+                <a href="https://twitter.com/WIPCamp" target="_blank">
+                  <li><i class="fa fa-twitter"></i></li>
+                </a>
+                <a href="https://www.instagram.com/wipcamp/" target="_blank">
+                  <li><i class="fa fa-instagram"></i></li>
+                </a>
+                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
+                  <li class="lineat"><img src="images/lineat.png" alt=""></li>
+                </a>
+                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
+                  <li><i class="fa fa-youtube"></i></li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+  if (!(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+    // some code..
+    console.log("aaa");
+    window.location.replace("http://site.freezer.wip.camp");
+  }
+
+  $(document).ready(function() {
+    // hide .navbar first
+    smoothScroll.init({
+      offset: 50
+    });
+
+    new WOW().init();
+
+    $(".navbar").hide();
+
+    // fade in .navbar
+    $(function() {
+      $(window).scroll(function() {
+
+        if ($(this).scrollTop() > $('#Home').height() - 51) {
+          $('.navbar').fadeIn();
+        } else {
+          $('.navbar').fadeOut();
+        }
+
+        var section =  ( $("#full-nav li[class*='active']").text() == "Home"
+          ? "<h1>What</h1>":
+          "<h1>" + ($("#full-nav li[class*='active']").text()) + "</h1>");
+
+        var emblem = function() {
+          var src;
+          if ($("#full-nav li[class*='active']").text() == "Home") src = "cap";
+          else if ($("#full-nav li[class*='active']").text() == "What") src = "cap";
+          else if ($("#full-nav li[class*='active']").text() == "Who") src = "cyp";
+          else if ($("#full-nav li[class*='active']").text() == "When") src = "scr";
+          else if ($("#full-nav li[class*='active']").text() == "Where") src = "thr";
+          else if ($("#full-nav li[class*='active']").text() == "FAQs") src = "spm";
+          else if ($("#full-nav li[class*='active']").text() == "Contact") src = "agl";
+          else src = "wippppp";
+          return "<img class=\"emblem img-responsive\" src=\"images/emblem/" + src + ".png\">" + section;
+        }
+
+        var cerrent_section = $("#full-nav li[class*='active']").text();
+        if (cerrent_section != $('.navbar-brand h1').text())
+          $('.navbar-brand').stop().html(emblem()).hide(0).fadeIn("slow");
+
+      });
+    });
+
+    $('.accordion').click(function() {
+      if (!($(this).next().is(':visible'))) {
+        $('.accContent').slideUp('600');
+      } else {
+        $('.accContent').not($(this).next()).slideUp('600');
+      }
+
+      if ($(this).next().is(':hidden') == true) {
+        $(this).next().slideDown('600');
+      }
+    });
+    $('.accContent').hide(); // Hide Content
+    $('.accContent.first').show();
+
+
+    $('.navbar-toggle,.navbar-inverse .navbar-nav span').click(function() {
+      if ($("#full-nav").hasClass('active')) {
+        TweenMax.to('#full-nav', .8, {
+          css: {
+            opacity: 0,
+            visibility: "hidden"
+          },
+          onComplete: function() {
+            $("#full-nav").removeClass('active');
+          }
+        });
+
+        TweenMax.to('body', 1, {
+          css: {
+            overflow: "auto"
+          }
+        });
+
+      } else {
+        TweenMax.to('body', 1, {
+          css: {
+            overflow: "hidden"
+          }
+        });
+
+        TweenMax.to('#full-nav', .8, {
+          css: {
+            opacity: 1,
+            visibility: "visible"
+          },
+          onComplete: function() {
+            $("#full-nav").addClass('active');
+          }
+        });
+      }
+    });
+
+    // $('.scrollDown').click(function(){
+    //   var height = $('#Home').height();
+
+    // });
+
+    $('#full-nav a').click(function() {
+      TweenMax.to('#full-nav', .2, {
+        css: {
+          opacity: 0,
+          visibility: "hidden"
+        },
+        onComplete: function() {
+          $("#full-nav").removeClass('active');
+        }
+      });
+      TweenMax.to('body', 1, {
+          css: {
+            overflow: "auto"
+          }
+        });
+    })
+
+  });
+  </script>
+</body>
+
+</html>
