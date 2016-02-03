@@ -1,16 +1,1 @@
-/* Black Screen on IE / Egde*/
-
-html,body{
-	overflow: hidden;
-}
-
-.popup {
-  min-height: 850px !important;
-	overflow: scroll;
-}
-
-#scene {
-  min-height: 850px !important;
-  overflow: scroll;
-}
-
+body,html{overflow:hidden}#scene,.popup{min-height:850px!important;overflow:scroll}
