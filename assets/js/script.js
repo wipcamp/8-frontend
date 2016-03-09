@@ -2,7 +2,7 @@
 
 if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // some code..
-    window.location.replace("http://site.freezer.wip.camp/m");
+    window.location.replace("http://wip.camp/m");
 }
 
 $(document).ready(function (e) {
@@ -187,6 +187,9 @@ $(document).ready(function (e) {
             TweenMax.to('.pre-redirect', 1, {css: {opacity: 0}});
             TweenMax.to('.pre-redirect', 1, {css: {visibility: "hidden"}, delay: 1});
             TweenMax.to(".pre-redirect", 1, {className: "-=active", delay: 1});
+            // setTimeout(function(){
+            //   window.location.replace("http://itim.wip.camp/");
+            // },1000);
         }
     });
 
